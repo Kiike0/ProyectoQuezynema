@@ -1,0 +1,123 @@
+{
+  "name": "boton_jugar",
+  "version": 32,
+  "source-key": {
+    "type": "figma",
+    "file": "H7ukQQTqL9pUMovBZnfFnU",
+    "node": "79:11",
+    "version": "5174526187",
+    "component-id": "4772821d2daec6bf65873e4a13688046f4ffb749"
+  },
+  "default": "BotonJugar",
+  "design": {
+    "atoms": [
+      {
+        "type": "group",
+        "id": "top_level",
+        "root": "true"
+      },
+      {
+        "type": "vector",
+        "id": "RectangleButton"
+      },
+      {
+        "type": "text",
+        "id": "PlayNow"
+      }
+    ],
+    "modes": {
+      "BotonJugar": {
+        "rules": [
+          {
+            "id": "top_level",
+            "is-structured": "false",
+            "children": [
+              "RectangleButton",
+              "PlayNow"
+            ],
+            "clip-content": "false"
+          },
+          {
+            "id": "RectangleButton",
+            "border-radius": "25.0",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "0.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "0.0"
+              }
+            },
+            "tap-handler": "$onButtonJugar",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "230.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "58.0"
+              }
+            },
+            "vector-content": "rectangle_button.svg"
+          },
+          {
+            "id": "PlayNow",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "0.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "0.0"
+              }
+            },
+            "font-weight": "700.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "text-content": "$PlayNow",
+            "overflow": "visible",
+            "text-align": "left",
+            "text-size": "20.0",
+            "line-height": "1.2",
+            "typeface": "Tomorrow"
+          }
+        ]
+      }
+    }
+  },
+  "parameters": {
+    "onButtonJugar": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": ""
+    },
+    "PlayNow": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    }
+  },
+  "previews": [
+    {
+      "design": "BotonJugar",
+      "size": {
+        "width": 230.0,
+        "height": 58.0
+      },
+      "parameters": {
+        "PlayNow": "Play Now"
+      }
+    }
+  ],
+  "adin-component-search-paths": [],
+  "image-search-paths": [],
+  "vector-search-paths": []
+}

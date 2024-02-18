@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "353491853298",
+    "project_id": "proyectofinal-quizynema",
+    "storage_bucket": "proyectofinal-quizynema.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:353491853298:android:687919323ac2d78ede156b",
+        "android_client_info": {
+          "package_name": "com.example.proyectofinal_quizynema"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDoppymreu1fR64c1dIGz1JjBYrvaNc_f4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,971 @@
+{
+  "name": "registro_usuario",
+  "version": 32,
+  "source-key": {
+    "type": "figma",
+    "file": "H7ukQQTqL9pUMovBZnfFnU",
+    "node": "87:68",
+    "version": "5174729305",
+    "component-id": "965c77e6d9a6b368f5fe377a64f8cc106e3c39b0"
+  },
+  "default": "RegistroUsuario",
+  "design": {
+    "atoms": [
+      {
+        "type": "group",
+        "id": "top_level",
+        "root": "true"
+      },
+      {
+        "type": "vector",
+        "id": "RectanglebuttonCreateAcc"
+      },
+      {
+        "type": "text",
+        "id": "CreateAccount"
+      },
+      {
+        "type": "vector",
+        "id": "AlterFavMovie"
+      },
+      {
+        "type": "text",
+        "id": "FavoriteMovie"
+      },
+      {
+        "type": "image",
+        "id": "Avatar1"
+      },
+      {
+        "type": "image",
+        "id": "Avatar2"
+      },
+      {
+        "type": "image",
+        "id": "Avatar3"
+      },
+      {
+        "type": "image",
+        "id": "Avatar4"
+      },
+      {
+        "type": "image",
+        "id": "Avatar5"
+      },
+      {
+        "type": "image",
+        "id": "Avatar6"
+      },
+      {
+        "type": "image",
+        "id": "Avatar7"
+      },
+      {
+        "type": "image",
+        "id": "Avatar8"
+      },
+      {
+        "type": "image",
+        "id": "Avatar9"
+      },
+      {
+        "type": "image",
+        "id": "Avatar10"
+      },
+      {
+        "type": "image",
+        "id": "Avatar11"
+      },
+      {
+        "type": "image",
+        "id": "Avatar12"
+      },
+      {
+        "type": "text",
+        "id": "ChooseAvatar"
+      },
+      {
+        "type": "vector",
+        "id": "AlterRepeatPassword"
+      },
+      {
+        "type": "text",
+        "id": "RepeatPassword"
+      },
+      {
+        "type": "vector",
+        "id": "AlterPassword"
+      },
+      {
+        "type": "text",
+        "id": "Password"
+      },
+      {
+        "type": "vector",
+        "id": "AlterNickname"
+      },
+      {
+        "type": "text",
+        "id": "Nickname"
+      }
+    ],
+    "modes": {
+      "RegistroUsuario": {
+        "rules": [
+          {
+            "id": "top_level",
+            "is-structured": "false",
+            "children": [
+              "RectanglebuttonCreateAcc",
+              "CreateAccount",
+              "AlterFavMovie",
+              "FavoriteMovie",
+              "Avatar1",
+              "Avatar2",
+              "Avatar3",
+              "Avatar4",
+              "Avatar5",
+              "Avatar6",
+              "Avatar7",
+              "Avatar8",
+              "Avatar9",
+              "Avatar10",
+              "Avatar11",
+              "Avatar12",
+              "ChooseAvatar",
+              "AlterRepeatPassword",
+              "RepeatPassword",
+              "AlterPassword",
+              "Password",
+              "AlterNickname",
+              "Nickname"
+            ],
+            "clip-content": "false"
+          },
+          {
+            "id": "RectanglebuttonCreateAcc",
+            "border-radius": "25.0",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-3.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "311.5"
+              }
+            },
+            "tap-handler": "$onbuttonCreateAcc",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "230.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "58.0"
+              }
+            },
+            "vector-content": "rectanglebutton_create_acc.svg"
+          },
+          {
+            "id": "CreateAccount",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "0.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "311.5"
+              }
+            },
+            "font-weight": "700.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "text-content": "$CreateAccount",
+            "overflow": "visible",
+            "text-align": "left",
+            "text-size": "20.0",
+            "line-height": "1.2",
+            "typeface": "Tomorrow"
+          },
+          {
+            "id": "AlterFavMovie",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-4.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "207.5"
+              }
+            },
+            "tap-handler": "$onAlterFavMovie",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "335.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "42.0"
+              }
+            },
+            "vector-content": "alter_fav_movie.svg"
+          },
+          {
+            "id": "FavoriteMovie",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-125.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "197.5"
+              }
+            },
+            "color": {
+              "alpha": "1.0",
+              "hue": "208.125",
+              "saturation": "0.17486338797814208",
+              "value": "0.7176470588235294"
+            },
+            "text-content": "$FavoriteMovie",
+            "overflow": "visible",
+            "text-align": "left",
+            "text-size": "10.0",
+            "line-height": "1.2",
+            "typeface": "Tomorrow"
+          },
+          {
+            "id": "Avatar1",
+            "border-radius": "40.0",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-128.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "-73.5"
+              }
+            },
+            "tap-handler": "$Avatar1",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "72.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "72.0"
+              }
+            },
+            "stroke-width": "1.0",
+            "stroke-color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "image-content": "avatar1.png",
+            "scale": "cover"
+          },
+          {
+            "id": "Avatar2",
+            "border-radius": "40.0",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-40.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "-73.5"
+              }
+            },
+            "tap-handler": "$Avatar2",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "72.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "72.0"
+              }
+            },
+            "stroke-width": "1.0",
+            "stroke-color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "image-content": "avatar2.png",
+            "scale": "cover"
+          },
+          {
+            "id": "Avatar3",
+            "border-radius": "40.0",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "47.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "-73.5"
+              }
+            },
+            "tap-handler": "$Avatar3",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "72.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "72.0"
+              }
+            },
+            "stroke-width": "1.0",
+            "stroke-color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "image-content": "avatar3.png",
+            "scale": "cover"
+          },
+          {
+            "id": "Avatar4",
+            "border-radius": "40.0",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "135.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "-73.5"
+              }
+            },
+            "tap-handler": "$Avatar4",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "72.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "72.0"
+              }
+            },
+            "stroke-width": "1.0",
+            "stroke-color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "image-content": "avatar4.png",
+            "scale": "cover"
+          },
+          {
+            "id": "Avatar5",
+            "border-radius": "40.0",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-128.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "18.5"
+              }
+            },
+            "tap-handler": "$Avatar5",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "72.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "72.0"
+              }
+            },
+            "stroke-width": "1.0",
+            "stroke-color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "image-content": "avatar5.png",
+            "scale": "cover"
+          },
+          {
+            "id": "Avatar6",
+            "border-radius": "40.0",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-40.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "18.5"
+              }
+            },
+            "tap-handler": "$Avatar6",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "72.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "72.0"
+              }
+            },
+            "stroke-width": "1.0",
+            "stroke-color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "image-content": "avatar6.png",
+            "scale": "cover"
+          },
+          {
+            "id": "Avatar7",
+            "border-radius": "40.0",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "47.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "18.5"
+              }
+            },
+            "tap-handler": "$Avatar7",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "72.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "72.0"
+              }
+            },
+            "stroke-width": "1.0",
+            "stroke-color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "image-content": "avatar7.png",
+            "scale": "cover"
+          },
+          {
+            "id": "Avatar8",
+            "border-radius": "40.0",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "135.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "18.5"
+              }
+            },
+            "tap-handler": "$Avatar8",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "72.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "72.0"
+              }
+            },
+            "stroke-width": "1.0",
+            "stroke-color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "image-content": "avatar8.png",
+            "scale": "cover"
+          },
+          {
+            "id": "Avatar9",
+            "border-radius": "40.0",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-128.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "110.5"
+              }
+            },
+            "tap-handler": "$Avatar9",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "72.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "72.0"
+              }
+            },
+            "stroke-width": "1.0",
+            "stroke-color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "image-content": "avatar9.png",
+            "scale": "cover"
+          },
+          {
+            "id": "Avatar10",
+            "border-radius": "40.0",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-40.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "110.5"
+              }
+            },
+            "tap-handler": "$Avatar10",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "72.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "72.0"
+              }
+            },
+            "stroke-width": "1.0",
+            "stroke-color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "image-content": "avatar10.png",
+            "scale": "cover"
+          },
+          {
+            "id": "Avatar11",
+            "border-radius": "40.0",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "47.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "110.5"
+              }
+            },
+            "tap-handler": "$Avatar11",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "72.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "72.0"
+              }
+            },
+            "stroke-width": "1.0",
+            "stroke-color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "image-content": "avatar11.png",
+            "scale": "cover"
+          },
+          {
+            "id": "Avatar12",
+            "border-radius": "40.0",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "135.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "110.5"
+              }
+            },
+            "tap-handler": "$Avatar12",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "72.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "72.0"
+              }
+            },
+            "stroke-width": "1.0",
+            "stroke-color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "image-content": "avatar12.png",
+            "scale": "cover"
+          },
+          {
+            "id": "ChooseAvatar",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-128.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "-143.5"
+              }
+            },
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "text-content": "$ChooseAvatar",
+            "overflow": "visible",
+            "text-align": "left",
+            "text-size": "10.0",
+            "line-height": "1.2",
+            "typeface": "Tomorrow"
+          },
+          {
+            "id": "AlterRepeatPassword",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-4.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "-195.5"
+              }
+            },
+            "tap-handler": "$onAlterRepeatPassword",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "335.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "42.0"
+              }
+            },
+            "vector-content": "alter_repeat_password.svg"
+          },
+          {
+            "id": "RepeatPassword",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-117.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "-205.5"
+              }
+            },
+            "color": {
+              "alpha": "1.0",
+              "hue": "208.125",
+              "saturation": "0.17486338797814208",
+              "value": "0.7176470588235294"
+            },
+            "text-content": "$RepeatPassword",
+            "overflow": "visible",
+            "text-align": "left",
+            "text-size": "10.0",
+            "line-height": "1.2",
+            "typeface": "Tomorrow"
+          },
+          {
+            "id": "AlterPassword",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-4.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "-257.5"
+              }
+            },
+            "tap-handler": "$onAlterPassword",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "335.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "42.0"
+              }
+            },
+            "vector-content": "alter_password.svg"
+          },
+          {
+            "id": "Password",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-134.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "-267.5"
+              }
+            },
+            "color": {
+              "alpha": "1.0",
+              "hue": "208.125",
+              "saturation": "0.17486338797814208",
+              "value": "0.7176470588235294"
+            },
+            "text-content": "$Password",
+            "overflow": "visible",
+            "text-align": "left",
+            "text-size": "10.0",
+            "line-height": "1.2",
+            "typeface": "Tomorrow"
+          },
+          {
+            "id": "AlterNickname",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-4.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "-319.5"
+              }
+            },
+            "tap-handler": "$onAlterNickname",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "335.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "42.0"
+              }
+            },
+            "vector-content": "alter_nickname.svg"
+          },
+          {
+            "id": "Nickname",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-116.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "-331.5"
+              }
+            },
+            "color": {
+              "alpha": "1.0",
+              "hue": "208.125",
+              "saturation": "0.17486338797814208",
+              "value": "0.7176470588235294"
+            },
+            "text-content": "$Nickname",
+            "overflow": "visible",
+            "text-align": "left",
+            "text-size": "10.0",
+            "line-height": "1.2",
+            "typeface": "Tomorrow"
+          }
+        ]
+      }
+    }
+  },
+  "parameters": {
+    "onbuttonCreateAcc": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": ""
+    },
+    "CreateAccount": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    },
+    "onAlterFavMovie": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": ""
+    },
+    "FavoriteMovie": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    },
+    "Avatar1": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": ""
+    },
+    "Avatar2": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": ""
+    },
+    "Avatar3": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": ""
+    },
+    "Avatar4": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": ""
+    },
+    "Avatar5": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": ""
+    },
+    "Avatar6": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": ""
+    },
+    "Avatar7": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": ""
+    },
+    "Avatar8": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": ""
+    },
+    "Avatar9": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": ""
+    },
+    "Avatar10": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": ""
+    },
+    "Avatar11": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": ""
+    },
+    "Avatar12": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": ""
+    },
+    "ChooseAvatar": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    },
+    "onAlterRepeatPassword": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": ""
+    },
+    "RepeatPassword": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    },
+    "onAlterPassword": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": ""
+    },
+    "Password": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    },
+    "onAlterNickname": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": ""
+    },
+    "Nickname": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    }
+  },
+  "previews": [
+    {
+      "design": "RegistroUsuario",
+      "size": {
+        "width": 343.0,
+        "height": 681.0
+      },
+      "parameters": {
+        "CreateAccount": "Crear cuenta",
+        "FavoriteMovie": "Película favorita",
+        "ChooseAvatar": "Elige tu avatar",
+        "RepeatPassword": "Repetir contraseña",
+        "Password": "Contraseña",
+        "Nickname": "Nombre de usuario"
+      }
+    }
+  ],
+  "adin-component-search-paths": [],
+  "image-search-paths": [],
+  "vector-search-paths": []
+}

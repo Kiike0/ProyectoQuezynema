@@ -1,0 +1,95 @@
+{
+  "name": "welcome_text",
+  "version": 32,
+  "source-key": {
+    "type": "figma",
+    "file": "H7ukQQTqL9pUMovBZnfFnU",
+    "node": "76:3",
+    "version": "5174434314",
+    "component-id": "8f72d3946db76fae2ab74fb03133be1cffe2357e"
+  },
+  "default": "WelcomeText",
+  "design": {
+    "atoms": [
+      {
+        "type": "group",
+        "id": "top_level",
+        "root": "true"
+      },
+      {
+        "type": "text",
+        "id": "JoinAndPlay"
+      }
+    ],
+    "modes": {
+      "WelcomeText": {
+        "rules": [
+          {
+            "id": "top_level",
+            "is-structured": "false",
+            "children": [
+              "JoinAndPlay"
+            ],
+            "clip-content": "false"
+          },
+          {
+            "id": "JoinAndPlay",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "0.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "0.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "207.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "shrink"
+              }
+            },
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "text-content": "$JoinAndPlay",
+            "overflow": "visible",
+            "max-lines": "-1",
+            "text-size": "16.0",
+            "line-height": "1.2000000476837158",
+            "typeface": "Tomorrow"
+          }
+        ]
+      }
+    }
+  },
+  "parameters": {
+    "JoinAndPlay": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    }
+  },
+  "previews": [
+    {
+      "design": "WelcomeText",
+      "size": {
+        "width": 207.0,
+        "height": 38.0
+      },
+      "parameters": {
+        "JoinAndPlay": "Únete y juega para ampliar tu conocimiento cinéfilo"
+      }
+    }
+  ],
+  "adin-component-search-paths": [],
+  "image-search-paths": [],
+  "vector-search-paths": []
+}

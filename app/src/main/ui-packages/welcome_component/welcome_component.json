@@ -1,0 +1,204 @@
+{
+  "name": "welcome_component",
+  "version": 32,
+  "source-key": {
+    "type": "figma",
+    "file": "H7ukQQTqL9pUMovBZnfFnU",
+    "node": "83:25",
+    "version": "5174635334",
+    "component-id": "129b2a1101d03e15be080eb5ddb14391892b75be"
+  },
+  "default": "WelcomeComponent",
+  "design": {
+    "atoms": [
+      {
+        "type": "group",
+        "id": "top_level",
+        "root": "true"
+      },
+      {
+        "type": "vector",
+        "id": "RectangleButton"
+      },
+      {
+        "type": "text",
+        "id": "PlayNowText"
+      },
+      {
+        "type": "text",
+        "id": "WelcomeText"
+      },
+      {
+        "type": "image",
+        "id": "NameApp"
+      }
+    ],
+    "modes": {
+      "WelcomeComponent": {
+        "rules": [
+          {
+            "id": "top_level",
+            "is-structured": "false",
+            "children": [
+              "RectangleButton",
+              "PlayNowText",
+              "WelcomeText",
+              "NameApp"
+            ],
+            "clip-content": "false"
+          },
+          {
+            "id": "RectangleButton",
+            "border-radius": "25.0",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-2.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "113.0"
+              }
+            },
+            "tap-handler": "$onButtonPlayNow",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "230.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "58.0"
+              }
+            },
+            "vector-content": "rectangle_button.svg"
+          },
+          {
+            "id": "PlayNowText",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-2.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "113.0"
+              }
+            },
+            "font-weight": "700.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "text-content": "$PlayNowTextButton",
+            "overflow": "visible",
+            "text-align": "left",
+            "text-size": "20.0",
+            "line-height": "1.2",
+            "typeface": "Tomorrow"
+          },
+          {
+            "id": "WelcomeText",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-1.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "37.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "207.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "shrink"
+              }
+            },
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "text-content": "$WelcomeText",
+            "overflow": "visible",
+            "max-lines": "-1",
+            "text-size": "16.0",
+            "line-height": "1.2000000476837158",
+            "typeface": "Tomorrow"
+          },
+          {
+            "id": "NameApp",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "0.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "-65.5"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "270.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "153.0"
+              }
+            },
+            "image-content": "$NameAppImg",
+            "scale": "cover"
+          }
+        ]
+      }
+    }
+  },
+  "parameters": {
+    "onButtonPlayNow": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": ""
+    },
+    "PlayNowTextButton": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    },
+    "WelcomeText": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    },
+    "NameAppImg": {
+      "data-type": "image",
+      "required": false,
+      "description": ""
+    }
+  },
+  "previews": [
+    {
+      "design": "WelcomeComponent",
+      "size": {
+        "width": 270.0,
+        "height": 284.0
+      },
+      "parameters": {
+        "PlayNowTextButton": "Play Now",
+        "WelcomeText": "Únete y juega para ampliar tu conocimiento cinéfilo",
+        "NameAppImg": "name_app.png"
+      }
+    }
+  ],
+  "adin-component-search-paths": [],
+  "image-search-paths": [],
+  "vector-search-paths": []
+}

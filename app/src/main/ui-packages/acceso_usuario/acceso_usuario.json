@@ -1,0 +1,467 @@
+{
+  "name": "acceso_usuario",
+  "version": 32,
+  "source-key": {
+    "type": "figma",
+    "file": "H7ukQQTqL9pUMovBZnfFnU",
+    "node": "85:40",
+    "version": "5174676646",
+    "component-id": "ec9ec44b6141e6f1e635e08d16ac7713e4e5a729"
+  },
+  "default": "AccesoUsuario",
+  "design": {
+    "atoms": [
+      {
+        "type": "group",
+        "id": "top_level",
+        "root": "true"
+      },
+      {
+        "type": "vector",
+        "id": "AccessButtonRectangle"
+      },
+      {
+        "type": "text",
+        "id": "AccessText"
+      },
+      {
+        "type": "text",
+        "id": "CreateAccountTap"
+      },
+      {
+        "type": "vector",
+        "id": "RectangleSeparation"
+      },
+      {
+        "type": "text",
+        "id": "RemindPasswordTap"
+      },
+      {
+        "type": "text",
+        "id": "TextDescription"
+      },
+      {
+        "type": "vector",
+        "id": "AlterTextPassword"
+      },
+      {
+        "type": "text",
+        "id": "Password"
+      },
+      {
+        "type": "vector",
+        "id": "AlterText"
+      },
+      {
+        "type": "text",
+        "id": "Nickname"
+      },
+      {
+        "type": "image",
+        "id": "RectangleImg"
+      }
+    ],
+    "modes": {
+      "AccesoUsuario": {
+        "rules": [
+          {
+            "id": "top_level",
+            "is-structured": "false",
+            "children": [
+              "AccessButtonRectangle",
+              "AccessText",
+              "CreateAccountTap",
+              "RectangleSeparation",
+              "RemindPasswordTap",
+              "TextDescription",
+              "AlterTextPassword",
+              "Password",
+              "AlterText",
+              "Nickname",
+              "RectangleImg"
+            ],
+            "clip-content": "false"
+          },
+          {
+            "id": "AccessButtonRectangle",
+            "border-radius": "25.0",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "4.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "220.5"
+              }
+            },
+            "tap-handler": "$onAccessButton",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "230.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "58.0"
+              }
+            },
+            "vector-content": "access_button_rectangle.svg"
+          },
+          {
+            "id": "AccessText",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "4.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "220.5"
+              }
+            },
+            "font-weight": "700.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "text-content": "$AccessText",
+            "overflow": "visible",
+            "text-align": "left",
+            "text-size": "20.0",
+            "line-height": "1.2",
+            "typeface": "Tomorrow"
+          },
+          {
+            "id": "CreateAccountTap",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "89.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "149.5"
+              }
+            },
+            "tap-handler": "$CreateAccountTap",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "124.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "shrink"
+              }
+            },
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "text-content": "Crear una cuenta",
+            "overflow": "visible",
+            "max-lines": "-1",
+            "text-align": "left",
+            "text-size": "13.0",
+            "line-height": "1.200000029343825",
+            "typeface": "Tomorrow"
+          },
+          {
+            "id": "RectangleSeparation",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "5.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "150.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "2.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "15.0"
+              }
+            },
+            "vector-content": "rectangle_separation.svg"
+          },
+          {
+            "id": "RemindPasswordTap",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-65.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "149.5"
+              }
+            },
+            "tap-handler": "$RemindPasswordTap",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "165.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "shrink"
+              }
+            },
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "text-content": "Recordar contraseña",
+            "overflow": "visible",
+            "max-lines": "-1",
+            "text-align": "left",
+            "text-size": "13.0",
+            "line-height": "1.200000029343825",
+            "typeface": "Tomorrow"
+          },
+          {
+            "id": "TextDescription",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-0.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "88.5"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "300.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "shrink"
+              }
+            },
+            "color": {
+              "alpha": "1.0",
+              "hue": "208.125",
+              "saturation": "0.17486338797814208",
+              "value": "0.7176470588235294"
+            },
+            "text-content": "$TextDescription",
+            "overflow": "visible",
+            "max-lines": "-1",
+            "text-size": "15.0",
+            "line-height": "1.2",
+            "typeface": "Tomorrow"
+          },
+          {
+            "id": "AlterTextPassword",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "0.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "26.5"
+              }
+            },
+            "tap-handler": "$onAlterTextPassword",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "335.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "42.0"
+              }
+            },
+            "vector-content": "alter_text_password.svg"
+          },
+          {
+            "id": "Password",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-130.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "16.5"
+              }
+            },
+            "color": {
+              "alpha": "1.0",
+              "hue": "208.125",
+              "saturation": "0.17486338797814208",
+              "value": "0.7176470588235294"
+            },
+            "text-content": "$PasswordText",
+            "overflow": "visible",
+            "text-align": "left",
+            "text-size": "10.0",
+            "line-height": "1.2",
+            "typeface": "Tomorrow"
+          },
+          {
+            "id": "AlterText",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "0.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "-44.5"
+              }
+            },
+            "tap-handler": "$onAlterText",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "335.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "42.0"
+              }
+            },
+            "vector-content": "alter_text.svg"
+          },
+          {
+            "id": "Nickname",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-112.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "-56.5"
+              }
+            },
+            "color": {
+              "alpha": "1.0",
+              "hue": "208.125",
+              "saturation": "0.17486338797814208",
+              "value": "0.7176470588235294"
+            },
+            "text-content": "$NicknameText",
+            "overflow": "visible",
+            "text-align": "left",
+            "text-size": "10.0",
+            "line-height": "1.2",
+            "typeface": "Tomorrow"
+          },
+          {
+            "id": "RectangleImg",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "3.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "-173.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "270.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "153.0"
+              }
+            },
+            "image-content": "$RectangleImg",
+            "scale": "cover"
+          }
+        ]
+      }
+    }
+  },
+  "parameters": {
+    "onAccessButton": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": ""
+    },
+    "AccessText": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    },
+    "CreateAccountTap": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": ""
+    },
+    "RemindPasswordTap": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": ""
+    },
+    "TextDescription": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    },
+    "onAlterTextPassword": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": ""
+    },
+    "PasswordText": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    },
+    "onAlterText": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": ""
+    },
+    "NicknameText": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    },
+    "RectangleImg": {
+      "data-type": "image",
+      "required": false,
+      "description": ""
+    }
+  },
+  "previews": [
+    {
+      "design": "AccesoUsuario",
+      "size": {
+        "width": 335.0,
+        "height": 499.0
+      },
+      "parameters": {
+        "AccessText": "Acceder",
+        "TextDescription": "Si no tienes cuenta debes crear una para acceder",
+        "PasswordText": "Contraseña",
+        "NicknameText": "Nombre de usuario",
+        "RectangleImg": "rectangle_img.png"
+      }
+    }
+  ],
+  "adin-component-search-paths": [],
+  "image-search-paths": [],
+  "vector-search-paths": []
+}
