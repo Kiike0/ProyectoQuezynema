@@ -1,0 +1,198 @@
+{
+  "name": "progreso_quiz",
+  "version": 32,
+  "source-key": {
+    "type": "figma",
+    "file": "H7ukQQTqL9pUMovBZnfFnU",
+    "node": "93:6",
+    "version": "5177759165",
+    "component-id": "d24c6751a98d0c87fb914411c52a23742d23e51f"
+  },
+  "default": "ProgresoQuiz",
+  "design": {
+    "atoms": [
+      {
+        "type": "group",
+        "id": "top_level",
+        "root": "true"
+      },
+      {
+        "type": "vector",
+        "id": "RectangleButton"
+      },
+      {
+        "type": "text",
+        "id": "Points"
+      },
+      {
+        "type": "text",
+        "id": "QuizTitle"
+      },
+      {
+        "type": "vector",
+        "id": "VectorTrophy"
+      }
+    ],
+    "modes": {
+      "ProgresoQuiz": {
+        "rules": [
+          {
+            "id": "top_level",
+            "is-structured": "false",
+            "children": [
+              "RectangleButton",
+              "Points",
+              "QuizTitle",
+              "VectorTrophy"
+            ],
+            "clip-content": "false"
+          },
+          {
+            "id": "RectangleButton",
+            "border-radius": "15.0",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "0.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "0.0"
+              }
+            },
+            "tap-handler": "$onQuizButton",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "128.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "88.0"
+              }
+            },
+            "vector-content": "rectangle_button.svg"
+          },
+          {
+            "id": "Points",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-28.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "20.0"
+              }
+            },
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "text-content": "$Points",
+            "overflow": "visible",
+            "text-align": "left",
+            "text-size": "10.0",
+            "line-height": "1.2",
+            "typeface": "Tomorrow"
+          },
+          {
+            "id": "QuizTitle",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "0.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "-18.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "112.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "shrink"
+              }
+            },
+            "font-weight": "700.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "text-content": "$QuizTitle",
+            "overflow": "visible",
+            "max-lines": "-1",
+            "text-align": "left",
+            "text-size": "12.0",
+            "line-height": "1.2000000476837158",
+            "typeface": "Tomorrow"
+          },
+          {
+            "id": "VectorTrophy",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-49.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "20.375"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "11.625"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "9.375"
+              }
+            },
+            "vector-content": "vector_trophy.svg"
+          }
+        ]
+      }
+    }
+  },
+  "parameters": {
+    "onQuizButton": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": ""
+    },
+    "Points": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    },
+    "QuizTitle": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    }
+  },
+  "previews": [
+    {
+      "design": "ProgresoQuiz",
+      "size": {
+        "width": 128.0,
+        "height": 88.0
+      },
+      "parameters": {
+        "Points": "3/5",
+        "QuizTitle": "¿Lo sabes todo sobre Star Wars?"
+      }
+    }
+  ],
+  "adin-component-search-paths": [],
+  "image-search-paths": [],
+  "vector-search-paths": []
+}

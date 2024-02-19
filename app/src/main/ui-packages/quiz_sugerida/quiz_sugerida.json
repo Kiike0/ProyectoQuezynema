@@ -1,0 +1,234 @@
+{
+  "name": "quiz_sugerida",
+  "version": 32,
+  "source-key": {
+    "type": "figma",
+    "file": "H7ukQQTqL9pUMovBZnfFnU",
+    "node": "93:3",
+    "version": "5177759165",
+    "component-id": "a1b152526905a8e8f01698b3ba58cb37f1f295a7"
+  },
+  "default": "QuizSugerida",
+  "design": {
+    "atoms": [
+      {
+        "type": "group",
+        "id": "top_level",
+        "root": "true"
+      },
+      {
+        "type": "vector",
+        "id": "Card"
+      },
+      {
+        "type": "text",
+        "id": "quizsuggest"
+      },
+      {
+        "type": "vector",
+        "id": "RectButton"
+      },
+      {
+        "type": "text",
+        "id": "Comenzar"
+      },
+      {
+        "type": "image",
+        "id": "Img"
+      }
+    ],
+    "modes": {
+      "QuizSugerida": {
+        "rules": [
+          {
+            "id": "top_level",
+            "is-structured": "false",
+            "children": [
+              "Card",
+              "quizsuggest",
+              "RectButton",
+              "Comenzar",
+              "Img"
+            ],
+            "clip-content": "false"
+          },
+          {
+            "id": "Card",
+            "border-radius": "25.0",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "0.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "-6.5"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "344.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "171.0"
+              }
+            },
+            "vector-content": "card.svg"
+          },
+          {
+            "id": "quizsuggest",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-69.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "-40.5"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "129.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "shrink"
+              }
+            },
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.0"
+            },
+            "text-content": "$quizsuggest",
+            "overflow": "visible",
+            "max-lines": "-1",
+            "text-align": "left",
+            "text-size": "16.0",
+            "line-height": "1.2000000476837158",
+            "typeface": "Tomorrow"
+          },
+          {
+            "id": "RectButton",
+            "border-radius": "15.0",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-79.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "24.5"
+              }
+            },
+            "tap-handler": "$onComenzarButton",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "109.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "31.0"
+              }
+            },
+            "vector-content": "rect_button.svg"
+          },
+          {
+            "id": "Comenzar",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-79.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "24.5"
+              }
+            },
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.0"
+            },
+            "text-content": "$Comenzar",
+            "overflow": "visible",
+            "text-align": "left",
+            "text-size": "16.0",
+            "line-height": "1.2000000476837158",
+            "typeface": "Tomorrow"
+          },
+          {
+            "id": "Img",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "89.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "0.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "128.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "184.0"
+              }
+            },
+            "image-content": "$Img",
+            "scale": "cover"
+          }
+        ]
+      }
+    }
+  },
+  "parameters": {
+    "quizsuggest": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    },
+    "onComenzarButton": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": ""
+    },
+    "Comenzar": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    },
+    "Img": {
+      "data-type": "image",
+      "required": false,
+      "description": ""
+    }
+  },
+  "previews": [
+    {
+      "design": "QuizSugerida",
+      "size": {
+        "width": 344.0,
+        "height": 184.0
+      },
+      "parameters": {
+        "quizsuggest": "Empieza una quiz elegida al azar",
+        "Comenzar": "Comenzar",
+        "Img": "img.png"
+      }
+    }
+  ],
+  "adin-component-search-paths": [],
+  "image-search-paths": [],
+  "vector-search-paths": []
+}

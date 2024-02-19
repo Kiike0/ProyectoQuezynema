@@ -1,0 +1,125 @@
+{
+  "name": "quiz_explored",
+  "version": 32,
+  "source-key": {
+    "type": "figma",
+    "file": "H7ukQQTqL9pUMovBZnfFnU",
+    "node": "93:5",
+    "version": "5177759165",
+    "component-id": "c0d18db51e70b84afb58d00bc0bcae62603b4e8e"
+  },
+  "default": "QuizExplored",
+  "design": {
+    "atoms": [
+      {
+        "type": "group",
+        "id": "top_level",
+        "root": "true"
+      },
+      {
+        "type": "image",
+        "id": "QuizImg"
+      },
+      {
+        "type": "text",
+        "id": "QuizTitle"
+      }
+    ],
+    "modes": {
+      "QuizExplored": {
+        "rules": [
+          {
+            "id": "top_level",
+            "is-structured": "false",
+            "children": [
+              "QuizImg",
+              "QuizTitle"
+            ],
+            "clip-content": "false"
+          },
+          {
+            "id": "QuizImg",
+            "margin": {
+              "bottom": "63.0"
+            },
+            "border-radius": "15.0",
+            "tap-handler": "$QuizImg",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              }
+            },
+            "stroke-width": "2.0",
+            "stroke-color": {
+              "alpha": "1.0",
+              "hue": "39.534883720930225",
+              "saturation": "0.5058823529411764",
+              "value": "1.0"
+            },
+            "image-content": "quiz_img.jpeg",
+            "scale": "cover"
+          },
+          {
+            "id": "QuizTitle",
+            "margin": {
+              "top": "153.0"
+            },
+            "tap-handler": "$QuizTitle",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              }
+            },
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "text-content": "¿Lo sabes todo sobre Star Wars?",
+            "overflow": "visible",
+            "max-lines": "-1",
+            "text-align": "left",
+            "text-size": "15.0",
+            "line-height": "1.2",
+            "typeface": "Tomorrow"
+          }
+        ]
+      }
+    }
+  },
+  "parameters": {
+    "QuizImg": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": ""
+    },
+    "QuizTitle": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": ""
+    }
+  },
+  "previews": [
+    {
+      "design": "QuizExplored",
+      "size": {
+        "width": 166.0,
+        "height": 189.0
+      }
+    }
+  ],
+  "adin-component-search-paths": [],
+  "image-search-paths": [],
+  "vector-search-paths": []
+}

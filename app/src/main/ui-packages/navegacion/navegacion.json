@@ -1,0 +1,122 @@
+{
+  "name": "navegacion",
+  "version": 32,
+  "source-key": {
+    "type": "figma",
+    "file": "H7ukQQTqL9pUMovBZnfFnU",
+    "node": "95:7",
+    "version": "5177759165",
+    "component-id": "bc08d9226a7a2322f89afea93be77341cccc2b0b"
+  },
+  "default": "Navegacion",
+  "design": {
+    "atoms": [
+      {
+        "type": "group",
+        "id": "top_level",
+        "root": "true"
+      },
+      {
+        "type": "text",
+        "id": "TextNav"
+      },
+      {
+        "type": "vector",
+        "id": "BackIcon"
+      }
+    ],
+    "modes": {
+      "Navegacion": {
+        "rules": [
+          {
+            "id": "top_level",
+            "is-structured": "false",
+            "children": [
+              "TextNav",
+              "BackIcon"
+            ],
+            "clip-content": "false"
+          },
+          {
+            "id": "TextNav",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "58.900001525878906"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "0.0"
+              }
+            },
+            "font-weight": "700.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "text-content": "$TextNav",
+            "overflow": "visible",
+            "text-align": "left",
+            "text-size": "24.0",
+            "line-height": "1.2000000476837158",
+            "typeface": "Tomorrow"
+          },
+          {
+            "id": "BackIcon",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-93.00000190734863"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "-0.49999427795410156"
+              }
+            },
+            "tap-handler": "$onBack",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "19.799999237060547"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "19.799999237060547"
+              }
+            },
+            "vector-content": "back_icon.svg"
+          }
+        ]
+      }
+    }
+  },
+  "parameters": {
+    "TextNav": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    },
+    "onBack": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": ""
+    }
+  },
+  "previews": [
+    {
+      "design": "Navegacion",
+      "size": {
+        "width": 205.8000030517578,
+        "height": 29.0
+      },
+      "parameters": {
+        "TextNav": "Cuenta"
+      }
+    }
+  ],
+  "adin-component-search-paths": [],
+  "image-search-paths": [],
+  "vector-search-paths": []
+}

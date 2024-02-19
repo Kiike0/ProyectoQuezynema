@@ -1,0 +1,160 @@
+{
+  "name": "welcome_msj",
+  "version": 32,
+  "source-key": {
+    "type": "figma",
+    "file": "H7ukQQTqL9pUMovBZnfFnU",
+    "node": "93:2",
+    "version": "5177759165",
+    "component-id": "acc7c1eb0d009eeea7592eee9aa43f227e248e85"
+  },
+  "default": "WelcomeMsj",
+  "design": {
+    "atoms": [
+      {
+        "type": "group",
+        "id": "top_level",
+        "root": "true"
+      },
+      {
+        "type": "text",
+        "id": "Greetings"
+      },
+      {
+        "type": "text",
+        "id": "LetsQuiz"
+      },
+      {
+        "type": "image",
+        "id": "AvatarImg"
+      }
+    ],
+    "modes": {
+      "WelcomeMsj": {
+        "rules": [
+          {
+            "id": "top_level",
+            "is-structured": "false",
+            "children": [
+              "Greetings",
+              "LetsQuiz",
+              "AvatarImg"
+            ],
+            "clip-content": "false"
+          },
+          {
+            "id": "Greetings",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-62.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "-16.0"
+              }
+            },
+            "font-weight": "700.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "text-content": "$Greetings",
+            "overflow": "visible",
+            "text-align": "left",
+            "text-size": "20.0",
+            "line-height": "1.2",
+            "typeface": "Tomorrow"
+          },
+          {
+            "id": "LetsQuiz",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-89.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "18.5"
+              }
+            },
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "text-content": "$LetsQuiz",
+            "overflow": "visible",
+            "text-align": "left",
+            "text-size": "16.0",
+            "line-height": "1.2000000476837158",
+            "typeface": "Tomorrow"
+          },
+          {
+            "id": "AvatarImg",
+            "border-radius": "30.0",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "152.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "-8.0"
+              }
+            },
+            "tap-handler": "$AvatarImg",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "40.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "40.0"
+              }
+            },
+            "image-content": "avatar_img.png",
+            "scale": "cover"
+          }
+        ]
+      }
+    }
+  },
+  "parameters": {
+    "Greetings": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    },
+    "LetsQuiz": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    },
+    "AvatarImg": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": ""
+    }
+  },
+  "previews": [
+    {
+      "design": "WelcomeMsj",
+      "size": {
+        "width": 344.0,
+        "height": 56.0
+      },
+      "parameters": {
+        "Greetings": "Buenos días, Senpai!",
+        "LetsQuiz": "Hagamos un quiz hoy"
+      }
+    }
+  ],
+  "adin-component-search-paths": [],
+  "image-search-paths": [],
+  "vector-search-paths": []
+}

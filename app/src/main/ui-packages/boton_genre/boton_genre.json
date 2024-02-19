@@ -1,0 +1,122 @@
+{
+  "name": "boton_genre",
+  "version": 32,
+  "source-key": {
+    "type": "figma",
+    "file": "H7ukQQTqL9pUMovBZnfFnU",
+    "node": "93:4",
+    "version": "5177759165",
+    "component-id": "187cbb9c59f5c3efc17a7ff5ca5f1103457c4118"
+  },
+  "default": "BotonGenre",
+  "design": {
+    "atoms": [
+      {
+        "type": "group",
+        "id": "top_level",
+        "root": "true"
+      },
+      {
+        "type": "vector",
+        "id": "ButtonGenre"
+      },
+      {
+        "type": "text",
+        "id": "GenreText"
+      }
+    ],
+    "modes": {
+      "BotonGenre": {
+        "rules": [
+          {
+            "id": "top_level",
+            "is-structured": "false",
+            "children": [
+              "ButtonGenre",
+              "GenreText"
+            ],
+            "clip-content": "false"
+          },
+          {
+            "id": "ButtonGenre",
+            "border-radius": "14.0",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "0.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "0.0"
+              }
+            },
+            "tap-handler": "$onButtonGenre",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "129.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "32.0"
+              }
+            },
+            "vector-content": "button_genre.svg"
+          },
+          {
+            "id": "GenreText",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "1.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "-2.5"
+              }
+            },
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "text-content": "$GenreText",
+            "overflow": "visible",
+            "text-align": "left",
+            "text-size": "16.0",
+            "line-height": "1.2000000476837158",
+            "typeface": "Tomorrow"
+          }
+        ]
+      }
+    }
+  },
+  "parameters": {
+    "onButtonGenre": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": ""
+    },
+    "GenreText": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    }
+  },
+  "previews": [
+    {
+      "design": "BotonGenre",
+      "size": {
+        "width": 129.0,
+        "height": 32.0
+      },
+      "parameters": {
+        "GenreText": "Ciencia ficción"
+      }
+    }
+  ],
+  "adin-component-search-paths": [],
+  "image-search-paths": [],
+  "vector-search-paths": []
+}

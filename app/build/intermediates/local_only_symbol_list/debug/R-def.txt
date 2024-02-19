@@ -13,10 +13,19 @@ drawable acceso_usuario_alter_text_password
 drawable acceso_usuario_rectangle_img
 drawable acceso_usuario_rectangle_separation
 drawable backgroundinicio
+drawable boton_genre_button_genre
 drawable boton_jugar_rectangle_button
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable navegacion_back_icon
+drawable palomitas
+drawable progreso_quiz_rectangle_button
+drawable progreso_quiz_vector_trophy
 drawable quezynematitle
+drawable quiz_explored_quiz_img
+drawable quiz_sugerida_card
+drawable quiz_sugerida_img
+drawable quiz_sugerida_rect_button
 drawable registro_usuario_alter_fav_movie
 drawable registro_usuario_alter_nickname
 drawable registro_usuario_alter_password
@@ -36,6 +45,7 @@ drawable registro_usuario_avatar9
 drawable registro_usuario_rectanglebutton_create_acc
 drawable welcome_component_name_app
 drawable welcome_component_rectangle_button
+drawable welcome_msj_avatar_img
 font relay_tomorrow_black
 font relay_tomorrow_black_italic
 font relay_tomorrow_bold
