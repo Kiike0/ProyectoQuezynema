@@ -17,6 +17,7 @@ import com.example.proyectofinal_quizynema.viewModels.ViewModelPrueba
 import com.example.proyectofinal_quizynema.views.InicioSesion
 import com.example.proyectofinal_quizynema.views.PantallaInicial
 import com.example.proyectofinal_quizynema.views.PantallaJuego
+import com.example.proyectofinal_quizynema.views.PantallaPregunta1
 import com.example.proyectofinal_quizynema.views.QuizDisponibles
 import com.example.proyectofinal_quizynema.views.QuizScreen
 import com.example.proyectofinal_quizynema.views.RegisterView
@@ -34,11 +35,12 @@ class MainActivity : ComponentActivity() {
                 ) {
                     //QuizScreen(quizVM = ViewModelPrueba())
                     //RegisterView(newUser = UserViewModel())
-                    //PantallaInicial()
+                    PantallaInicial()
                     //InicioSesion()
                     //Registro()
                     //PantallaJuego()
-                    QuizDisponibles()
+                    //QuizDisponibles()
+                    //PantallaPregunta1()
                 }
             }
         }

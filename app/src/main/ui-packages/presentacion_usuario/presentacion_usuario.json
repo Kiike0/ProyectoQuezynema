@@ -1,0 +1,191 @@
+{
+  "name": "presentacion_usuario",
+  "version": 32,
+  "source-key": {
+    "type": "figma",
+    "file": "H7ukQQTqL9pUMovBZnfFnU",
+    "node": "103:3",
+    "version": "5179405750",
+    "component-id": "4c1c7b7db423035a1e6334e1f902097f9b7fd84c"
+  },
+  "default": "PresentacionUsuario",
+  "design": {
+    "atoms": [
+      {
+        "type": "group",
+        "id": "top_level",
+        "root": "true"
+      },
+      {
+        "type": "image",
+        "id": "AvatarImg"
+      },
+      {
+        "type": "text",
+        "id": "Nickname"
+      },
+      {
+        "type": "vector",
+        "id": "LevelRectangle"
+      },
+      {
+        "type": "text",
+        "id": "LevelText"
+      }
+    ],
+    "modes": {
+      "PresentacionUsuario": {
+        "rules": [
+          {
+            "id": "top_level",
+            "is-structured": "false",
+            "children": [
+              "AvatarImg",
+              "Nickname",
+              "LevelRectangle",
+              "LevelText"
+            ],
+            "clip-content": "false"
+          },
+          {
+            "id": "AvatarImg",
+            "border-radius": "70.0",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "0.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "-50.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "143.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "148.0"
+              }
+            },
+            "image-content": "$AvatarImg",
+            "scale": "cover"
+          },
+          {
+            "id": "Nickname",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "0.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "63.5"
+              }
+            },
+            "font-weight": "700.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "text-content": "$Nickname",
+            "overflow": "visible",
+            "text-align": "left",
+            "text-size": "24.0",
+            "line-height": "1.2000000476837158",
+            "typeface": "Tomorrow"
+          },
+          {
+            "id": "LevelRectangle",
+            "border-radius": "15.0",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "0.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "107.5"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "197.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "33.0"
+              }
+            },
+            "vector-content": "level_rectangle.svg"
+          },
+          {
+            "id": "LevelText",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "0.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "106.0"
+              }
+            },
+            "font-weight": "700.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.0"
+            },
+            "text-content": "$LevelText",
+            "overflow": "visible",
+            "text-align": "left",
+            "text-size": "15.0",
+            "line-height": "1.2",
+            "typeface": "Tomorrow"
+          }
+        ]
+      }
+    }
+  },
+  "parameters": {
+    "AvatarImg": {
+      "data-type": "image",
+      "required": false,
+      "description": ""
+    },
+    "Nickname": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    },
+    "LevelText": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    }
+  },
+  "previews": [
+    {
+      "design": "PresentacionUsuario",
+      "size": {
+        "width": 197.0,
+        "height": 248.0
+      },
+      "parameters": {
+        "AvatarImg": "avatar_img.png",
+        "Nickname": "Joker1231",
+        "LevelText": "Jugador Profesional"
+      }
+    }
+  ],
+  "adin-component-search-paths": [],
+  "image-search-paths": [],
+  "vector-search-paths": []
+}

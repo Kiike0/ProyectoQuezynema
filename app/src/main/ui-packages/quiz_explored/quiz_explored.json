@@ -5,7 +5,7 @@
     "type": "figma",
     "file": "H7ukQQTqL9pUMovBZnfFnU",
     "node": "93:5",
-    "version": "5177759165",
+    "version": "5179077080",
     "component-id": "c0d18db51e70b84afb58d00bc0bcae62603b4e8e"
   },
   "default": "QuizExplored",
@@ -61,7 +61,7 @@
               "saturation": "0.5058823529411764",
               "value": "1.0"
             },
-            "image-content": "quiz_img.jpeg",
+            "image-content": "quiz_img.png",
             "scale": "cover"
           },
           {

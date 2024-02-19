@@ -1,0 +1,174 @@
+{
+  "name": "navegacion_salir",
+  "version": 32,
+  "source-key": {
+    "type": "figma",
+    "file": "H7ukQQTqL9pUMovBZnfFnU",
+    "node": "99:2",
+    "version": "5179077080",
+    "component-id": "162c4da606400188563d4b2d57caae823fcb4255"
+  },
+  "default": "NavegacionSalir",
+  "design": {
+    "atoms": [
+      {
+        "type": "group",
+        "id": "top_level",
+        "root": "true"
+      },
+      {
+        "type": "text",
+        "id": "QuestionNum"
+      },
+      {
+        "type": "group",
+        "id": "ExitButton"
+      },
+      {
+        "type": "vector",
+        "id": "Vector2"
+      },
+      {
+        "type": "vector",
+        "id": "Vector1"
+      }
+    ],
+    "modes": {
+      "NavegacionSalir": {
+        "rules": [
+          {
+            "id": "top_level",
+            "is-structured": "false",
+            "children": [
+              "QuestionNum",
+              "ExitButton"
+            ],
+            "clip-content": "false"
+          },
+          {
+            "id": "QuestionNum",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-34.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "-1.5"
+              }
+            },
+            "font-weight": "700.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "text-content": "$QuestionNum",
+            "overflow": "visible",
+            "text-align": "left",
+            "text-size": "24.0",
+            "line-height": "1.2000000476837158",
+            "typeface": "Tomorrow"
+          },
+          {
+            "id": "ExitButton",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "129.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "0.0"
+              }
+            },
+            "tap-handler": "$onExitButton",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "32.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "32.0"
+              }
+            },
+            "is-structured": "false",
+            "children": [
+              "Vector2",
+              "Vector1"
+            ]
+          },
+          {
+            "id": "Vector2",
+            "margin": {
+              "left": "4.002685546875",
+              "top": "4.0",
+              "right": "3.997314453125",
+              "bottom": "4.0"
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              }
+            },
+            "vector-content": "vector2.svg"
+          },
+          {
+            "id": "Vector1",
+            "margin": {
+              "left": "4.0",
+              "top": "10.666656494140625",
+              "right": "10.666664123535156",
+              "bottom": "10.666679382324219"
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              }
+            },
+            "vector-content": "vector1.svg"
+          }
+        ]
+      }
+    }
+  },
+  "parameters": {
+    "QuestionNum": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    },
+    "onExitButton": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": ""
+    }
+  },
+  "previews": [
+    {
+      "design": "NavegacionSalir",
+      "size": {
+        "width": 290.0,
+        "height": 32.0
+      },
+      "parameters": {
+        "QuestionNum": "Primera pregunta"
+      }
+    }
+  ],
+  "adin-component-search-paths": [],
+  "image-search-paths": [],
+  "vector-search-paths": []
+}

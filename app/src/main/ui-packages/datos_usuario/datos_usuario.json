@@ -1,0 +1,327 @@
+{
+  "name": "datos_usuario",
+  "version": 32,
+  "source-key": {
+    "type": "figma",
+    "file": "H7ukQQTqL9pUMovBZnfFnU",
+    "node": "103:4",
+    "version": "5179420870",
+    "component-id": "d336435af07398c03aab9a688a9ad5d0b3967755"
+  },
+  "default": "DatosUsuario",
+  "design": {
+    "atoms": [
+      {
+        "type": "group",
+        "id": "top_level",
+        "root": "true"
+      },
+      {
+        "type": "text",
+        "id": "PointsNumber"
+      },
+      {
+        "type": "text",
+        "id": "PointsTxt"
+      },
+      {
+        "type": "text",
+        "id": "JugadosNumber"
+      },
+      {
+        "type": "text",
+        "id": "JugadosTxt"
+      },
+      {
+        "type": "text",
+        "id": "PuestoNumber"
+      },
+      {
+        "type": "text",
+        "id": "PuestoRankingTxt"
+      },
+      {
+        "type": "vector",
+        "id": "SeparationRectangle1"
+      },
+      {
+        "type": "vector",
+        "id": "SeparationRectangle2"
+      }
+    ],
+    "modes": {
+      "DatosUsuario": {
+        "rules": [
+          {
+            "id": "top_level",
+            "is-structured": "false",
+            "children": [
+              "PointsNumber",
+              "PointsTxt",
+              "JugadosNumber",
+              "JugadosTxt",
+              "PuestoNumber",
+              "PuestoRankingTxt",
+              "SeparationRectangle1",
+              "SeparationRectangle2"
+            ],
+            "clip-content": "false"
+          },
+          {
+            "id": "PointsNumber",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-133.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "-9.5"
+              }
+            },
+            "font-weight": "700.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "text-content": "$PointsNumber",
+            "overflow": "visible",
+            "text-align": "left",
+            "text-size": "24.0",
+            "line-height": "1.2000000476837158",
+            "typeface": "Tomorrow"
+          },
+          {
+            "id": "PointsTxt",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-130.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "25.5"
+              }
+            },
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "text-content": "$PointsTxt",
+            "overflow": "visible",
+            "text-align": "left",
+            "text-size": "16.0",
+            "line-height": "1.2000000476837158",
+            "typeface": "Tomorrow"
+          },
+          {
+            "id": "JugadosNumber",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-9.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "-9.5"
+              }
+            },
+            "font-weight": "700.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "text-content": "$JugadosNumber",
+            "overflow": "visible",
+            "text-align": "left",
+            "text-size": "24.0",
+            "line-height": "1.2000000476837158",
+            "typeface": "Tomorrow"
+          },
+          {
+            "id": "JugadosTxt",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-10.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "25.5"
+              }
+            },
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "text-content": "$JugadosTxt",
+            "overflow": "visible",
+            "text-align": "left",
+            "text-size": "16.0",
+            "line-height": "1.2000000476837158",
+            "typeface": "Tomorrow"
+          },
+          {
+            "id": "PuestoNumber",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "111.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "-9.5"
+              }
+            },
+            "font-weight": "700.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "text-content": "$PuestoNumber",
+            "overflow": "visible",
+            "text-align": "left",
+            "text-size": "24.0",
+            "line-height": "1.2000000476837158",
+            "typeface": "Tomorrow"
+          },
+          {
+            "id": "PuestoRankingTxt",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "114.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "25.5"
+              }
+            },
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "text-content": "$PuestoRankingTxt",
+            "overflow": "visible",
+            "text-align": "left",
+            "text-size": "16.0",
+            "line-height": "1.2000000476837158",
+            "typeface": "Tomorrow"
+          },
+          {
+            "id": "SeparationRectangle1",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-66.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "0.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "2.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "70.0"
+              }
+            },
+            "vector-content": "separation_rectangle1.svg"
+          },
+          {
+            "id": "SeparationRectangle2",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "39.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "0.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "2.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "70.0"
+              }
+            },
+            "vector-content": "separation_rectangle2.svg"
+          }
+        ]
+      }
+    }
+  },
+  "parameters": {
+    "PointsNumber": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    },
+    "PointsTxt": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    },
+    "JugadosNumber": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    },
+    "JugadosTxt": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    },
+    "PuestoNumber": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    },
+    "PuestoRankingTxt": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    }
+  },
+  "previews": [
+    {
+      "design": "DatosUsuario",
+      "size": {
+        "width": 347.0,
+        "height": 70.0
+      },
+      "parameters": {
+        "PointsNumber": "10",
+        "PointsTxt": "Puntuación",
+        "JugadosNumber": "24",
+        "JugadosTxt": "Jugados",
+        "PuestoNumber": "1",
+        "PuestoRankingTxt": "Puesto Ranking"
+      }
+    }
+  ],
+  "adin-component-search-paths": [],
+  "image-search-paths": [],
+  "vector-search-paths": []
+}

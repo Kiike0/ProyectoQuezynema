@@ -1,0 +1,565 @@
+{
+  "name": "pregunta_quiz",
+  "version": 32,
+  "source-key": {
+    "type": "figma",
+    "file": "H7ukQQTqL9pUMovBZnfFnU",
+    "node": "101:2",
+    "version": "5179098772",
+    "component-id": "2a736ec759a830fe0f03d3aab5857c1d6ec8e53c"
+  },
+  "default": "PreguntaQuiz",
+  "design": {
+    "atoms": [
+      {
+        "type": "group",
+        "id": "top_level",
+        "root": "true"
+      },
+      {
+        "type": "vector",
+        "id": "CardBox"
+      },
+      {
+        "type": "image",
+        "id": "ImgQuestion"
+      },
+      {
+        "type": "text",
+        "id": "QuestionDesc"
+      },
+      {
+        "type": "vector",
+        "id": "Question1Button"
+      },
+      {
+        "type": "text",
+        "id": "Question1"
+      },
+      {
+        "type": "vector",
+        "id": "Question2Button"
+      },
+      {
+        "type": "text",
+        "id": "Question2"
+      },
+      {
+        "type": "vector",
+        "id": "Question3Button"
+      },
+      {
+        "type": "text",
+        "id": "Question3"
+      },
+      {
+        "type": "vector",
+        "id": "Question4Button"
+      },
+      {
+        "type": "text",
+        "id": "Question4"
+      },
+      {
+        "type": "text",
+        "id": "ConfirmAnswer"
+      },
+      {
+        "type": "vector",
+        "id": "ButtonConfirm"
+      }
+    ],
+    "modes": {
+      "PreguntaQuiz": {
+        "rules": [
+          {
+            "id": "top_level",
+            "is-structured": "false",
+            "children": [
+              "CardBox",
+              "ImgQuestion",
+              "QuestionDesc",
+              "Question1Button",
+              "Question1",
+              "Question2Button",
+              "Question2",
+              "Question3Button",
+              "Question3",
+              "Question4Button",
+              "Question4",
+              "ConfirmAnswer",
+              "ButtonConfirm"
+            ],
+            "clip-content": "false"
+          },
+          {
+            "id": "CardBox",
+            "border-radius": "25.0",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "0.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "0.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "344.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "660.0"
+              }
+            },
+            "vector-content": "card_box.svg"
+          },
+          {
+            "id": "ImgQuestion",
+            "border-radius": "15.0",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "0.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "-160.5"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "296.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "281.0"
+              }
+            },
+            "image-content": "$ImgQuestion image content",
+            "scale": "cover"
+          },
+          {
+            "id": "QuestionDesc",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-4.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "24.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "281.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "shrink"
+              }
+            },
+            "font-weight": "700.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.0"
+            },
+            "text-content": "$QuestionDesc",
+            "overflow": "visible",
+            "max-lines": "-1",
+            "text-align": "left",
+            "text-size": "15.0",
+            "line-height": "1.2",
+            "typeface": "Tomorrow"
+          },
+          {
+            "id": "Question1Button",
+            "border-radius": "15.0",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-76.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "97.0"
+              }
+            },
+            "tap-handler": "$onQuestion1Button",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "143.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "48.0"
+              }
+            },
+            "vector-content": "question1button.svg"
+          },
+          {
+            "id": "Question1",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-77.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "95.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "123.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "shrink"
+              }
+            },
+            "font-weight": "600.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.0"
+            },
+            "text-content": "$Question1",
+            "overflow": "visible",
+            "max-lines": "-1",
+            "text-size": "12.0",
+            "line-height": "1.2000000476837158",
+            "typeface": "Tomorrow"
+          },
+          {
+            "id": "Question2Button",
+            "border-radius": "15.0",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "76.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "97.0"
+              }
+            },
+            "tap-handler": "$onQuestion2Button",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "143.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "48.0"
+              }
+            },
+            "vector-content": "question2button.svg"
+          },
+          {
+            "id": "Question2",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "76.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "94.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "123.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "shrink"
+              }
+            },
+            "font-weight": "600.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.0"
+            },
+            "text-content": "$Question2",
+            "overflow": "visible",
+            "max-lines": "-1",
+            "text-size": "12.0",
+            "line-height": "1.2000000476837158",
+            "typeface": "Tomorrow"
+          },
+          {
+            "id": "Question3Button",
+            "border-radius": "15.0",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-76.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "163.0"
+              }
+            },
+            "tap-handler": "$onQuestion3Button",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "143.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "48.0"
+              }
+            },
+            "vector-content": "question3button.svg"
+          },
+          {
+            "id": "Question3",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-75.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "163.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "123.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "shrink"
+              }
+            },
+            "font-weight": "600.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.0"
+            },
+            "text-content": "$Question3",
+            "overflow": "visible",
+            "max-lines": "-1",
+            "text-size": "12.0",
+            "line-height": "1.2000000476837158",
+            "typeface": "Tomorrow"
+          },
+          {
+            "id": "Question4Button",
+            "border-radius": "15.0",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "76.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "163.0"
+              }
+            },
+            "tap-handler": "$onQuestion4Button",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "143.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "48.0"
+              }
+            },
+            "vector-content": "question4button.svg"
+          },
+          {
+            "id": "Question4",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "78.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "163.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "123.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "shrink"
+              }
+            },
+            "font-weight": "600.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.0"
+            },
+            "text-content": "$Question4",
+            "overflow": "visible",
+            "max-lines": "-1",
+            "text-size": "12.0",
+            "line-height": "1.2000000476837158",
+            "typeface": "Tomorrow"
+          },
+          {
+            "id": "ConfirmAnswer",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-7.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "243.5"
+              }
+            },
+            "font-weight": "600.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.0"
+            },
+            "text-content": "$ConfirmAnswer",
+            "overflow": "visible",
+            "text-align": "left",
+            "text-size": "16.0",
+            "line-height": "1.2000000476837158",
+            "typeface": "Tomorrow"
+          },
+          {
+            "id": "ButtonConfirm",
+            "border-radius": "15.0",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-7.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "243.5"
+              }
+            },
+            "tap-handler": "$onButtonConfirm",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "193.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "49.0"
+              }
+            },
+            "vector-content": "button_confirm.svg"
+          }
+        ]
+      }
+    }
+  },
+  "parameters": {
+    "ImgQuestion image content": {
+      "data-type": "image",
+      "required": false,
+      "description": ""
+    },
+    "QuestionDesc": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    },
+    "onQuestion1Button": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": ""
+    },
+    "Question1": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    },
+    "onQuestion2Button": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": ""
+    },
+    "Question2": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    },
+    "onQuestion3Button": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": ""
+    },
+    "Question3": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    },
+    "onQuestion4Button": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": ""
+    },
+    "Question4": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    },
+    "ConfirmAnswer": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    },
+    "onButtonConfirm": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": ""
+    }
+  },
+  "previews": [
+    {
+      "design": "PreguntaQuiz",
+      "size": {
+        "width": 344.0,
+        "height": 660.0
+      },
+      "parameters": {
+        "ImgQuestion image content": "img_question.jpeg",
+        "QuestionDesc": "¿Cuál de estas frases dice Yoda en alguna de las películas?",
+        "Question1": "El mejor profesor, el fracaso es",
+        "Question2": "El miedo, al fracaso conduce",
+        "Question3": "Si creer no puedes, es por eso que debes",
+        "Question4": "Imposible nada es, fácil muchas cosas son",
+        "ConfirmAnswer": "Confirmar respuesta"
+      }
+    }
+  ],
+  "adin-component-search-paths": [],
+  "image-search-paths": [],
+  "vector-search-paths": []
+}
