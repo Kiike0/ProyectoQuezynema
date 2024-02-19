@@ -7,23 +7,20 @@ import androidx.activity.viewModels
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
+import com.example.proyectofinal_quizynema.navigation.Routes
 import com.example.proyectofinal_quizynema.ui.theme.Proyectofinal_quizynemaTheme
 import com.example.proyectofinal_quizynema.viewModels.UserViewModel
-import com.example.proyectofinal_quizynema.viewModels.ViewModelPrueba
-import com.example.proyectofinal_quizynema.views.InicioSesion
-import com.example.proyectofinal_quizynema.views.PantallaInicial
-import com.example.proyectofinal_quizynema.views.PantallaJuego
-import com.example.proyectofinal_quizynema.views.PantallaPregunta1
-import com.example.proyectofinal_quizynema.views.QuizDisponibles
-import com.example.proyectofinal_quizynema.views.QuizScreen
-import com.example.proyectofinal_quizynema.views.RegisterView
-import com.example.proyectofinal_quizynema.views.Registro
+import com.example.proyectofinal_quizynema.views.login.InicioSesion
+import com.example.proyectofinal_quizynema.views.game.ui.PantallaInicial
+import com.example.proyectofinal_quizynema.views.login.Registro
 
 class MainActivity : ComponentActivity() {
+
+    private val userViewModel: UserViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -33,9 +30,33 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
+                    val navController = rememberNavController()
+
+                    NavHost(
+                        navController = navController,
+                        startDestination = Routes.InitialScreen.route
+                    ) {
+                        composable(Routes.InitialScreen.route) {
+                            PantallaInicial(
+                                navController = navController
+                            )
+                        }
+                        composable(Routes.AccessScreen.route) {
+                            InicioSesion(
+                                navController = navController,
+                                accessViewModel = userViewModel
+                            )
+                        }
+                        composable(Routes.RegisterScreen.route) {
+                            Registro(
+                                navController = navController,
+                                registerViewModel = userViewModel
+                            )
+                        }
+                    }
                     //QuizScreen(quizVM = ViewModelPrueba())
                     //RegisterView(newUser = UserViewModel())
-                    PantallaInicial()
+                    //PantallaInicial()
                     //InicioSesion()
                     //Registro()
                     //PantallaJuego()
