@@ -14,9 +14,10 @@ import androidx.navigation.compose.rememberNavController
 import com.example.proyectofinal_quizynema.navigation.Routes
 import com.example.proyectofinal_quizynema.ui.theme.Proyectofinal_quizynemaTheme
 import com.example.proyectofinal_quizynema.viewModels.UserViewModel
-import com.example.proyectofinal_quizynema.views.login.InicioSesion
-import com.example.proyectofinal_quizynema.views.game.ui.PantallaInicial
-import com.example.proyectofinal_quizynema.views.login.Registro
+import com.example.proyectofinal_quizynema.views.game.ui.HomeScreen
+import com.example.proyectofinal_quizynema.views.game.ui.StartGameScreen
+import com.example.proyectofinal_quizynema.views.login.Login
+import com.example.proyectofinal_quizynema.views.login.Register
 
 class MainActivity : ComponentActivity() {
 
@@ -37,20 +38,26 @@ class MainActivity : ComponentActivity() {
                         startDestination = Routes.InitialScreen.route
                     ) {
                         composable(Routes.InitialScreen.route) {
-                            PantallaInicial(
+                            StartGameScreen(
                                 navController = navController
                             )
                         }
                         composable(Routes.AccessScreen.route) {
-                            InicioSesion(
+                            Login(
                                 navController = navController,
                                 accessViewModel = userViewModel
                             )
                         }
                         composable(Routes.RegisterScreen.route) {
-                            Registro(
+                            Register(
                                 navController = navController,
                                 registerViewModel = userViewModel
+                            )
+                        }
+                        composable(Routes.GameScreen.route) {
+                            HomeScreen(
+                                navController = navController,
+                                currentUserViewModel = userViewModel
                             )
                         }
                     }

@@ -108,6 +108,7 @@ dimen notification_subtext_size
 dimen notification_top_pad
 dimen notification_top_pad_large_text
 drawable acceso_usuario_access_button_rectangle
+drawable acceso_usuario_alter_email_text
 drawable acceso_usuario_alter_text
 drawable acceso_usuario_alter_text_password
 drawable acceso_usuario_rectangle_img
@@ -183,6 +184,7 @@ drawable quiz_sugerida_img
 drawable quiz_sugerida_rect_button
 drawable rectangular_vignette_bottom
 drawable rectangular_vignette_top
+drawable registro_usuario_alter_email_text
 drawable registro_usuario_alter_fav_movie
 drawable registro_usuario_alter_nickname
 drawable registro_usuario_alter_password

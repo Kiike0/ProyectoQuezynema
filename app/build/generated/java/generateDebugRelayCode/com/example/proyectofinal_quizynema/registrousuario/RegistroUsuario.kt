@@ -34,12 +34,12 @@ import com.google.relay.compose.tappable
 fun RegistroUsuario(
     modifier: Modifier = Modifier,
     createAccount: String = "",
-    favoriteMovie: String = "",
+    nickname: String = "",
     chooseAvatar: String = "",
     repeatPassword: String = "",
     password: String = "",
-    nickname: String = "",
     onbuttonCreateAcc: () -> Unit = {},
+    onAlterNickname: () -> Unit = {},
     onAlterFavMovie: () -> Unit = {},
     avatar1: () -> Unit = {},
     avatar2: () -> Unit = {},
@@ -55,7 +55,7 @@ fun RegistroUsuario(
     avatar12: () -> Unit = {},
     onAlterRepeatPassword: () -> Unit = {},
     onAlterPassword: () -> Unit = {},
-    onAlterNickname: () -> Unit = {}
+    onAlterEmailText: () -> Unit = {}
 ) {
     TopLevel(modifier = modifier) {
         RectanglebuttonCreateAcc(
@@ -63,8 +63,8 @@ fun RegistroUsuario(
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
-                    x = -3.5.dp,
-                    y = 311.5.dp
+                    x = -4.5.dp,
+                    y = 295.5.dp
                 )
             )
         )
@@ -73,28 +73,29 @@ fun RegistroUsuario(
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
-                    x = 0.0.dp,
-                    y = 311.5.dp
+                    x = -1.0.dp,
+                    y = 295.5.dp
                 )
             )
         )
         AlterFavMovie(
+            onAlterNickname = onAlterNickname,
             onAlterFavMovie = onAlterFavMovie,
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
-                    x = -4.0.dp,
-                    y = 207.5.dp
+                    x = -5.0.dp,
+                    y = 216.0.dp
                 )
             )
         )
-        FavoriteMovie(
-            favoriteMovie = favoriteMovie,
+        FavMovie(
+            nickname = nickname,
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
-                    x = -125.0.dp,
-                    y = 197.5.dp
+                    x = -117.5.dp,
+                    y = 205.5.dp
                 )
             )
         )
@@ -103,8 +104,8 @@ fun RegistroUsuario(
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
-                    x = -128.5.dp,
-                    y = -73.5.dp
+                    x = -136.5.dp,
+                    y = -44.5.dp
                 )
             )
         )
@@ -113,8 +114,8 @@ fun RegistroUsuario(
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
-                    x = -40.5.dp,
-                    y = -73.5.dp
+                    x = -48.5.dp,
+                    y = -44.5.dp
                 )
             )
         )
@@ -123,8 +124,8 @@ fun RegistroUsuario(
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
-                    x = 47.5.dp,
-                    y = -73.5.dp
+                    x = 39.5.dp,
+                    y = -44.5.dp
                 )
             )
         )
@@ -133,8 +134,8 @@ fun RegistroUsuario(
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
-                    x = 135.5.dp,
-                    y = -73.5.dp
+                    x = 127.5.dp,
+                    y = -44.5.dp
                 )
             )
         )
@@ -143,8 +144,8 @@ fun RegistroUsuario(
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
-                    x = -128.5.dp,
-                    y = 18.5.dp
+                    x = -136.5.dp,
+                    y = 47.5.dp
                 )
             )
         )
@@ -153,8 +154,8 @@ fun RegistroUsuario(
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
-                    x = -40.5.dp,
-                    y = 18.5.dp
+                    x = -48.5.dp,
+                    y = 47.5.dp
                 )
             )
         )
@@ -163,8 +164,8 @@ fun RegistroUsuario(
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
-                    x = 47.5.dp,
-                    y = 18.5.dp
+                    x = 39.5.dp,
+                    y = 47.5.dp
                 )
             )
         )
@@ -173,8 +174,8 @@ fun RegistroUsuario(
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
-                    x = 135.5.dp,
-                    y = 18.5.dp
+                    x = 127.5.dp,
+                    y = 47.5.dp
                 )
             )
         )
@@ -183,8 +184,8 @@ fun RegistroUsuario(
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
-                    x = -128.5.dp,
-                    y = 110.5.dp
+                    x = -136.5.dp,
+                    y = 139.5.dp
                 )
             )
         )
@@ -193,8 +194,8 @@ fun RegistroUsuario(
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
-                    x = -40.5.dp,
-                    y = 110.5.dp
+                    x = -48.5.dp,
+                    y = 139.5.dp
                 )
             )
         )
@@ -203,8 +204,8 @@ fun RegistroUsuario(
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
-                    x = 47.5.dp,
-                    y = 110.5.dp
+                    x = 39.5.dp,
+                    y = 139.5.dp
                 )
             )
         )
@@ -213,8 +214,8 @@ fun RegistroUsuario(
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
-                    x = 135.5.dp,
-                    y = 110.5.dp
+                    x = 127.5.dp,
+                    y = 139.5.dp
                 )
             )
         )
@@ -224,7 +225,7 @@ fun RegistroUsuario(
                 alignment = Alignment.Center,
                 offset = DpOffset(
                     x = -128.5.dp,
-                    y = -143.5.dp
+                    y = -107.0.dp
                 )
             )
         )
@@ -233,8 +234,8 @@ fun RegistroUsuario(
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
-                    x = -4.0.dp,
-                    y = -195.5.dp
+                    x = -5.0.dp,
+                    y = -153.0.dp
                 )
             )
         )
@@ -243,8 +244,8 @@ fun RegistroUsuario(
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
-                    x = -117.0.dp,
-                    y = -205.5.dp
+                    x = -118.0.dp,
+                    y = -162.0.dp
                 )
             )
         )
@@ -253,8 +254,8 @@ fun RegistroUsuario(
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
-                    x = -4.0.dp,
-                    y = -257.5.dp
+                    x = -5.0.dp,
+                    y = -208.5.dp
                 )
             )
         )
@@ -263,8 +264,8 @@ fun RegistroUsuario(
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
-                    x = -134.5.dp,
-                    y = -267.5.dp
+                    x = -135.5.dp,
+                    y = -217.5.dp
                 )
             )
         )
@@ -273,8 +274,8 @@ fun RegistroUsuario(
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
-                    x = -4.0.dp,
-                    y = -319.5.dp
+                    x = -5.0.dp,
+                    y = -264.0.dp
                 )
             )
         )
@@ -283,8 +284,29 @@ fun RegistroUsuario(
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
+                    x = -117.5.dp,
+                    y = -274.5.dp
+                )
+            )
+        )
+        AlterEmailText(
+            onAlterNickname = onAlterNickname,
+            onAlterEmailText = onAlterEmailText,
+            modifier = Modifier.boxAlign(
+                alignment = Alignment.Center,
+                offset = DpOffset(
+                    x = -4.0.dp,
+                    y = -319.0.dp
+                )
+            )
+        )
+        Email(
+            nickname = nickname,
+            modifier = Modifier.boxAlign(
+                alignment = Alignment.Center,
+                offset = DpOffset(
                     x = -116.5.dp,
-                    y = -331.5.dp
+                    y = -329.5.dp
                 )
             )
         )
@@ -299,8 +321,9 @@ private fun RegistroUsuarioPreview() {
             RegistroUsuario(
                 onbuttonCreateAcc = {},
                 createAccount = "Crear cuenta",
+                onAlterNickname = {},
                 onAlterFavMovie = {},
-                favoriteMovie = "Película favorita",
+                nickname = "Email",
                 avatar1 = {},
                 avatar2 = {},
                 avatar3 = {},
@@ -318,8 +341,7 @@ private fun RegistroUsuarioPreview() {
                 repeatPassword = "Repetir contraseña",
                 onAlterPassword = {},
                 password = "Contraseña",
-                onAlterNickname = {},
-                nickname = "Nombre de usuario",
+                onAlterEmailText = {},
                 modifier = Modifier.rowWeight(1.0f).columnWeight(1.0f)
             )
         }
@@ -361,22 +383,26 @@ fun CreateAccount(
 
 @Composable
 fun AlterFavMovie(
+    onAlterNickname: () -> Unit,
     onAlterFavMovie: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     RelayVector(
         vector = painterResource(R.drawable.registro_usuario_alter_fav_movie),
-        modifier = modifier.tappable(onTap = onAlterFavMovie).requiredWidth(335.0.dp).requiredHeight(42.0.dp)
+        modifier = modifier.tappable(
+            onTap = onAlterNickname,
+            onDoubleTap = onAlterFavMovie
+        ).requiredWidth(335.0.dp).requiredHeight(37.0.dp)
     )
 }
 
 @Composable
-fun FavoriteMovie(
-    favoriteMovie: String,
+fun FavMovie(
+    nickname: String,
     modifier: Modifier = Modifier
 ) {
     RelayText(
-        content = favoriteMovie,
+        content = nickname,
         fontSize = 10.0.sp,
         fontFamily = tomorrow,
         color = Color(
@@ -387,7 +413,8 @@ fun FavoriteMovie(
         ),
         height = 1.2.em,
         textAlign = TextAlign.Left,
-        modifier = modifier
+        maxLines = -1,
+        modifier = modifier.requiredWidth(92.0.dp).requiredHeight(10.0.dp)
     )
 }
 
@@ -407,7 +434,7 @@ fun Avatar1(
         ),
         strokeWidth = 1.0,
         contentScale = ContentScale.Crop,
-        modifier = modifier.tappable(onTap = avatar1).requiredWidth(72.0.dp).requiredHeight(72.0.dp)
+        modifier = modifier.tappable(onTap = avatar1).requiredWidth(70.0.dp).requiredHeight(70.0.dp)
     )
 }
 
@@ -427,7 +454,7 @@ fun Avatar2(
         ),
         strokeWidth = 1.0,
         contentScale = ContentScale.Crop,
-        modifier = modifier.tappable(onTap = avatar2).requiredWidth(72.0.dp).requiredHeight(72.0.dp)
+        modifier = modifier.tappable(onTap = avatar2).requiredWidth(70.0.dp).requiredHeight(70.0.dp)
     )
 }
 
@@ -447,7 +474,7 @@ fun Avatar3(
         ),
         strokeWidth = 1.0,
         contentScale = ContentScale.Crop,
-        modifier = modifier.tappable(onTap = avatar3).requiredWidth(72.0.dp).requiredHeight(72.0.dp)
+        modifier = modifier.tappable(onTap = avatar3).requiredWidth(70.0.dp).requiredHeight(70.0.dp)
     )
 }
 
@@ -467,7 +494,7 @@ fun Avatar4(
         ),
         strokeWidth = 1.0,
         contentScale = ContentScale.Crop,
-        modifier = modifier.tappable(onTap = avatar4).requiredWidth(72.0.dp).requiredHeight(72.0.dp)
+        modifier = modifier.tappable(onTap = avatar4).requiredWidth(70.0.dp).requiredHeight(70.0.dp)
     )
 }
 
@@ -487,7 +514,7 @@ fun Avatar5(
         ),
         strokeWidth = 1.0,
         contentScale = ContentScale.Crop,
-        modifier = modifier.tappable(onTap = avatar5).requiredWidth(72.0.dp).requiredHeight(72.0.dp)
+        modifier = modifier.tappable(onTap = avatar5).requiredWidth(70.0.dp).requiredHeight(70.0.dp)
     )
 }
 
@@ -507,7 +534,7 @@ fun Avatar6(
         ),
         strokeWidth = 1.0,
         contentScale = ContentScale.Crop,
-        modifier = modifier.tappable(onTap = avatar6).requiredWidth(72.0.dp).requiredHeight(72.0.dp)
+        modifier = modifier.tappable(onTap = avatar6).requiredWidth(70.0.dp).requiredHeight(70.0.dp)
     )
 }
 
@@ -527,7 +554,7 @@ fun Avatar7(
         ),
         strokeWidth = 1.0,
         contentScale = ContentScale.Crop,
-        modifier = modifier.tappable(onTap = avatar7).requiredWidth(72.0.dp).requiredHeight(72.0.dp)
+        modifier = modifier.tappable(onTap = avatar7).requiredWidth(70.0.dp).requiredHeight(70.0.dp)
     )
 }
 
@@ -547,7 +574,7 @@ fun Avatar8(
         ),
         strokeWidth = 1.0,
         contentScale = ContentScale.Crop,
-        modifier = modifier.tappable(onTap = avatar8).requiredWidth(72.0.dp).requiredHeight(72.0.dp)
+        modifier = modifier.tappable(onTap = avatar8).requiredWidth(70.0.dp).requiredHeight(70.0.dp)
     )
 }
 
@@ -567,7 +594,7 @@ fun Avatar9(
         ),
         strokeWidth = 1.0,
         contentScale = ContentScale.Crop,
-        modifier = modifier.tappable(onTap = avatar9).requiredWidth(72.0.dp).requiredHeight(72.0.dp)
+        modifier = modifier.tappable(onTap = avatar9).requiredWidth(70.0.dp).requiredHeight(70.0.dp)
     )
 }
 
@@ -587,7 +614,7 @@ fun Avatar10(
         ),
         strokeWidth = 1.0,
         contentScale = ContentScale.Crop,
-        modifier = modifier.tappable(onTap = avatar10).requiredWidth(72.0.dp).requiredHeight(72.0.dp)
+        modifier = modifier.tappable(onTap = avatar10).requiredWidth(70.0.dp).requiredHeight(70.0.dp)
     )
 }
 
@@ -607,7 +634,7 @@ fun Avatar11(
         ),
         strokeWidth = 1.0,
         contentScale = ContentScale.Crop,
-        modifier = modifier.tappable(onTap = avatar11).requiredWidth(72.0.dp).requiredHeight(72.0.dp)
+        modifier = modifier.tappable(onTap = avatar11).requiredWidth(70.0.dp).requiredHeight(70.0.dp)
     )
 }
 
@@ -627,7 +654,7 @@ fun Avatar12(
         ),
         strokeWidth = 1.0,
         contentScale = ContentScale.Crop,
-        modifier = modifier.tappable(onTap = avatar12).requiredWidth(72.0.dp).requiredHeight(72.0.dp)
+        modifier = modifier.tappable(onTap = avatar12).requiredWidth(70.0.dp).requiredHeight(70.0.dp)
     )
 }
 
@@ -648,7 +675,8 @@ fun ChooseAvatar(
         ),
         height = 1.2.em,
         textAlign = TextAlign.Left,
-        modifier = modifier
+        maxLines = -1,
+        modifier = modifier.requiredWidth(68.0.dp).requiredHeight(11.0.dp)
     )
 }
 
@@ -659,7 +687,7 @@ fun AlterRepeatPassword(
 ) {
     RelayVector(
         vector = painterResource(R.drawable.registro_usuario_alter_repeat_password),
-        modifier = modifier.tappable(onTap = onAlterRepeatPassword).requiredWidth(335.0.dp).requiredHeight(42.0.dp)
+        modifier = modifier.tappable(onTap = onAlterRepeatPassword).requiredWidth(335.0.dp).requiredHeight(37.0.dp)
     )
 }
 
@@ -680,7 +708,8 @@ fun RepeatPassword(
         ),
         height = 1.2.em,
         textAlign = TextAlign.Left,
-        modifier = modifier
+        maxLines = -1,
+        modifier = modifier.requiredWidth(91.0.dp).requiredHeight(11.0.dp)
     )
 }
 
@@ -691,7 +720,7 @@ fun AlterPassword(
 ) {
     RelayVector(
         vector = painterResource(R.drawable.registro_usuario_alter_password),
-        modifier = modifier.tappable(onTap = onAlterPassword).requiredWidth(335.0.dp).requiredHeight(42.0.dp)
+        modifier = modifier.tappable(onTap = onAlterPassword).requiredWidth(335.0.dp).requiredHeight(38.0.dp)
     )
 }
 
@@ -712,7 +741,8 @@ fun Password(
         ),
         height = 1.2.em,
         textAlign = TextAlign.Left,
-        modifier = modifier
+        maxLines = -1,
+        modifier = modifier.requiredWidth(56.0.dp).requiredHeight(10.0.dp)
     )
 }
 
@@ -723,7 +753,7 @@ fun AlterNickname(
 ) {
     RelayVector(
         vector = painterResource(R.drawable.registro_usuario_alter_nickname),
-        modifier = modifier.tappable(onTap = onAlterNickname).requiredWidth(335.0.dp).requiredHeight(42.0.dp)
+        modifier = modifier.tappable(onTap = onAlterNickname).requiredWidth(335.0.dp).requiredHeight(37.0.dp)
     )
 }
 
@@ -744,7 +774,45 @@ fun Nickname(
         ),
         height = 1.2.em,
         textAlign = TextAlign.Left,
-        modifier = modifier
+        maxLines = -1,
+        modifier = modifier.requiredWidth(92.0.dp).requiredHeight(10.0.dp)
+    )
+}
+
+@Composable
+fun AlterEmailText(
+    onAlterNickname: () -> Unit,
+    onAlterEmailText: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+    RelayVector(
+        vector = painterResource(R.drawable.registro_usuario_alter_email_text),
+        modifier = modifier.tappable(
+            onTap = onAlterNickname,
+            onDoubleTap = onAlterEmailText
+        ).requiredWidth(335.0.dp).requiredHeight(37.0.dp)
+    )
+}
+
+@Composable
+fun Email(
+    nickname: String,
+    modifier: Modifier = Modifier
+) {
+    RelayText(
+        content = nickname,
+        fontSize = 10.0.sp,
+        fontFamily = tomorrow,
+        color = Color(
+            alpha = 255,
+            red = 151,
+            green = 168,
+            blue = 183
+        ),
+        height = 1.2.em,
+        textAlign = TextAlign.Left,
+        maxLines = -1,
+        modifier = modifier.requiredWidth(92.0.dp).requiredHeight(10.0.dp)
     )
 }
 

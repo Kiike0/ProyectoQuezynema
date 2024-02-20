@@ -22,9 +22,9 @@ sealed class Routes(val route: String) {
     object RegisterScreen : Routes("registerScreen")
 
     /**
-     * Objeto que representa la pantalla con las opciones del Juego.
+     * Objeto que representa la pantalla Home con las opciones del Juego.
      */
-    object GamesScreen : Routes("gamesScreen")
+    object GameScreen : Routes("gameScreen")
 
     /**
      * Objeto que representa la pantalla de las preguntas.

@@ -38,13 +38,13 @@ fun AccesoUsuario(
     accessText: String = "",
     textDescription: String = "",
     passwordText: String = "",
-    nicknameText: String = "",
+    emailText: String = "",
     rectangleImg: Painter = EmptyPainter(),
     onAccessButton: () -> Unit = {},
     createAccountTap: () -> Unit = {},
     remindPasswordTap: () -> Unit = {},
     onAlterTextPassword: () -> Unit = {},
-    onAlterText: () -> Unit = {}
+    onAlterEmailText: () -> Unit = {}
 ) {
     TopLevel(modifier = modifier) {
         AccessButtonRectangle(
@@ -126,8 +126,8 @@ fun AccesoUsuario(
                 )
             )
         )
-        AlterText(
-            onAlterText = onAlterText,
+        AlterEmailText(
+            onAlterEmailText = onAlterEmailText,
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
@@ -136,12 +136,12 @@ fun AccesoUsuario(
                 )
             )
         )
-        Nickname(
-            nicknameText = nicknameText,
+        Email(
+            emailText = emailText,
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
-                    x = -112.5.dp,
+                    x = -144.5.dp,
                     y = -56.5.dp
                 )
             )
@@ -172,8 +172,8 @@ private fun AccesoUsuarioPreview() {
                 textDescription = "Si no tienes cuenta debes crear una para acceder",
                 onAlterTextPassword = {},
                 passwordText = "Contraseña",
-                onAlterText = {},
-                nicknameText = "Nombre de usuario",
+                onAlterEmailText = {},
+                emailText = "Email",
                 rectangleImg = painterResource(R.drawable.acceso_usuario_rectangle_img),
                 modifier = Modifier.rowWeight(1.0f).columnWeight(1.0f)
             )
@@ -320,23 +320,23 @@ fun Password(
 }
 
 @Composable
-fun AlterText(
-    onAlterText: () -> Unit,
+fun AlterEmailText(
+    onAlterEmailText: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     RelayVector(
-        vector = painterResource(R.drawable.acceso_usuario_alter_text),
-        modifier = modifier.tappable(onTap = onAlterText).requiredWidth(335.0.dp).requiredHeight(42.0.dp)
+        vector = painterResource(R.drawable.acceso_usuario_alter_email_text),
+        modifier = modifier.tappable(onTap = onAlterEmailText).requiredWidth(335.0.dp).requiredHeight(42.0.dp)
     )
 }
 
 @Composable
-fun Nickname(
-    nicknameText: String,
+fun Email(
+    emailText: String,
     modifier: Modifier = Modifier
 ) {
     RelayText(
-        content = nicknameText,
+        content = emailText,
         fontSize = 10.0.sp,
         fontFamily = tomorrow,
         color = Color(

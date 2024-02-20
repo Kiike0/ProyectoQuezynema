@@ -4,10 +4,6 @@
         "source": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-relay-61:\\font\\relay_tomorrow_bold.ttf"
     },
     {
-        "merged": "com.example.proyectofinal_quizynema.app-merged_res-65:/drawable-nodpi_presentacion_usuario_level_rectangle.xml.flat",
-        "source": "com.example.proyectofinal_quizynema.app-relay-61:/drawable-nodpi/presentacion_usuario_level_rectangle.xml"
-    },
-    {
         "merged": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-merged_res-65:\\mipmap-mdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-main-67:\\mipmap-mdpi\\ic_launcher.webp"
     },
@@ -80,10 +76,6 @@
         "source": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-relay-61:\\drawable-nodpi\\boton_genre_button_genre.xml"
     },
     {
-        "merged": "com.example.proyectofinal_quizynema.app-merged_res-65:/drawable-nodpi_presentacion_usuario_avatar_img.png.flat",
-        "source": "com.example.proyectofinal_quizynema.app-relay-61:/drawable-nodpi/presentacion_usuario_avatar_img.png"
-    },
-    {
         "merged": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-merged_res-65:\\drawable-nodpi_quiz_explored_quiz_img.png.flat",
         "source": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-relay-61:\\drawable-nodpi\\quiz_explored_quiz_img.png"
     },
@@ -100,8 +92,16 @@
         "source": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-relay-61:\\drawable-nodpi\\navegacion_salir_vector1.xml"
     },
     {
+        "merged": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-merged_res-65:\\drawable-nodpi_acceso_usuario_alter_email_text.xml.flat",
+        "source": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-relay-61:\\drawable-nodpi\\acceso_usuario_alter_email_text.xml"
+    },
+    {
         "merged": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-merged_res-65:\\drawable-nodpi_registro_usuario_avatar3.png.flat",
         "source": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-relay-61:\\drawable-nodpi\\registro_usuario_avatar3.png"
+    },
+    {
+        "merged": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-merged_res-65:\\drawable-nodpi_presentacion_usuario_avatar_img.png.flat",
+        "source": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-relay-61:\\drawable-nodpi\\presentacion_usuario_avatar_img.png"
     },
     {
         "merged": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-merged_res-65:\\drawable-nodpi_pregunta_quiz_img_question.jpeg.flat",
@@ -136,12 +136,20 @@
         "source": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-relay-61:\\drawable-nodpi\\pregunta_quiz_question1button.xml"
     },
     {
+        "merged": "com.example.proyectofinal_quizynema.app-merged_res-65:/drawable_acceso_usuario_alter_email_text.xml.flat",
+        "source": "com.example.proyectofinal_quizynema.app-main-67:/drawable/acceso_usuario_alter_email_text.xml"
+    },
+    {
         "merged": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-merged_res-65:\\drawable-nodpi_registro_usuario_alter_password.xml.flat",
         "source": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-relay-61:\\drawable-nodpi\\registro_usuario_alter_password.xml"
     },
     {
         "merged": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-merged_res-65:\\drawable-nodpi_quiz_sugerida_card.xml.flat",
         "source": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-relay-61:\\drawable-nodpi\\quiz_sugerida_card.xml"
+    },
+    {
+        "merged": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-merged_res-65:\\drawable-nodpi_registro_usuario_alter_email_text.xml.flat",
+        "source": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-relay-61:\\drawable-nodpi\\registro_usuario_alter_email_text.xml"
     },
     {
         "merged": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-merged_res-65:\\font_relay_tomorrow_medium_italic.ttf.flat",
@@ -204,6 +212,10 @@
         "source": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-relay-61:\\drawable-nodpi\\quiz_sugerida_img.png"
     },
     {
+        "merged": "com.example.proyectofinal_quizynema.app-merged_res-65:/drawable_registro_usuario_alter_email_text.xml.flat",
+        "source": "com.example.proyectofinal_quizynema.app-main-67:/drawable/registro_usuario_alter_email_text.xml"
+    },
+    {
         "merged": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-merged_res-65:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-main-67:\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
@@ -218,6 +230,10 @@
     {
         "merged": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-merged_res-65:\\drawable-nodpi_acceso_usuario_alter_text_password.xml.flat",
         "source": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-relay-61:\\drawable-nodpi\\acceso_usuario_alter_text_password.xml"
+    },
+    {
+        "merged": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-merged_res-65:\\drawable-nodpi_presentacion_usuario_level_rectangle.xml.flat",
+        "source": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-relay-61:\\drawable-nodpi\\presentacion_usuario_level_rectangle.xml"
     },
     {
         "merged": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-merged_res-65:\\drawable-nodpi_registro_usuario_avatar6.png.flat",
@@ -252,6 +268,10 @@
         "source": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-relay-61:\\font\\relay_tomorrow_thin.ttf"
     },
     {
+        "merged": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-merged_res-65:\\drawable-nodpi_datos_usuario_separation_rectangle2.xml.flat",
+        "source": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-relay-61:\\drawable-nodpi\\datos_usuario_separation_rectangle2.xml"
+    },
+    {
         "merged": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-merged_res-65:\\mipmap-xxhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-main-67:\\mipmap-xxhdpi\\ic_launcher.webp"
     },
@@ -262,10 +282,6 @@
     {
         "merged": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-merged_res-65:\\drawable-nodpi_acceso_usuario_alter_text.xml.flat",
         "source": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-relay-61:\\drawable-nodpi\\acceso_usuario_alter_text.xml"
-    },
-    {
-        "merged": "com.example.proyectofinal_quizynema.app-merged_res-65:/drawable-nodpi_datos_usuario_separation_rectangle2.xml.flat",
-        "source": "com.example.proyectofinal_quizynema.app-relay-61:/drawable-nodpi/datos_usuario_separation_rectangle2.xml"
     },
     {
         "merged": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-merged_res-65:\\drawable_ic_launcher_foreground.xml.flat",
@@ -320,12 +336,12 @@
         "source": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-main-67:\\drawable\\palomitas.png"
     },
     {
-        "merged": "com.example.proyectofinal_quizynema.app-merged_res-65:/drawable-nodpi_datos_usuario_separation_rectangle1.xml.flat",
-        "source": "com.example.proyectofinal_quizynema.app-relay-61:/drawable-nodpi/datos_usuario_separation_rectangle1.xml"
-    },
-    {
         "merged": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-merged_res-65:\\font_relay_tomorrow_medium.ttf.flat",
         "source": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-relay-61:\\font\\relay_tomorrow_medium.ttf"
+    },
+    {
+        "merged": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-merged_res-65:\\drawable-nodpi_datos_usuario_separation_rectangle1.xml.flat",
+        "source": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-relay-61:\\drawable-nodpi\\datos_usuario_separation_rectangle1.xml"
     },
     {
         "merged": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-merged_res-65:\\font_relay_tomorrow_bold_italic.ttf.flat",

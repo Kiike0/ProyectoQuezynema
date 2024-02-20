@@ -5,7 +5,7 @@
     "type": "figma",
     "file": "H7ukQQTqL9pUMovBZnfFnU",
     "node": "85:40",
-    "version": "5179077080",
+    "version": "5186178695",
     "component-id": "ec9ec44b6141e6f1e635e08d16ac7713e4e5a729"
   },
   "default": "AccesoUsuario",
@@ -50,11 +50,11 @@
       },
       {
         "type": "vector",
-        "id": "AlterText"
+        "id": "AlterEmailText"
       },
       {
         "type": "text",
-        "id": "Nickname"
+        "id": "Email"
       },
       {
         "type": "image",
@@ -76,8 +76,8 @@
               "TextDescription",
               "AlterTextPassword",
               "Password",
-              "AlterText",
-              "Nickname",
+              "AlterEmailText",
+              "Email",
               "RectangleImg"
             ],
             "clip-content": "false"
@@ -315,7 +315,7 @@
             "typeface": "Tomorrow"
           },
           {
-            "id": "AlterText",
+            "id": "AlterEmailText",
             "alignment": {
               "horizontal": {
                 "attachment": "center",
@@ -326,7 +326,7 @@
                 "offset": "-44.5"
               }
             },
-            "tap-handler": "$onAlterText",
+            "tap-handler": "$onAlterEmailText",
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
@@ -337,14 +337,14 @@
                 "value": "42.0"
               }
             },
-            "vector-content": "alter_text.svg"
+            "vector-content": "alter_email_text.svg"
           },
           {
-            "id": "Nickname",
+            "id": "Email",
             "alignment": {
               "horizontal": {
                 "attachment": "center",
-                "offset": "-112.5"
+                "offset": "-144.5"
               },
               "vertical": {
                 "attachment": "center",
@@ -357,7 +357,7 @@
               "saturation": "0.17486338797814208",
               "value": "0.7176470588235294"
             },
-            "text-content": "$NicknameText",
+            "text-content": "$EmailText",
             "overflow": "visible",
             "text-align": "left",
             "text-size": "10.0",
@@ -429,12 +429,12 @@
       "required": false,
       "description": ""
     },
-    "onAlterText": {
+    "onAlterEmailText": {
       "data-type": "void-callback",
       "required": false,
       "description": ""
     },
-    "NicknameText": {
+    "EmailText": {
       "data-type": "text",
       "required": false,
       "description": ""
@@ -456,7 +456,7 @@
         "AccessText": "Acceder",
         "TextDescription": "Si no tienes cuenta debes crear una para acceder",
         "PasswordText": "Contraseña",
-        "NicknameText": "Nombre de usuario",
+        "EmailText": "Email",
         "RectangleImg": "rectangle_img.png"
       }
     }

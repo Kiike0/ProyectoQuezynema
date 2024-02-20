@@ -5,7 +5,7 @@
     "type": "figma",
     "file": "H7ukQQTqL9pUMovBZnfFnU",
     "node": "87:68",
-    "version": "5179077080",
+    "version": "5186178695",
     "component-id": "965c77e6d9a6b368f5fe377a64f8cc106e3c39b0"
   },
   "default": "RegistroUsuario",
@@ -30,7 +30,7 @@
       },
       {
         "type": "text",
-        "id": "FavoriteMovie"
+        "id": "FavMovie"
       },
       {
         "type": "image",
@@ -107,6 +107,14 @@
       {
         "type": "text",
         "id": "Nickname"
+      },
+      {
+        "type": "vector",
+        "id": "AlterEmailText"
+      },
+      {
+        "type": "text",
+        "id": "Email"
       }
     ],
     "modes": {
@@ -119,7 +127,7 @@
               "RectanglebuttonCreateAcc",
               "CreateAccount",
               "AlterFavMovie",
-              "FavoriteMovie",
+              "FavMovie",
               "Avatar1",
               "Avatar2",
               "Avatar3",
@@ -138,7 +146,9 @@
               "AlterPassword",
               "Password",
               "AlterNickname",
-              "Nickname"
+              "Nickname",
+              "AlterEmailText",
+              "Email"
             ],
             "clip-content": "false"
           },
@@ -148,11 +158,11 @@
             "alignment": {
               "horizontal": {
                 "attachment": "center",
-                "offset": "-3.5"
+                "offset": "-4.5"
               },
               "vertical": {
                 "attachment": "center",
-                "offset": "311.5"
+                "offset": "295.5"
               }
             },
             "tap-handler": "$onbuttonCreateAcc",
@@ -173,11 +183,11 @@
             "alignment": {
               "horizontal": {
                 "attachment": "center",
-                "offset": "0.0"
+                "offset": "-1.0"
               },
               "vertical": {
                 "attachment": "center",
-                "offset": "311.5"
+                "offset": "295.5"
               }
             },
             "font-weight": "700.0",
@@ -199,14 +209,15 @@
             "alignment": {
               "horizontal": {
                 "attachment": "center",
-                "offset": "-4.0"
+                "offset": "-5.0"
               },
               "vertical": {
                 "attachment": "center",
-                "offset": "207.5"
+                "offset": "216.0"
               }
             },
-            "tap-handler": "$onAlterFavMovie",
+            "tap-handler": "$onAlterNickname",
+            "doubletap-handler": "$onAlterFavMovie",
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
@@ -214,21 +225,31 @@
               },
               "height-constraints": {
                 "sizing-mode": "fixed",
-                "value": "42.0"
+                "value": "37.0"
               }
             },
             "vector-content": "alter_fav_movie.svg"
           },
           {
-            "id": "FavoriteMovie",
+            "id": "FavMovie",
             "alignment": {
               "horizontal": {
                 "attachment": "center",
-                "offset": "-125.0"
+                "offset": "-117.5"
               },
               "vertical": {
                 "attachment": "center",
-                "offset": "197.5"
+                "offset": "205.5"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "92.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "10.0"
               }
             },
             "color": {
@@ -237,8 +258,9 @@
               "saturation": "0.17486338797814208",
               "value": "0.7176470588235294"
             },
-            "text-content": "$FavoriteMovie",
+            "text-content": "$Nickname",
             "overflow": "visible",
+            "max-lines": "-1",
             "text-align": "left",
             "text-size": "10.0",
             "line-height": "1.2",
@@ -250,22 +272,22 @@
             "alignment": {
               "horizontal": {
                 "attachment": "center",
-                "offset": "-128.5"
+                "offset": "-136.5"
               },
               "vertical": {
                 "attachment": "center",
-                "offset": "-73.5"
+                "offset": "-44.5"
               }
             },
             "tap-handler": "$Avatar1",
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": "72.0"
+                "value": "70.0"
               },
               "height-constraints": {
                 "sizing-mode": "fixed",
-                "value": "72.0"
+                "value": "70.0"
               }
             },
             "stroke-width": "1.0",
@@ -284,22 +306,22 @@
             "alignment": {
               "horizontal": {
                 "attachment": "center",
-                "offset": "-40.5"
+                "offset": "-48.5"
               },
               "vertical": {
                 "attachment": "center",
-                "offset": "-73.5"
+                "offset": "-44.5"
               }
             },
             "tap-handler": "$Avatar2",
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": "72.0"
+                "value": "70.0"
               },
               "height-constraints": {
                 "sizing-mode": "fixed",
-                "value": "72.0"
+                "value": "70.0"
               }
             },
             "stroke-width": "1.0",
@@ -318,22 +340,22 @@
             "alignment": {
               "horizontal": {
                 "attachment": "center",
-                "offset": "47.5"
+                "offset": "39.5"
               },
               "vertical": {
                 "attachment": "center",
-                "offset": "-73.5"
+                "offset": "-44.5"
               }
             },
             "tap-handler": "$Avatar3",
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": "72.0"
+                "value": "70.0"
               },
               "height-constraints": {
                 "sizing-mode": "fixed",
-                "value": "72.0"
+                "value": "70.0"
               }
             },
             "stroke-width": "1.0",
@@ -352,22 +374,22 @@
             "alignment": {
               "horizontal": {
                 "attachment": "center",
-                "offset": "135.5"
+                "offset": "127.5"
               },
               "vertical": {
                 "attachment": "center",
-                "offset": "-73.5"
+                "offset": "-44.5"
               }
             },
             "tap-handler": "$Avatar4",
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": "72.0"
+                "value": "70.0"
               },
               "height-constraints": {
                 "sizing-mode": "fixed",
-                "value": "72.0"
+                "value": "70.0"
               }
             },
             "stroke-width": "1.0",
@@ -386,22 +408,22 @@
             "alignment": {
               "horizontal": {
                 "attachment": "center",
-                "offset": "-128.5"
+                "offset": "-136.5"
               },
               "vertical": {
                 "attachment": "center",
-                "offset": "18.5"
+                "offset": "47.5"
               }
             },
             "tap-handler": "$Avatar5",
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": "72.0"
+                "value": "70.0"
               },
               "height-constraints": {
                 "sizing-mode": "fixed",
-                "value": "72.0"
+                "value": "70.0"
               }
             },
             "stroke-width": "1.0",
@@ -420,22 +442,22 @@
             "alignment": {
               "horizontal": {
                 "attachment": "center",
-                "offset": "-40.5"
+                "offset": "-48.5"
               },
               "vertical": {
                 "attachment": "center",
-                "offset": "18.5"
+                "offset": "47.5"
               }
             },
             "tap-handler": "$Avatar6",
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": "72.0"
+                "value": "70.0"
               },
               "height-constraints": {
                 "sizing-mode": "fixed",
-                "value": "72.0"
+                "value": "70.0"
               }
             },
             "stroke-width": "1.0",
@@ -454,22 +476,22 @@
             "alignment": {
               "horizontal": {
                 "attachment": "center",
-                "offset": "47.5"
+                "offset": "39.5"
               },
               "vertical": {
                 "attachment": "center",
-                "offset": "18.5"
+                "offset": "47.5"
               }
             },
             "tap-handler": "$Avatar7",
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": "72.0"
+                "value": "70.0"
               },
               "height-constraints": {
                 "sizing-mode": "fixed",
-                "value": "72.0"
+                "value": "70.0"
               }
             },
             "stroke-width": "1.0",
@@ -488,22 +510,22 @@
             "alignment": {
               "horizontal": {
                 "attachment": "center",
-                "offset": "135.5"
+                "offset": "127.5"
               },
               "vertical": {
                 "attachment": "center",
-                "offset": "18.5"
+                "offset": "47.5"
               }
             },
             "tap-handler": "$Avatar8",
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": "72.0"
+                "value": "70.0"
               },
               "height-constraints": {
                 "sizing-mode": "fixed",
-                "value": "72.0"
+                "value": "70.0"
               }
             },
             "stroke-width": "1.0",
@@ -522,22 +544,22 @@
             "alignment": {
               "horizontal": {
                 "attachment": "center",
-                "offset": "-128.5"
+                "offset": "-136.5"
               },
               "vertical": {
                 "attachment": "center",
-                "offset": "110.5"
+                "offset": "139.5"
               }
             },
             "tap-handler": "$Avatar9",
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": "72.0"
+                "value": "70.0"
               },
               "height-constraints": {
                 "sizing-mode": "fixed",
-                "value": "72.0"
+                "value": "70.0"
               }
             },
             "stroke-width": "1.0",
@@ -556,22 +578,22 @@
             "alignment": {
               "horizontal": {
                 "attachment": "center",
-                "offset": "-40.5"
+                "offset": "-48.5"
               },
               "vertical": {
                 "attachment": "center",
-                "offset": "110.5"
+                "offset": "139.5"
               }
             },
             "tap-handler": "$Avatar10",
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": "72.0"
+                "value": "70.0"
               },
               "height-constraints": {
                 "sizing-mode": "fixed",
-                "value": "72.0"
+                "value": "70.0"
               }
             },
             "stroke-width": "1.0",
@@ -590,22 +612,22 @@
             "alignment": {
               "horizontal": {
                 "attachment": "center",
-                "offset": "47.5"
+                "offset": "39.5"
               },
               "vertical": {
                 "attachment": "center",
-                "offset": "110.5"
+                "offset": "139.5"
               }
             },
             "tap-handler": "$Avatar11",
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": "72.0"
+                "value": "70.0"
               },
               "height-constraints": {
                 "sizing-mode": "fixed",
-                "value": "72.0"
+                "value": "70.0"
               }
             },
             "stroke-width": "1.0",
@@ -624,22 +646,22 @@
             "alignment": {
               "horizontal": {
                 "attachment": "center",
-                "offset": "135.5"
+                "offset": "127.5"
               },
               "vertical": {
                 "attachment": "center",
-                "offset": "110.5"
+                "offset": "139.5"
               }
             },
             "tap-handler": "$Avatar12",
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": "72.0"
+                "value": "70.0"
               },
               "height-constraints": {
                 "sizing-mode": "fixed",
-                "value": "72.0"
+                "value": "70.0"
               }
             },
             "stroke-width": "1.0",
@@ -661,7 +683,17 @@
               },
               "vertical": {
                 "attachment": "center",
-                "offset": "-143.5"
+                "offset": "-107.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "68.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "11.0"
               }
             },
             "color": {
@@ -672,6 +704,7 @@
             },
             "text-content": "$ChooseAvatar",
             "overflow": "visible",
+            "max-lines": "-1",
             "text-align": "left",
             "text-size": "10.0",
             "line-height": "1.2",
@@ -682,11 +715,11 @@
             "alignment": {
               "horizontal": {
                 "attachment": "center",
-                "offset": "-4.0"
+                "offset": "-5.0"
               },
               "vertical": {
                 "attachment": "center",
-                "offset": "-195.5"
+                "offset": "-153.0"
               }
             },
             "tap-handler": "$onAlterRepeatPassword",
@@ -697,7 +730,7 @@
               },
               "height-constraints": {
                 "sizing-mode": "fixed",
-                "value": "42.0"
+                "value": "37.0"
               }
             },
             "vector-content": "alter_repeat_password.svg"
@@ -707,11 +740,21 @@
             "alignment": {
               "horizontal": {
                 "attachment": "center",
-                "offset": "-117.0"
+                "offset": "-118.0"
               },
               "vertical": {
                 "attachment": "center",
-                "offset": "-205.5"
+                "offset": "-162.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "91.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "11.0"
               }
             },
             "color": {
@@ -722,6 +765,7 @@
             },
             "text-content": "$RepeatPassword",
             "overflow": "visible",
+            "max-lines": "-1",
             "text-align": "left",
             "text-size": "10.0",
             "line-height": "1.2",
@@ -732,11 +776,11 @@
             "alignment": {
               "horizontal": {
                 "attachment": "center",
-                "offset": "-4.0"
+                "offset": "-5.0"
               },
               "vertical": {
                 "attachment": "center",
-                "offset": "-257.5"
+                "offset": "-208.5"
               }
             },
             "tap-handler": "$onAlterPassword",
@@ -747,7 +791,7 @@
               },
               "height-constraints": {
                 "sizing-mode": "fixed",
-                "value": "42.0"
+                "value": "38.0"
               }
             },
             "vector-content": "alter_password.svg"
@@ -757,11 +801,21 @@
             "alignment": {
               "horizontal": {
                 "attachment": "center",
-                "offset": "-134.5"
+                "offset": "-135.5"
               },
               "vertical": {
                 "attachment": "center",
-                "offset": "-267.5"
+                "offset": "-217.5"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "56.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "10.0"
               }
             },
             "color": {
@@ -772,6 +826,7 @@
             },
             "text-content": "$Password",
             "overflow": "visible",
+            "max-lines": "-1",
             "text-align": "left",
             "text-size": "10.0",
             "line-height": "1.2",
@@ -782,11 +837,11 @@
             "alignment": {
               "horizontal": {
                 "attachment": "center",
-                "offset": "-4.0"
+                "offset": "-5.0"
               },
               "vertical": {
                 "attachment": "center",
-                "offset": "-319.5"
+                "offset": "-264.0"
               }
             },
             "tap-handler": "$onAlterNickname",
@@ -797,7 +852,7 @@
               },
               "height-constraints": {
                 "sizing-mode": "fixed",
-                "value": "42.0"
+                "value": "37.0"
               }
             },
             "vector-content": "alter_nickname.svg"
@@ -807,11 +862,21 @@
             "alignment": {
               "horizontal": {
                 "attachment": "center",
-                "offset": "-116.5"
+                "offset": "-117.5"
               },
               "vertical": {
                 "attachment": "center",
-                "offset": "-331.5"
+                "offset": "-274.5"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "92.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "10.0"
               }
             },
             "color": {
@@ -822,6 +887,69 @@
             },
             "text-content": "$Nickname",
             "overflow": "visible",
+            "max-lines": "-1",
+            "text-align": "left",
+            "text-size": "10.0",
+            "line-height": "1.2",
+            "typeface": "Tomorrow"
+          },
+          {
+            "id": "AlterEmailText",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-4.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "-319.0"
+              }
+            },
+            "tap-handler": "$onAlterNickname",
+            "doubletap-handler": "$onAlterEmailText",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "335.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "37.0"
+              }
+            },
+            "vector-content": "alter_email_text.svg"
+          },
+          {
+            "id": "Email",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-116.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "-329.5"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "92.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "10.0"
+              }
+            },
+            "color": {
+              "alpha": "1.0",
+              "hue": "208.125",
+              "saturation": "0.17486338797814208",
+              "value": "0.7176470588235294"
+            },
+            "text-content": "$Nickname",
+            "overflow": "visible",
+            "max-lines": "-1",
             "text-align": "left",
             "text-size": "10.0",
             "line-height": "1.2",
@@ -842,12 +970,17 @@
       "required": false,
       "description": ""
     },
+    "onAlterNickname": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": ""
+    },
     "onAlterFavMovie": {
       "data-type": "void-callback",
       "required": false,
       "description": ""
     },
-    "FavoriteMovie": {
+    "Nickname": {
       "data-type": "text",
       "required": false,
       "description": ""
@@ -937,13 +1070,8 @@
       "required": false,
       "description": ""
     },
-    "onAlterNickname": {
+    "onAlterEmailText": {
       "data-type": "void-callback",
-      "required": false,
-      "description": ""
-    },
-    "Nickname": {
-      "data-type": "text",
       "required": false,
       "description": ""
     }
@@ -957,11 +1085,10 @@
       },
       "parameters": {
         "CreateAccount": "Crear cuenta",
-        "FavoriteMovie": "Película favorita",
+        "Nickname": "Email",
         "ChooseAvatar": "Elige tu avatar",
         "RepeatPassword": "Repetir contraseña",
-        "Password": "Contraseña",
-        "Nickname": "Nombre de usuario"
+        "Password": "Contraseña"
       }
     }
   ],
