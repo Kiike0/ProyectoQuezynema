@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.requiredHeight
 import androidx.compose.foundation.layout.requiredWidth
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.LocalTextStyle
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.TextFieldDefaults
@@ -74,8 +75,9 @@ fun UserAccessMod(
                 .width(330.dp),
             colors = TextFieldDefaults.outlinedTextFieldColors(
                 focusedBorderColor = Color.Transparent,
-                unfocusedBorderColor = Color.Transparent
-            )
+                unfocusedBorderColor = Color.Transparent,
+            ),
+            textStyle = LocalTextStyle.current.copy(color = Color.White)
         )
         OutlinedTextField(
             value = accessUserViewModel.password,
@@ -94,7 +96,8 @@ fun UserAccessMod(
             colors = TextFieldDefaults.outlinedTextFieldColors(
                 focusedBorderColor = Color.Transparent,
                 unfocusedBorderColor = Color.Transparent
-            )
+            ),
+            textStyle = LocalTextStyle.current.copy(color = Color.White)
         )
         TextDescriptionMod(
             textDescription = "Si no tienes cuenta debes crear una para acceder",

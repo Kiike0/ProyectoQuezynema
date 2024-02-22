@@ -8,12 +8,14 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.proyectofinal_quizynema.model.UserModel
+import com.example.proyectofinal_quizynema.navigation.Routes
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.tasks.await
 import java.lang.Exception
 
 /**
@@ -28,7 +30,7 @@ import java.lang.Exception
  * @property userName Nombre de usuario, utilizado solo en el proceso de registro.
  * @property selectedTab Índice de la pestaña seleccionada en la UI, utilizado para alternar entre las vistas de inicio de sesión y registro.
  */
-class UserViewModel: ViewModel() {
+class UserViewModel : ViewModel() {
     // DCS - Definición de variables y funciones para manejar el inicio de sesión y registro de usuarios.
 
     private val auth: FirebaseAuth = Firebase.auth
@@ -42,6 +44,10 @@ class UserViewModel: ViewModel() {
         private set
     var nickname by mutableStateOf("")
         private set
+
+    val currentnickname: String
+        get() = nickname
+
     var favoriteFilm by mutableStateOf("")
         private set
     var points by mutableIntStateOf(0)
@@ -54,23 +60,59 @@ class UserViewModel: ViewModel() {
      *
      * @param onSuccess Acción a ejecutar si el inicio de sesión es exitoso.
      */
-    fun login(onSuccess: () -> Unit){
+
+    fun login(onSuccess: () -> Unit) {
         viewModelScope.launch {
             try {
-                // DCS - Utiliza el servicio de autenticación de Firebase para validar al usuario
+                // Utiliza el servicio de autenticación de Firebase para validar al usuario
                 // por email y contraseña
                 auth.signInWithEmailAndPassword(email, password)
                     .addOnCompleteListener { task ->
                         if (task.isSuccessful) {
-                            onSuccess()
+                            Log.d(
+                                "LOGIN_SUCCESS",
+                                "Inicio de sesión exitoso"
+                            ) // Mensaje de registro
+                            onSuccess() // Redirige al usuario si la autenticación es exitosa
                         } else {
-                            Log.d("ERROR EN FIREBASE","Usuario y/o contrasena incorrectos")
+                            Log.d("ERROR EN FIREBASE", "Usuario y/o contrasena incorrectos")
                             showAlert = true
                         }
                     }
-            } catch (e: Exception){
+            } catch (e: Exception) {
                 Log.d("ERROR EN JETPACK", "ERROR: ${e.localizedMessage}")
             }
+        }
+    }
+
+    fun getNickname(callback: (String) -> Unit) {
+        val uid = auth.currentUser?.uid
+        if (uid != null) {
+            try {
+                firestore.collection("Users").document(uid).get()
+                    .addOnSuccessListener { document ->
+                        if (document.exists()) {
+                            val nickname = document.getString("nickname")
+                            if (nickname != null) {
+                                callback(nickname)
+                                return@addOnSuccessListener
+                            }
+                        } else {
+                            Log.d("TAG", "El documento del usuario no existe")
+                        }
+                        callback("Senpai")
+                    }
+                    .addOnFailureListener { exception ->
+                        Log.d("TAG", "Error al obtener el documento del usuario: $exception")
+                        callback("Senpai")
+                    }
+            } catch (e: Exception) {
+                Log.d("TAG", "Error al obtener el documento del usuario: $e")
+                callback("Senpai")
+            }
+        } else {
+            Log.d("TAG", "No hay usuario autenticado")
+            callback("Senpai")
         }
     }
 
@@ -81,7 +123,7 @@ class UserViewModel: ViewModel() {
      *
      * @param onSuccess Acción a ejecutar si el registro es exitoso.
      */
-    fun createUser(onSuccess: () -> Unit){
+    fun createUser(onSuccess: () -> Unit) {
         viewModelScope.launch {
             try {
                 // DCS - Utiliza el servicio de autenticación de Firebase para registrar al usuario
@@ -93,13 +135,34 @@ class UserViewModel: ViewModel() {
                             saveUser(nickname)
                             onSuccess()
                         } else {
-                            Log.d("ERROR EN FIREBASE","Error al crear usuario")
+                            Log.d("ERROR EN FIREBASE", "Error al crear usuario")
                             showAlert = true
                         }
                     }
-            } catch (e: Exception){
+            } catch (e: Exception) {
                 Log.d("ERROR CREAR USUARIO", "ERROR: ${e.localizedMessage}")
             }
+        }
+    }
+
+    suspend fun fetchNickname() {
+        val uid = auth.currentUser?.uid
+        if (uid != null) {
+            try {
+                val document = firestore.collection("Users").document(uid).get().await()
+                if (document.exists()) {
+                    val receivedNickname = document.getString("nickname")
+                    if (receivedNickname != null) {
+                        nickname = receivedNickname
+                    }
+                } else {
+                    Log.d("TAG", "El documento del usuario no existe")
+                }
+            } catch (e: Exception) {
+                Log.d("TAG", "Error al obtener el documento del usuario: $e")
+            }
+        } else {
+            Log.d("TAG", "No hay usuario autenticado")
         }
     }
 
@@ -108,7 +171,7 @@ class UserViewModel: ViewModel() {
      *
      * @param username Nombre de usuario a guardar.
      */
-    private fun saveUser(username: String){
+    private fun saveUser(username: String) {
         val id = auth.currentUser?.uid
         val email = auth.currentUser?.email
 
@@ -124,7 +187,12 @@ class UserViewModel: ViewModel() {
             // DCS - Añade el usuario a la colección "Users" en la base de datos Firestore
             firestore.collection("Users")
                 .add(user)
-                .addOnSuccessListener { Log.d("GUARDAR OK", "Se guardó el usuario correctamente en Firestore") }
+                .addOnSuccessListener {
+                    Log.d(
+                        "GUARDAR OK",
+                        "Se guardó el usuario correctamente en Firestore"
+                    )
+                }
                 .addOnFailureListener { Log.d("ERROR AL GUARDAR", "ERROR al guardar en Firestore") }
         }
     }
@@ -132,7 +200,7 @@ class UserViewModel: ViewModel() {
     /**
      * Cierra el diálogo de alerta de error mostrada en la UI.
      */
-    fun closeAlert(){
+    fun closeAlert() {
         showAlert = false
     }
 

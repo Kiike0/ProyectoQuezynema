@@ -1,5 +1,6 @@
 package com.example.proyectofinal_quizynema.views.login
 
+import android.util.Log
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -32,10 +33,16 @@ fun Login(
     ) {
         UserAccessMod(
             modifier = Modifier,
-            onAccessButton = { accessViewModel.login { navController.navigate(Routes.GameScreen.route) }},
+            onAccessButton = {
+                accessViewModel.login {
+                    // Agrega un registro para confirmar que onSuccess se está llamando correctamente
+                    Log.d("LOGIN_SUCCESS", "Inicio de sesión exitoso")
+                    navController.navigate(Routes.GameScreen.route)
+                }
+            },
             createAccountTap = { navController.navigate(Routes.RegisterScreen.route) },
             remindPasswordTap = {},
-            accessUserViewModel = UserViewModel()
+            accessUserViewModel = accessViewModel
         )
         if (accessViewModel.showAlert) {
             Alert(title = "Alerta",

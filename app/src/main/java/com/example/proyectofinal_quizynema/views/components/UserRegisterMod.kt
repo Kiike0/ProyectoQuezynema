@@ -7,8 +7,10 @@ import androidx.compose.foundation.layout.requiredHeight
 import androidx.compose.foundation.layout.requiredWidth
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.LocalTextStyle
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.Text
 import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -16,6 +18,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -67,8 +70,8 @@ fun UserRegisterMod(
                 .boxAlign(
                     alignment = Alignment.Center,
                     offset = DpOffset(
-                        x = -5.0.dp,
-                        y = -316.0.dp
+                        x = -1.5.dp,
+                        y = -303.dp
                     )
                 )
                 .background(BackGroundAccessBox)
@@ -76,7 +79,8 @@ fun UserRegisterMod(
             colors = TextFieldDefaults.outlinedTextFieldColors(
                 focusedBorderColor = Color.Transparent,
                 unfocusedBorderColor = Color.Transparent
-            )
+            ),
+            textStyle = LocalTextStyle.current.copy(color = Color.White)
         )
         // Texto editable para el Nombre de usuario
         OutlinedTextField(
@@ -87,8 +91,8 @@ fun UserRegisterMod(
                 .boxAlign(
                     alignment = Alignment.Center,
                     offset = DpOffset(
-                        x = -5.0.dp,
-                        y = -247.dp
+                        x = -1.5.dp,
+                        y = -228.dp
                     )
                 )
                 .background(BackGroundAccessBox)
@@ -96,7 +100,8 @@ fun UserRegisterMod(
             colors = TextFieldDefaults.outlinedTextFieldColors(
                 focusedBorderColor = Color.Transparent,
                 unfocusedBorderColor = Color.Transparent
-            )
+            ),
+            textStyle = LocalTextStyle.current.copy(color = Color.White)
         )
         // Texto editable para la Contraseña
         OutlinedTextField(
@@ -107,8 +112,8 @@ fun UserRegisterMod(
                 .boxAlign(
                     alignment = Alignment.Center,
                     offset = DpOffset(
-                        x = -5.0.dp,
-                        y = -177.dp
+                        x = -1.5.dp,
+                        y = -153.dp
                     )
                 )
                 .background(BackGroundAccessBox)
@@ -116,7 +121,8 @@ fun UserRegisterMod(
             colors = TextFieldDefaults.outlinedTextFieldColors(
                 focusedBorderColor = Color.Transparent,
                 unfocusedBorderColor = Color.Transparent
-            )
+            ),
+            textStyle = LocalTextStyle.current.copy(color = Color.White)
         )
         // Texto editable para comprobar si la contraseña es la misma
         OutlinedTextField(
@@ -127,8 +133,8 @@ fun UserRegisterMod(
                 .boxAlign(
                     alignment = Alignment.Center,
                     offset = DpOffset(
-                        x = -5.0.dp,
-                        y = -108.0.dp
+                        x = -1.5.dp,
+                        y = -78.0.dp
                     )
                 )
                 .background(BackGroundAccessBox)
@@ -136,17 +142,29 @@ fun UserRegisterMod(
             colors = TextFieldDefaults.outlinedTextFieldColors(
                 focusedBorderColor = Color.Transparent,
                 unfocusedBorderColor = Color.Transparent
-            )
+            ),
+            textStyle = LocalTextStyle.current.copy(color = Color.White)
         )
         // Texto y ubicacion exacta en la pantalla de Elige tu avatar
-        ChooseAvatarRMod(
-            chooseAvatar = "Elige tu avatar",
+
+        Text(
+            text = "Elige tu avatar",
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
-                    x = -140.dp,
-                    y = -66.dp
+                    x = -129.dp,
+                    y = -30.dp
                 )
+            ),
+            style = TextStyle(
+                color = Color(
+                    alpha = 255,
+                    red = 151,
+                    green = 168,
+                    blue = 183
+                ),
+                fontSize = 12.0.sp,
+                fontFamily = com.example.proyectofinal_quizynema.accesousuario.tomorrow
             )
         )
         Avatar1RMod(
@@ -155,7 +173,7 @@ fun UserRegisterMod(
                 alignment = Alignment.Center,
                 offset = DpOffset(
                     x = -136.5.dp,
-                    y = -16.dp
+                    y = 26.dp
                 )
             )
         )
@@ -165,7 +183,7 @@ fun UserRegisterMod(
                 alignment = Alignment.Center,
                 offset = DpOffset(
                     x = -48.5.dp,
-                    y = -16.dp
+                    y = 26.dp
                 )
             )
         )
@@ -175,7 +193,7 @@ fun UserRegisterMod(
                 alignment = Alignment.Center,
                 offset = DpOffset(
                     x = 39.5.dp,
-                    y = -16.dp
+                    y = 26.dp
                 )
             )
         )
@@ -185,7 +203,7 @@ fun UserRegisterMod(
                 alignment = Alignment.Center,
                 offset = DpOffset(
                     x = 127.5.dp,
-                    y = -16.dp
+                    y = 26.dp
                 )
             )
         )
@@ -195,7 +213,7 @@ fun UserRegisterMod(
                 alignment = Alignment.Center,
                 offset = DpOffset(
                     x = -136.5.dp,
-                    y = 76.dp
+                    y = 118.dp
                 )
             )
         )
@@ -205,7 +223,7 @@ fun UserRegisterMod(
                 alignment = Alignment.Center,
                 offset = DpOffset(
                     x = -48.5.dp,
-                    y = 76.dp
+                    y = 118.dp
                 )
             )
         )
@@ -215,7 +233,7 @@ fun UserRegisterMod(
                 alignment = Alignment.Center,
                 offset = DpOffset(
                     x = 39.5.dp,
-                    y = 76.dp
+                    y = 118.dp
                 )
             )
         )
@@ -225,7 +243,7 @@ fun UserRegisterMod(
                 alignment = Alignment.Center,
                 offset = DpOffset(
                     x = 127.5.dp,
-                    y = 76.dp
+                    y = 118.dp
                 )
             )
         )
@@ -235,7 +253,7 @@ fun UserRegisterMod(
                 alignment = Alignment.Center,
                 offset = DpOffset(
                     x = -136.5.dp,
-                    y = 168.dp
+                    y = 210.dp
                 )
             )
         )
@@ -245,7 +263,7 @@ fun UserRegisterMod(
                 alignment = Alignment.Center,
                 offset = DpOffset(
                     x = -48.5.dp,
-                    y = 168.dp
+                    y = 210.dp
                 )
             )
         )
@@ -255,7 +273,7 @@ fun UserRegisterMod(
                 alignment = Alignment.Center,
                 offset = DpOffset(
                     x = 39.5.dp,
-                    y = 168.dp
+                    y = 210.dp
                 )
             )
         )
@@ -265,38 +283,19 @@ fun UserRegisterMod(
                 alignment = Alignment.Center,
                 offset = DpOffset(
                     x = 127.5.dp,
-                    y = 168.dp
+                    y = 210.dp
                 )
-            )
-        )
-        // Texto editable para la pelicula favorita
-        OutlinedTextField(
-            value = registUserViewModel.favoriteFilm,
-            onValueChange = { registUserViewModel.changeFavoriteFilm(it) },
-            label = { CustomizedText(customizedText = "Pelicula favorita") },
-            modifier = Modifier
-                .boxAlign(
-                    alignment = Alignment.Center,
-                    offset = DpOffset(
-                        x = -5.0.dp,
-                        y = 242.0.dp
-                    )
-                )
-                .background(BackGroundAccessBox)
-                .width(350.dp),
-            colors = TextFieldDefaults.outlinedTextFieldColors(
-                focusedBorderColor = Color.Transparent,
-                unfocusedBorderColor = Color.Transparent
             )
         )
 
+        // Ubicación y estilo del botón Crear cuenta
         RectanglebuttonCreateAccRMod(
             onbuttonCreateAcc = onbuttonCreateAcc,
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
                     x = -4.5.dp,
-                    y = 315.dp
+                    y = 300.dp
                 )
             )
         )
@@ -306,36 +305,13 @@ fun UserRegisterMod(
                 alignment = Alignment.Center,
                 offset = DpOffset(
                     x = -1.0.dp,
-                    y = 315.dp
+                    y = 300.dp
                 )
             )
         )
     }
 }
 
-@Composable
-fun ChooseAvatarRMod(
-    chooseAvatar: String,
-    modifier: Modifier = Modifier
-) {
-    RelayText(
-        content = chooseAvatar,
-        fontSize = 10.0.sp,
-        fontFamily = tomorrow,
-        color = Color(
-            alpha = 255,
-            red = 255,
-            green = 255,
-            blue = 255
-        ),
-        height = 1.2.em,
-        textAlign = TextAlign.Left,
-        maxLines = -1,
-        modifier = modifier
-            .requiredWidth(68.0.dp)
-            .requiredHeight(11.0.dp)
-    )
-}
 
 @Composable
 fun Avatar1RMod(

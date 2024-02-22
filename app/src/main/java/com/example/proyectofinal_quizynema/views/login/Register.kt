@@ -33,7 +33,7 @@ fun Register(
     ) {
         Navegacion(
             modifier = Modifier
-                .size(300.dp, 50.dp)
+                .size(300.dp, 60.dp)
                 .align(Alignment.Start),
             textNav = "Registro",
             onBack = { navController.navigate(Routes.AccessScreen.route) }
