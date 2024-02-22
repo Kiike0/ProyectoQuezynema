@@ -1,0 +1,296 @@
+{
+  "name": "quiz_sin_terminar",
+  "version": 32,
+  "source-key": {
+    "type": "figma",
+    "file": "H7ukQQTqL9pUMovBZnfFnU",
+    "node": "140:11",
+    "version": "5204371008",
+    "component-id": "9053fa585795508367e844a74b5f0f00bd558d87"
+  },
+  "default": "QuizSinTerminar",
+  "design": {
+    "atoms": [
+      {
+        "type": "group",
+        "id": "top_level",
+        "root": "true"
+      },
+      {
+        "type": "image",
+        "id": "onImageButtonUQ"
+      },
+      {
+        "type": "vector",
+        "id": "onRectangleButtonUQ"
+      },
+      {
+        "type": "text",
+        "id": "Points"
+      },
+      {
+        "type": "group",
+        "id": "ThrophyIcon"
+      },
+      {
+        "type": "text",
+        "id": "IniciadaText"
+      },
+      {
+        "type": "text",
+        "id": "TitleUnfinishedQuiz"
+      },
+      {
+        "type": "vector",
+        "id": "VectorIcon"
+      }
+    ],
+    "modes": {
+      "QuizSinTerminar": {
+        "rules": [
+          {
+            "id": "top_level",
+            "is-structured": "false",
+            "children": [
+              "onImageButtonUQ",
+              "onRectangleButtonUQ",
+              "Points",
+              "ThrophyIcon",
+              "IniciadaText",
+              "TitleUnfinishedQuiz"
+            ],
+            "clip-content": "false"
+          },
+          {
+            "id": "onImageButtonUQ",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-124.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "0.0"
+              }
+            },
+            "tap-handler": "$onImageButtonUQ",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "85.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "68.0"
+              }
+            },
+            "image-content": "on_image_button_uq.jpeg",
+            "scale": "cover"
+          },
+          {
+            "id": "onRectangleButtonUQ",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "42.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "0.0"
+              }
+            },
+            "tap-handler": "$onRectangleButtonUQ",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "249.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "68.0"
+              }
+            },
+            "vector-content": "on_rectangle_button_uq.svg"
+          },
+          {
+            "id": "Points",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "117.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "9.0"
+              }
+            },
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "text-content": "$Pointstext",
+            "overflow": "visible",
+            "text-align": "left",
+            "text-size": "10.0",
+            "line-height": "1.2",
+            "typeface": "Tomorrow"
+          },
+          {
+            "id": "ThrophyIcon",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "94.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "9.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "12.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "12.0"
+              }
+            },
+            "is-structured": "false",
+            "children": [
+              "VectorIcon"
+            ]
+          },
+          {
+            "id": "IniciadaText",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-10.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "9.0"
+              }
+            },
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "text-content": "$IniciadaText",
+            "overflow": "visible",
+            "text-align": "left",
+            "text-size": "10.0",
+            "line-height": "1.2",
+            "typeface": "Tomorrow"
+          },
+          {
+            "id": "TitleUnfinishedQuiz",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "34.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "-24.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "193.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "shrink"
+              }
+            },
+            "font-weight": "700.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "text-content": "$TitleUnfinishedQuiz",
+            "overflow": "visible",
+            "max-lines": "-1",
+            "text-align": "left",
+            "text-size": "12.0",
+            "line-height": "1.2000000476837158",
+            "typeface": "Tomorrow"
+          },
+          {
+            "id": "VectorIcon",
+            "margin": {
+              "left": "0.1875",
+              "top": "1.6875",
+              "right": "0.1875",
+              "bottom": "0.9375"
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              }
+            },
+            "vector-content": "vector_icon.svg"
+          }
+        ]
+      }
+    }
+  },
+  "parameters": {
+    "onImageButtonUQ": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": ""
+    },
+    "onRectangleButtonUQ": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": ""
+    },
+    "Pointstext": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    },
+    "IniciadaText": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    },
+    "TitleUnfinishedQuiz": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    }
+  },
+  "previews": [
+    {
+      "design": "QuizSinTerminar",
+      "size": {
+        "width": 334.0,
+        "height": 68.0
+      },
+      "parameters": {
+        "Pointstext": "5/10",
+        "IniciadaText": "Iniciada sin terminar",
+        "TitleUnfinishedQuiz": "Conoce la saga Scream"
+      }
+    }
+  ],
+  "adin-component-search-paths": [],
+  "image-search-paths": [],
+  "vector-search-paths": []
+}

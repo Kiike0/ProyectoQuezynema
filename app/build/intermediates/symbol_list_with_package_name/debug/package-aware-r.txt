@@ -116,6 +116,8 @@ drawable acceso_usuario_rectangle_separation
 drawable backgroundinicio
 drawable boton_genre_button_genre
 drawable boton_jugar_rectangle_button
+drawable botones_usuario_editar_perfil_button
+drawable botones_usuario_ranking_button
 drawable circular_vignette_bottom
 drawable circular_vignette_top
 drawable common_full_open_on_phone
@@ -179,6 +181,9 @@ drawable progreso_quiz_rectangle_button
 drawable progreso_quiz_vector_trophy
 drawable quezynematitle
 drawable quiz_explored_quiz_img
+drawable quiz_sin_terminar_on_image_button_uq
+drawable quiz_sin_terminar_on_rectangle_button_uq
+drawable quiz_sin_terminar_vector_icon
 drawable quiz_sugerida_card
 drawable quiz_sugerida_img
 drawable quiz_sugerida_rect_button

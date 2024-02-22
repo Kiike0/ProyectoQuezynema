@@ -84,6 +84,10 @@
         "source": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-relay-61:\\drawable-nodpi\\registro_usuario_avatar10.png"
     },
     {
+        "merged": "com.example.proyectofinal_quizynema.app-merged_res-65:/drawable-nodpi_quiz_sin_terminar_on_rectangle_button_uq.xml.flat",
+        "source": "com.example.proyectofinal_quizynema.app-relay-61:/drawable-nodpi/quiz_sin_terminar_on_rectangle_button_uq.xml"
+    },
+    {
         "merged": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-merged_res-65:\\drawable-nodpi_welcome_component_rectangle_button.xml.flat",
         "source": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-relay-61:\\drawable-nodpi\\welcome_component_rectangle_button.xml"
     },
@@ -150,6 +154,10 @@
     {
         "merged": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-merged_res-65:\\drawable-nodpi_registro_usuario_alter_email_text.xml.flat",
         "source": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-relay-61:\\drawable-nodpi\\registro_usuario_alter_email_text.xml"
+    },
+    {
+        "merged": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-merged_res-65:\\drawable-nodpi_botones_usuario_editar_perfil_button.xml.flat",
+        "source": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-relay-61:\\drawable-nodpi\\botones_usuario_editar_perfil_button.xml"
     },
     {
         "merged": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-merged_res-65:\\font_relay_tomorrow_medium_italic.ttf.flat",
@@ -248,6 +256,10 @@
         "source": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-main-67:\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
+        "merged": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-merged_res-65:\\drawable-nodpi_botones_usuario_ranking_button.xml.flat",
+        "source": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-relay-61:\\drawable-nodpi\\botones_usuario_ranking_button.xml"
+    },
+    {
         "merged": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-merged_res-65:\\drawable-nodpi_registro_usuario_avatar12.png.flat",
         "source": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-relay-61:\\drawable-nodpi\\registro_usuario_avatar12.png"
     },
@@ -288,6 +300,10 @@
         "source": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-main-67:\\mipmap-xhdpi\\ic_launcher.webp"
     },
     {
+        "merged": "com.example.proyectofinal_quizynema.app-merged_res-65:/drawable-nodpi_quiz_sin_terminar_on_image_button_uq.jpeg.flat",
+        "source": "com.example.proyectofinal_quizynema.app-relay-61:/drawable-nodpi/quiz_sin_terminar_on_image_button_uq.jpeg"
+    },
+    {
         "merged": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-merged_res-65:\\drawable-nodpi_registro_usuario_avatar1.png.flat",
         "source": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-relay-61:\\drawable-nodpi\\registro_usuario_avatar1.png"
     },
@@ -306,6 +322,10 @@
     {
         "merged": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-merged_res-65:\\drawable-nodpi_boton_jugar_rectangle_button.xml.flat",
         "source": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-relay-61:\\drawable-nodpi\\boton_jugar_rectangle_button.xml"
+    },
+    {
+        "merged": "com.example.proyectofinal_quizynema.app-merged_res-65:/drawable-nodpi_quiz_sin_terminar_vector_icon.xml.flat",
+        "source": "com.example.proyectofinal_quizynema.app-relay-61:/drawable-nodpi/quiz_sin_terminar_vector_icon.xml"
     },
     {
         "merged": "C:\\Users\\enriv\\.gradle\\daemon\\8.2\\com.example.proyectofinal_quizynema.app-merged_res-65:\\drawable-nodpi_registro_usuario_alter_fav_movie.xml.flat",

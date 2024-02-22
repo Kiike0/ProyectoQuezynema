@@ -10,6 +10,10 @@ sealed class Routes(val route: String) {
      * Objeto que representa la pantalla Inicial.
      */
     object InitialScreen : Routes("initialScreen")
+    /**
+     * Objeto que representa la pantalla Inicial.
+     */
+    object EmptyScreen : Routes("emptyScreen")
 
     /**
      * Objeto que representa la pantalla de Inicio de Sesión (Acceso).
@@ -24,7 +28,7 @@ sealed class Routes(val route: String) {
     /**
      * Objeto que representa la pantalla Home con las opciones del Juego.
      */
-    object GameScreen : Routes("gameScreen")
+    object HomeScreen : Routes("homeScreen")
 
     /**
      * Objeto que representa la pantalla de las preguntas.

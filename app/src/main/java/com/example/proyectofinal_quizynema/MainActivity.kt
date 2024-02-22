@@ -14,8 +14,10 @@ import androidx.navigation.compose.rememberNavController
 import com.example.proyectofinal_quizynema.navigation.Routes
 import com.example.proyectofinal_quizynema.ui.theme.Proyectofinal_quizynemaTheme
 import com.example.proyectofinal_quizynema.viewModels.UserViewModel
-import com.example.proyectofinal_quizynema.views.game.ui.HomeScreen
+import com.example.proyectofinal_quizynema.views.game.ui.HomeView
 import com.example.proyectofinal_quizynema.views.game.ui.StartGameScreen
+import com.example.proyectofinal_quizynema.views.game.ui.UserView
+import com.example.proyectofinal_quizynema.views.login.EmptyView
 import com.example.proyectofinal_quizynema.views.login.Login
 import com.example.proyectofinal_quizynema.views.login.Register
 
@@ -35,8 +37,11 @@ class MainActivity : ComponentActivity() {
 
                     NavHost(
                         navController = navController,
-                        startDestination = Routes.InitialScreen.route
+                        startDestination = Routes.EmptyScreen.route
                     ) {
+                        composable(Routes.EmptyScreen.route) {
+                            EmptyView(navController = navController)
+                        }
                         composable(Routes.InitialScreen.route) {
                             StartGameScreen(
                                 navController = navController
@@ -54,8 +59,14 @@ class MainActivity : ComponentActivity() {
                                 registerViewModel = userViewModel
                             )
                         }
-                        composable(Routes.GameScreen.route) {
-                            HomeScreen(
+                        composable(Routes.HomeScreen.route) {
+                            HomeView(
+                                navController = navController,
+                                currentUserViewModel = userViewModel
+                            )
+                        }
+                        composable(Routes.UserScreen.route) {
+                            UserView(
                                 navController = navController,
                                 currentUserViewModel = userViewModel
                             )

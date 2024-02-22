@@ -1,0 +1,196 @@
+{
+  "name": "botones_usuario",
+  "version": 32,
+  "source-key": {
+    "type": "figma",
+    "file": "H7ukQQTqL9pUMovBZnfFnU",
+    "node": "138:10",
+    "version": "5204266973",
+    "component-id": "dd133ad5cbe4ed4a35dba96e96217b8652691e30"
+  },
+  "default": "BotonesUsuario",
+  "design": {
+    "atoms": [
+      {
+        "type": "group",
+        "id": "top_level",
+        "root": "true"
+      },
+      {
+        "type": "vector",
+        "id": "EditarPerfilButton"
+      },
+      {
+        "type": "text",
+        "id": "EditarPerfilText"
+      },
+      {
+        "type": "vector",
+        "id": "RankingButton"
+      },
+      {
+        "type": "text",
+        "id": "VerRankingText"
+      }
+    ],
+    "modes": {
+      "BotonesUsuario": {
+        "rules": [
+          {
+            "id": "top_level",
+            "is-structured": "false",
+            "children": [
+              "EditarPerfilButton",
+              "EditarPerfilText",
+              "RankingButton",
+              "VerRankingText"
+            ],
+            "clip-content": "false"
+          },
+          {
+            "id": "EditarPerfilButton",
+            "border-radius": "15.0",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-93.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "0.0"
+              }
+            },
+            "tap-handler": "$onEditarPerfilButton",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "159.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "36.0"
+              }
+            },
+            "vector-content": "editar_perfil_button.svg"
+          },
+          {
+            "id": "EditarPerfilText",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-94.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "-1.0"
+              }
+            },
+            "font-weight": "700.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "text-content": "$EditarPerfilText",
+            "overflow": "visible",
+            "text-align": "left",
+            "text-size": "18.0",
+            "line-height": "1.2000000211927626",
+            "typeface": "Tomorrow"
+          },
+          {
+            "id": "RankingButton",
+            "border-radius": "15.0",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "93.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "0.0"
+              }
+            },
+            "tap-handler": "$onRankingButton",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "159.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "36.0"
+              }
+            },
+            "vector-content": "ranking_button.svg"
+          },
+          {
+            "id": "VerRankingText",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "93.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "-1.0"
+              }
+            },
+            "font-weight": "700.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "text-content": "$VerRankingText",
+            "overflow": "visible",
+            "text-align": "left",
+            "text-size": "18.0",
+            "line-height": "1.2000000211927626",
+            "typeface": "Tomorrow"
+          }
+        ]
+      }
+    }
+  },
+  "parameters": {
+    "onEditarPerfilButton": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": ""
+    },
+    "EditarPerfilText": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    },
+    "onRankingButton": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": ""
+    },
+    "VerRankingText": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    }
+  },
+  "previews": [
+    {
+      "design": "BotonesUsuario",
+      "size": {
+        "width": 345.0,
+        "height": 36.0
+      },
+      "parameters": {
+        "EditarPerfilText": "Editar Perfil",
+        "VerRankingText": "Ver Ranking"
+      }
+    }
+  ],
+  "adin-component-search-paths": [],
+  "image-search-paths": [],
+  "vector-search-paths": []
+}

@@ -37,7 +37,7 @@ fun Login(
                 accessViewModel.login {
                     // Agrega un registro para confirmar que onSuccess se está llamando correctamente
                     Log.d("LOGIN_SUCCESS", "Inicio de sesión exitoso")
-                    navController.navigate(Routes.GameScreen.route)
+                    navController.navigate(Routes.HomeScreen.route)
                 }
             },
             createAccountTap = { navController.navigate(Routes.RegisterScreen.route) },
