@@ -1,5 +1,6 @@
 package com.example.proyectofinal_quizynema.viewModels
 
+import android.content.ContentValues.TAG
 import android.util.Log
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
@@ -8,14 +9,12 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.proyectofinal_quizynema.model.UserModel
-import com.example.proyectofinal_quizynema.navigation.Routes
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.tasks.await
 import java.lang.Exception
 
 /**
@@ -45,8 +44,7 @@ class UserViewModel : ViewModel() {
     var nickname by mutableStateOf("")
         private set
 
-    val currentnickname: String
-        get() = nickname
+    private var currentNickname by mutableStateOf("")
 
     var favoriteFilm by mutableStateOf("")
         private set
@@ -85,35 +83,29 @@ class UserViewModel : ViewModel() {
         }
     }
 
-    fun getNickname(callback: (String) -> Unit) {
+
+    fun getSaludo() = if (currentNickname.isBlank()) "" else "$currentNickname"
+
+    //fun getCurrentNickname() = if (currentNickname.isBlank()) "" else "$currentNickname"
+
+    fun getNickname() {
         val uid = auth.currentUser?.uid
         if (uid != null) {
-            try {
-                firestore.collection("Users").document(uid).get()
-                    .addOnSuccessListener { document ->
-                        if (document.exists()) {
-                            val nickname = document.getString("nickname")
-                            if (nickname != null) {
-                                callback(nickname)
-                                return@addOnSuccessListener
-                            }
-                        } else {
-                            Log.d("TAG", "El documento del usuario no existe")
-                        }
-                        callback("Senpai")
+            firestore.collection("Users")
+                .whereEqualTo("userId", uid)
+                .get()
+                .addOnSuccessListener { documents ->
+                    for (document in documents) {
+                        Log.d(TAG, "${document.id} => ${document.data.get("nickname")}")
+                        Log.d(TAG, "${document.data.get("nickname").toString()}")
+                        currentNickname = document.data.get("nickname").toString()
                     }
-                    .addOnFailureListener { exception ->
-                        Log.d("TAG", "Error al obtener el documento del usuario: $exception")
-                        callback("Senpai")
-                    }
-            } catch (e: Exception) {
-                Log.d("TAG", "Error al obtener el documento del usuario: $e")
-                callback("Senpai")
-            }
-        } else {
-            Log.d("TAG", "No hay usuario autenticado")
-            callback("Senpai")
+                }
+                .addOnFailureListener { exception ->
+                    Log.d(TAG, "Error al obtener el documento del usuario: $exception")
+                }
         }
+
     }
 
     /**
@@ -145,6 +137,7 @@ class UserViewModel : ViewModel() {
         }
     }
 
+    /*
     suspend fun fetchNickname() {
         val uid = auth.currentUser?.uid
         if (uid != null) {
@@ -165,6 +158,8 @@ class UserViewModel : ViewModel() {
             Log.d("TAG", "No hay usuario autenticado")
         }
     }
+
+     */
 
     /**
      * Guarda la información del usuario recién registrado en Firestore.
@@ -195,6 +190,12 @@ class UserViewModel : ViewModel() {
                 }
                 .addOnFailureListener { Log.d("ERROR AL GUARDAR", "ERROR al guardar en Firestore") }
         }
+    }
+    /**
+     * Cierra la sesión del usuario actual en Firebase Auth.
+     */
+    fun signOut() {
+        auth.signOut()
     }
 
     /**

@@ -5,7 +5,7 @@
     "type": "figma",
     "file": "H7ukQQTqL9pUMovBZnfFnU",
     "node": "99:2",
-    "version": "5179077080",
+    "version": "5217154745",
     "component-id": "162c4da606400188563d4b2d57caae823fcb4255"
   },
   "default": "NavegacionSalir",
@@ -18,19 +18,15 @@
       },
       {
         "type": "text",
-        "id": "QuestionNum"
+        "id": "TextQuestionNumber"
       },
       {
         "type": "group",
-        "id": "ExitButton"
+        "id": "ExitIcon"
       },
       {
         "type": "vector",
-        "id": "Vector2"
-      },
-      {
-        "type": "vector",
-        "id": "Vector1"
+        "id": "VectorExit"
       }
     ],
     "modes": {
@@ -40,17 +36,17 @@
             "id": "top_level",
             "is-structured": "false",
             "children": [
-              "QuestionNum",
-              "ExitButton"
+              "TextQuestionNumber",
+              "ExitIcon"
             ],
             "clip-content": "false"
           },
           {
-            "id": "QuestionNum",
+            "id": "TextQuestionNumber",
             "alignment": {
               "horizontal": {
                 "attachment": "center",
-                "offset": "-34.0"
+                "offset": "-32.0"
               },
               "vertical": {
                 "attachment": "center",
@@ -64,7 +60,7 @@
               "saturation": "0.0",
               "value": "1.0"
             },
-            "text-content": "$QuestionNum",
+            "text-content": "$TextQuestionNumber",
             "overflow": "visible",
             "text-align": "left",
             "text-size": "24.0",
@@ -72,18 +68,18 @@
             "typeface": "Tomorrow"
           },
           {
-            "id": "ExitButton",
+            "id": "ExitIcon",
             "alignment": {
               "horizontal": {
                 "attachment": "center",
-                "offset": "129.0"
+                "offset": "-94.0"
               },
               "vertical": {
                 "attachment": "center",
                 "offset": "0.0"
               }
             },
-            "tap-handler": "$onExitButton",
+            "tap-handler": "$onExit",
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
@@ -96,17 +92,16 @@
             },
             "is-structured": "false",
             "children": [
-              "Vector2",
-              "Vector1"
+              "VectorExit"
             ]
           },
           {
-            "id": "Vector2",
+            "id": "VectorExit",
             "margin": {
-              "left": "4.002685546875",
-              "top": "4.0",
-              "right": "3.997314453125",
-              "bottom": "4.0"
+              "left": "5.626678466796875",
+              "top": "5.626678466796875",
+              "right": "5.639986038208008",
+              "bottom": "5.626644134521484"
             },
             "size-constraints": {
               "width-constraints": {
@@ -118,39 +113,19 @@
                 "value": "1.0"
               }
             },
-            "vector-content": "vector2.svg"
-          },
-          {
-            "id": "Vector1",
-            "margin": {
-              "left": "4.0",
-              "top": "10.666656494140625",
-              "right": "10.666664123535156",
-              "bottom": "10.666679382324219"
-            },
-            "size-constraints": {
-              "width-constraints": {
-                "sizing-mode": "proportional",
-                "value": "1.0"
-              },
-              "height-constraints": {
-                "sizing-mode": "proportional",
-                "value": "1.0"
-              }
-            },
-            "vector-content": "vector1.svg"
+            "vector-content": "vector_exit.svg"
           }
         ]
       }
     }
   },
   "parameters": {
-    "QuestionNum": {
+    "TextQuestionNumber": {
       "data-type": "text",
       "required": false,
       "description": ""
     },
-    "onExitButton": {
+    "onExit": {
       "data-type": "void-callback",
       "required": false,
       "description": ""
@@ -164,7 +139,7 @@
         "height": 32.0
       },
       "parameters": {
-        "QuestionNum": "Primera pregunta"
+        "TextQuestionNumber": "1/5"
       }
     }
   ],

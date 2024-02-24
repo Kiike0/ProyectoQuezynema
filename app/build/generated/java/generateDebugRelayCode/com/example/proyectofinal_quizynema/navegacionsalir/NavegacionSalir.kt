@@ -33,32 +33,31 @@ import com.google.relay.compose.tappable
 @Composable
 fun NavegacionSalir(
     modifier: Modifier = Modifier,
-    questionNum: String = "",
-    onExitButton: () -> Unit = {}
+    textQuestionNumber: String = "",
+    onExit: () -> Unit = {}
 ) {
     TopLevel(modifier = modifier) {
-        QuestionNum(
-            questionNum = questionNum,
+        TextQuestionNumber(
+            textQuestionNumber = textQuestionNumber,
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
-                    x = -34.0.dp,
+                    x = -32.0.dp,
                     y = -1.5.dp
                 )
             )
         )
-        ExitButton(
-            onExitButton = onExitButton,
+        ExitIcon(
+            onExit = onExit,
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
-                    x = 129.0.dp,
+                    x = -94.0.dp,
                     y = 0.0.dp
                 )
             )
         ) {
-            Vector2(modifier = Modifier.rowWeight(1.0f).columnWeight(1.0f))
-            Vector1(modifier = Modifier.rowWeight(1.0f).columnWeight(1.0f))
+            VectorExit(modifier = Modifier.rowWeight(1.0f).columnWeight(1.0f))
         }
     }
 }
@@ -69,8 +68,8 @@ private fun NavegacionSalirPreview() {
     MaterialTheme {
         RelayContainer {
             NavegacionSalir(
-                questionNum = "Primera pregunta",
-                onExitButton = {},
+                textQuestionNumber = "1/5",
+                onExit = {},
                 modifier = Modifier.rowWeight(1.0f).columnWeight(1.0f)
             )
         }
@@ -78,12 +77,12 @@ private fun NavegacionSalirPreview() {
 }
 
 @Composable
-fun QuestionNum(
-    questionNum: String,
+fun TextQuestionNumber(
+    textQuestionNumber: String,
     modifier: Modifier = Modifier
 ) {
     RelayText(
-        content = questionNum,
+        content = textQuestionNumber,
         fontSize = 24.0.sp,
         fontFamily = tomorrow,
         color = Color(
@@ -100,45 +99,30 @@ fun QuestionNum(
 }
 
 @Composable
-fun Vector2(modifier: Modifier = Modifier) {
+fun VectorExit(modifier: Modifier = Modifier) {
     RelayVector(
-        vector = painterResource(R.drawable.navegacion_salir_vector2),
+        vector = painterResource(R.drawable.navegacion_salir_vector_exit),
         modifier = modifier.padding(
             paddingValues = PaddingValues(
-                start = 4.002685546875.dp,
-                top = 4.0.dp,
-                end = 3.997314453125.dp,
-                bottom = 4.0.dp
+                start = 5.626678466796875.dp,
+                top = 5.626678466796875.dp,
+                end = 5.639986038208008.dp,
+                bottom = 5.626644134521484.dp
             )
         ).fillMaxWidth(1.0f).fillMaxHeight(1.0f)
     )
 }
 
 @Composable
-fun Vector1(modifier: Modifier = Modifier) {
-    RelayVector(
-        vector = painterResource(R.drawable.navegacion_salir_vector1),
-        modifier = modifier.padding(
-            paddingValues = PaddingValues(
-                start = 4.0.dp,
-                top = 10.666656494140625.dp,
-                end = 10.666664123535156.dp,
-                bottom = 10.666679382324219.dp
-            )
-        ).fillMaxWidth(1.0f).fillMaxHeight(1.0f)
-    )
-}
-
-@Composable
-fun ExitButton(
-    onExitButton: () -> Unit,
+fun ExitIcon(
+    onExit: () -> Unit,
     modifier: Modifier = Modifier,
     content: @Composable RelayContainerScope.() -> Unit
 ) {
     RelayContainer(
         isStructured = false,
         content = content,
-        modifier = modifier.tappable(onTap = onExitButton).requiredWidth(32.0.dp).requiredHeight(32.0.dp)
+        modifier = modifier.tappable(onTap = onExit).requiredWidth(32.0.dp).requiredHeight(32.0.dp)
     )
 }
 

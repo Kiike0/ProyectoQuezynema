@@ -40,6 +40,22 @@ fun CustomizedTextWhite(
         text = customizedText,
         style = TextStyle(
             color = Color.White,
+            fontSize = 11.0.sp,
+            fontFamily = tomorrow
+        ),
+        modifier = modifier
+    )
+}
+
+@Composable
+fun CustomizedBigTextWhite(
+    customizedText: String,
+    modifier: Modifier
+) {
+    Text(
+        text = customizedText,
+        style = TextStyle(
+            color = Color.White,
             fontSize = 14.0.sp,
             fontFamily = tomorrow
         ),

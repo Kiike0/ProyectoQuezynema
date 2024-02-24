@@ -5,7 +5,7 @@
     "type": "figma",
     "file": "H7ukQQTqL9pUMovBZnfFnU",
     "node": "93:2",
-    "version": "5179077080",
+    "version": "5217159695",
     "component-id": "acc7c1eb0d009eeea7592eee9aa43f227e248e85"
   },
   "default": "WelcomeMsj",
@@ -18,15 +18,15 @@
       },
       {
         "type": "text",
-        "id": "Greetings"
+        "id": "WelcomeTextnick"
       },
       {
         "type": "text",
-        "id": "LetsQuiz"
+        "id": "LetsQuizText"
       },
       {
         "type": "image",
-        "id": "AvatarImg"
+        "id": "QuizyAvatarImg"
       }
     ],
     "modes": {
@@ -36,22 +36,31 @@
             "id": "top_level",
             "is-structured": "false",
             "children": [
-              "Greetings",
-              "LetsQuiz",
-              "AvatarImg"
+              "WelcomeTextnick",
+              "LetsQuizText",
+              "QuizyAvatarImg"
             ],
             "clip-content": "false"
           },
           {
-            "id": "Greetings",
+            "id": "WelcomeTextnick",
             "alignment": {
               "horizontal": {
                 "attachment": "center",
-                "offset": "-62.0"
+                "offset": "29.0"
               },
               "vertical": {
                 "attachment": "center",
-                "offset": "-16.0"
+                "offset": "-19.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "264.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "shrink"
               }
             },
             "font-weight": "700.0",
@@ -61,23 +70,24 @@
               "saturation": "0.0",
               "value": "1.0"
             },
-            "text-content": "$Greetings",
+            "text-content": "$WelcomeTextnick",
             "overflow": "visible",
+            "max-lines": "-1",
             "text-align": "left",
-            "text-size": "20.0",
-            "line-height": "1.2",
+            "text-size": "16.0",
+            "line-height": "1.2000000476837158",
             "typeface": "Tomorrow"
           },
           {
-            "id": "LetsQuiz",
+            "id": "LetsQuizText",
             "alignment": {
               "horizontal": {
                 "attachment": "center",
-                "offset": "-89.0"
+                "offset": "-30.5"
               },
               "vertical": {
                 "attachment": "center",
-                "offset": "18.5"
+                "offset": "17.0"
               }
             },
             "color": {
@@ -86,38 +96,37 @@
               "saturation": "0.0",
               "value": "1.0"
             },
-            "text-content": "$LetsQuiz",
+            "text-content": "$LetsQuizText",
             "overflow": "visible",
             "text-align": "left",
-            "text-size": "16.0",
-            "line-height": "1.2000000476837158",
+            "line-height": "1.2000000817435128",
             "typeface": "Tomorrow"
           },
           {
-            "id": "AvatarImg",
+            "id": "QuizyAvatarImg",
             "border-radius": "30.0",
             "alignment": {
               "horizontal": {
                 "attachment": "center",
-                "offset": "152.0"
+                "offset": "-147.5"
               },
               "vertical": {
                 "attachment": "center",
-                "offset": "-8.0"
+                "offset": "-0.5"
               }
             },
-            "tap-handler": "$AvatarImg",
+            "tap-handler": "$onQuizyAvatarImg",
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": "40.0"
+                "value": "67.0"
               },
               "height-constraints": {
                 "sizing-mode": "fixed",
-                "value": "40.0"
+                "value": "68.0"
               }
             },
-            "image-content": "avatar_img.png",
+            "image-content": "quizy_avatar_img.png",
             "scale": "cover"
           }
         ]
@@ -125,17 +134,17 @@
     }
   },
   "parameters": {
-    "Greetings": {
+    "WelcomeTextnick": {
       "data-type": "text",
       "required": false,
       "description": ""
     },
-    "LetsQuiz": {
+    "LetsQuizText": {
       "data-type": "text",
       "required": false,
       "description": ""
     },
-    "AvatarImg": {
+    "onQuizyAvatarImg": {
       "data-type": "void-callback",
       "required": false,
       "description": ""
@@ -145,12 +154,12 @@
     {
       "design": "WelcomeMsj",
       "size": {
-        "width": 344.0,
-        "height": 56.0
+        "width": 362.0,
+        "height": 93.0
       },
       "parameters": {
-        "Greetings": "Buenos días, Senpai!",
-        "LetsQuiz": "Hagamos un quiz hoy"
+        "WelcomeTextnick": "Buenos días, Joker1231!",
+        "LetsQuizText": "Hagamos un quiz hoy"
       }
     }
   ],

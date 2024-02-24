@@ -34,37 +34,27 @@ import com.google.relay.compose.RelayVector
 @Composable
 fun PresentacionUsuario(
     modifier: Modifier = Modifier,
-    avatarImg: Painter = EmptyPainter(),
-    nickname: String = "",
-    levelText: String = ""
+    nicknameText: String = "",
+    levelText: String = "",
+    imgQuizyAvatar: Painter = EmptyPainter()
 ) {
     TopLevel(modifier = modifier) {
-        AvatarImg(
-            avatarImg = avatarImg,
-            modifier = Modifier.boxAlign(
-                alignment = Alignment.Center,
-                offset = DpOffset(
-                    x = 0.0.dp,
-                    y = -50.0.dp
-                )
-            )
-        )
         Nickname(
-            nickname = nickname,
+            nicknameText = nicknameText,
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
-                    x = 0.0.dp,
-                    y = 63.5.dp
+                    x = 7.0.dp,
+                    y = -48.0.dp
                 )
             )
         )
-        LevelRectangle(
+        BoxLevel(
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
-                    x = 0.0.dp,
-                    y = 107.5.dp
+                    x = -5.5.dp,
+                    y = 24.5.dp
                 )
             )
         )
@@ -73,23 +63,33 @@ fun PresentacionUsuario(
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
-                    x = 0.5.dp,
-                    y = 106.0.dp
+                    x = -1.0.dp,
+                    y = 23.0.dp
+                )
+            )
+        )
+        ImgQuizyAvatar(
+            imgQuizyAvatar = imgQuizyAvatar,
+            modifier = Modifier.boxAlign(
+                alignment = Alignment.Center,
+                offset = DpOffset(
+                    x = -124.5.dp,
+                    y = -46.0.dp
                 )
             )
         )
     }
 }
 
-@Preview(widthDp = 197, heightDp = 248)
+@Preview(widthDp = 316, heightDp = 160)
 @Composable
 private fun PresentacionUsuarioPreview() {
     MaterialTheme {
         RelayContainer {
             PresentacionUsuario(
-                avatarImg = painterResource(R.drawable.presentacion_usuario_avatar_img),
-                nickname = "Joker1231",
+                nicknameText = "Joker1231",
                 levelText = "Jugador Profesional",
+                imgQuizyAvatar = painterResource(R.drawable.presentacion_usuario_img_quizy_avatar),
                 modifier = Modifier.rowWeight(1.0f).columnWeight(1.0f)
             )
         }
@@ -97,26 +97,13 @@ private fun PresentacionUsuarioPreview() {
 }
 
 @Composable
-fun AvatarImg(
-    avatarImg: Painter,
-    modifier: Modifier = Modifier
-) {
-    RelayImage(
-        image = avatarImg,
-        radius = 70.0,
-        contentScale = ContentScale.Crop,
-        modifier = modifier.requiredWidth(143.0.dp).requiredHeight(148.0.dp)
-    )
-}
-
-@Composable
 fun Nickname(
-    nickname: String,
+    nicknameText: String,
     modifier: Modifier = Modifier
 ) {
     RelayText(
-        content = nickname,
-        fontSize = 24.0.sp,
+        content = nicknameText,
+        fontSize = 20.0.sp,
         fontFamily = tomorrow,
         color = Color(
             alpha = 255,
@@ -124,18 +111,19 @@ fun Nickname(
             green = 255,
             blue = 255
         ),
-        height = 1.2000000476837158.em,
+        height = 1.2.em,
         textAlign = TextAlign.Left,
         fontWeight = FontWeight(700.0.toInt()),
-        modifier = modifier
+        maxLines = -1,
+        modifier = modifier.requiredWidth(180.0.dp)
     )
 }
 
 @Composable
-fun LevelRectangle(modifier: Modifier = Modifier) {
+fun BoxLevel(modifier: Modifier = Modifier) {
     RelayVector(
-        vector = painterResource(R.drawable.presentacion_usuario_level_rectangle),
-        modifier = modifier.requiredWidth(197.0.dp).requiredHeight(33.0.dp)
+        vector = painterResource(R.drawable.presentacion_usuario_box_level),
+        modifier = modifier.requiredWidth(295.0.dp).requiredHeight(33.0.dp)
     )
 }
 
@@ -155,9 +143,22 @@ fun LevelText(
             blue = 0
         ),
         height = 1.2.em,
-        textAlign = TextAlign.Left,
         fontWeight = FontWeight(700.0.toInt()),
-        modifier = modifier
+        maxLines = -1,
+        modifier = modifier.requiredWidth(266.0.dp)
+    )
+}
+
+@Composable
+fun ImgQuizyAvatar(
+    imgQuizyAvatar: Painter,
+    modifier: Modifier = Modifier
+) {
+    RelayImage(
+        image = imgQuizyAvatar,
+        radius = 30.0,
+        contentScale = ContentScale.Crop,
+        modifier = modifier.requiredWidth(67.0.dp).requiredHeight(68.0.dp)
     )
 }
 

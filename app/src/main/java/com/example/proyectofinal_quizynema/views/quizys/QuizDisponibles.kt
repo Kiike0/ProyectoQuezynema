@@ -27,11 +27,14 @@ fun QuizDisponibles(
             textNav = "Quiz Disponibles",
             onBack = {}
         )
+        /*
         QuizExplored(
             modifier = Modifier.size(200.dp,200.dp),
             quizImg = {},
             quizTitle = {}
         )
+
+         */
     }
 }
 

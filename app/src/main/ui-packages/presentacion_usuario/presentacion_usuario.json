@@ -5,7 +5,7 @@
     "type": "figma",
     "file": "H7ukQQTqL9pUMovBZnfFnU",
     "node": "103:3",
-    "version": "5179405750",
+    "version": "5217154745",
     "component-id": "4c1c7b7db423035a1e6334e1f902097f9b7fd84c"
   },
   "default": "PresentacionUsuario",
@@ -17,20 +17,20 @@
         "root": "true"
       },
       {
-        "type": "image",
-        "id": "AvatarImg"
-      },
-      {
         "type": "text",
         "id": "Nickname"
       },
       {
         "type": "vector",
-        "id": "LevelRectangle"
+        "id": "BoxLevel"
       },
       {
         "type": "text",
         "id": "LevelText"
+      },
+      {
+        "type": "image",
+        "id": "ImgQuizyAvatar"
       }
     ],
     "modes": {
@@ -40,49 +40,32 @@
             "id": "top_level",
             "is-structured": "false",
             "children": [
-              "AvatarImg",
               "Nickname",
-              "LevelRectangle",
-              "LevelText"
+              "BoxLevel",
+              "LevelText",
+              "ImgQuizyAvatar"
             ],
             "clip-content": "false"
-          },
-          {
-            "id": "AvatarImg",
-            "border-radius": "70.0",
-            "alignment": {
-              "horizontal": {
-                "attachment": "center",
-                "offset": "0.0"
-              },
-              "vertical": {
-                "attachment": "center",
-                "offset": "-50.0"
-              }
-            },
-            "size-constraints": {
-              "width-constraints": {
-                "sizing-mode": "fixed",
-                "value": "143.0"
-              },
-              "height-constraints": {
-                "sizing-mode": "fixed",
-                "value": "148.0"
-              }
-            },
-            "image-content": "$AvatarImg",
-            "scale": "cover"
           },
           {
             "id": "Nickname",
             "alignment": {
               "horizontal": {
                 "attachment": "center",
-                "offset": "0.0"
+                "offset": "7.0"
               },
               "vertical": {
                 "attachment": "center",
-                "offset": "63.5"
+                "offset": "-48.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "180.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "shrink"
               }
             },
             "font-weight": "700.0",
@@ -92,48 +75,58 @@
               "saturation": "0.0",
               "value": "1.0"
             },
-            "text-content": "$Nickname",
+            "text-content": "$NicknameText",
             "overflow": "visible",
+            "max-lines": "-1",
             "text-align": "left",
-            "text-size": "24.0",
-            "line-height": "1.2000000476837158",
+            "text-size": "20.0",
+            "line-height": "1.2",
             "typeface": "Tomorrow"
           },
           {
-            "id": "LevelRectangle",
+            "id": "BoxLevel",
             "border-radius": "15.0",
             "alignment": {
               "horizontal": {
                 "attachment": "center",
-                "offset": "0.0"
+                "offset": "-5.5"
               },
               "vertical": {
                 "attachment": "center",
-                "offset": "107.5"
+                "offset": "24.5"
               }
             },
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": "197.0"
+                "value": "295.0"
               },
               "height-constraints": {
                 "sizing-mode": "fixed",
                 "value": "33.0"
               }
             },
-            "vector-content": "level_rectangle.svg"
+            "vector-content": "box_level.svg"
           },
           {
             "id": "LevelText",
             "alignment": {
               "horizontal": {
                 "attachment": "center",
-                "offset": "0.5"
+                "offset": "-1.0"
               },
               "vertical": {
                 "attachment": "center",
-                "offset": "106.0"
+                "offset": "23.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "266.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "shrink"
               }
             },
             "font-weight": "700.0",
@@ -145,22 +138,43 @@
             },
             "text-content": "$LevelText",
             "overflow": "visible",
-            "text-align": "left",
+            "max-lines": "-1",
             "text-size": "15.0",
             "line-height": "1.2",
             "typeface": "Tomorrow"
+          },
+          {
+            "id": "ImgQuizyAvatar",
+            "border-radius": "30.0",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-124.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "-46.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "67.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "68.0"
+              }
+            },
+            "image-content": "$ImgQuizyAvatar",
+            "scale": "cover"
           }
         ]
       }
     }
   },
   "parameters": {
-    "AvatarImg": {
-      "data-type": "image",
-      "required": false,
-      "description": ""
-    },
-    "Nickname": {
+    "NicknameText": {
       "data-type": "text",
       "required": false,
       "description": ""
@@ -169,19 +183,24 @@
       "data-type": "text",
       "required": false,
       "description": ""
+    },
+    "ImgQuizyAvatar": {
+      "data-type": "image",
+      "required": false,
+      "description": ""
     }
   },
   "previews": [
     {
       "design": "PresentacionUsuario",
       "size": {
-        "width": 197.0,
-        "height": 248.0
+        "width": 316.0,
+        "height": 160.0
       },
       "parameters": {
-        "AvatarImg": "avatar_img.png",
-        "Nickname": "Joker1231",
-        "LevelText": "Jugador Profesional"
+        "NicknameText": "Joker1231",
+        "LevelText": "Jugador Profesional",
+        "ImgQuizyAvatar": "img_quizy_avatar.png"
       }
     }
   ],

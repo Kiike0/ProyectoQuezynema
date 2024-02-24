@@ -25,6 +25,8 @@ fun PantallaPregunta1(
             .fillMaxSize()
             .background(BackGroundApp)
     ) {
+        /*
+
         NavegacionSalir(
             modifier = Modifier
                 .size(300.dp, 90.dp)
@@ -47,6 +49,8 @@ fun PantallaPregunta1(
             onQuestion4Button = {},
             onButtonConfirm = {}
         )
+
+         */
 
 
     }

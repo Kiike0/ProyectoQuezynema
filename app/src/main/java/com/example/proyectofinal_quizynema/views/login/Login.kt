@@ -40,8 +40,7 @@ fun Login(
                     navController.navigate(Routes.HomeScreen.route)
                 }
             },
-            createAccountTap = { navController.navigate(Routes.RegisterScreen.route) },
-            remindPasswordTap = {},
+            onCreateButton = { navController.navigate(Routes.RegisterScreen.route) },
             accessUserViewModel = accessViewModel
         )
         if (accessViewModel.showAlert) {

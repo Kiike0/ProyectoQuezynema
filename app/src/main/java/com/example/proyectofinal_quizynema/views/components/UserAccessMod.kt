@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.requiredHeight
 import androidx.compose.foundation.layout.requiredWidth
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.LocalTextStyle
 import androidx.compose.material3.MaterialTheme
@@ -14,6 +15,7 @@ import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.layout.ContentScale
@@ -44,8 +46,7 @@ import com.google.relay.compose.tappable
 fun UserAccessMod(
     modifier: Modifier = Modifier,
     onAccessButton: () -> Unit = {},
-    createAccountTap: () -> Unit = {},
-    remindPasswordTap: () -> Unit = {},
+    onCreateButton: () -> Unit = {},
     accessUserViewModel: UserViewModel
 ) {
     TopLevelMod(modifier = modifier) {
@@ -71,6 +72,7 @@ fun UserAccessMod(
                         y = -44.5.dp
                     )
                 )
+                .clip(RoundedCornerShape(25.dp))
                 .background(BackGroundAccessBox)
                 .width(330.dp),
             colors = TextFieldDefaults.outlinedTextFieldColors(
@@ -91,6 +93,7 @@ fun UserAccessMod(
                         y = 26.5.dp
                     )
                 )
+                .clip(RoundedCornerShape(25.dp))
                 .background(BackGroundAccessBox)
                 .width(330.dp),
             colors = TextFieldDefaults.outlinedTextFieldColors(
@@ -109,32 +112,23 @@ fun UserAccessMod(
                 )
             )
         )
-        RemindPasswordTapMod(
-            remindPasswordTap = remindPasswordTap,
+        CreateButtonMod(
+            onCreateButton = onCreateButton,
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
-                    x = -65.0.dp,
-                    y = 149.5.dp
+                    x = 4.5.dp,
+                    y = 160.dp
                 )
             )
         )
-        RectangleSeparationMod(
+        CreateTextMod(
+            createText = "Crear Cuenta",
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
-                    x = 5.5.dp,
-                    y = 150.0.dp
-                )
-            )
-        )
-        CreateAccountTapMod(
-            createAccountTap = createAccountTap,
-            modifier = Modifier.boxAlign(
-                alignment = Alignment.Center,
-                offset = DpOffset(
-                    x = 89.5.dp,
-                    y = 149.5.dp
+                    x = 4.0.dp,
+                    y = 160.dp
                 )
             )
         )
@@ -144,7 +138,7 @@ fun UserAccessMod(
                 alignment = Alignment.Center,
                 offset = DpOffset(
                     x = 4.5.dp,
-                    y = 220.5.dp
+                    y = 240.dp
                 )
             )
         )
@@ -154,11 +148,43 @@ fun UserAccessMod(
                 alignment = Alignment.Center,
                 offset = DpOffset(
                     x = 4.0.dp,
-                    y = 220.5.dp
+                    y = 240.dp
                 )
             )
         )
     }
+}
+@Composable
+fun CreateButtonMod(
+    onCreateButton: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+    RelayVector(
+        vector = painterResource(R.drawable.acceso_usuario_create_button),
+        modifier = modifier.tappable(onTap = onCreateButton).requiredWidth(230.0.dp).requiredHeight(58.0.dp)
+    )
+}
+
+@Composable
+fun CreateTextMod(
+    createText: String,
+    modifier: Modifier = Modifier
+) {
+    RelayText(
+        content = createText,
+        fontSize = 20.0.sp,
+        fontFamily = tomorrow,
+        color = Color(
+            alpha = 255,
+            red = 255,
+            green = 255,
+            blue = 255
+        ),
+        height = 1.2.em,
+        textAlign = TextAlign.Left,
+        fontWeight = FontWeight(700.0.toInt()),
+        modifier = modifier
+    )
 }
 
 @Composable
@@ -194,64 +220,6 @@ fun AccessTextMod(
         textAlign = TextAlign.Left,
         fontWeight = FontWeight(700.0.toInt()),
         modifier = modifier
-    )
-}
-
-@Composable
-fun CreateAccountTapMod(
-    createAccountTap: () -> Unit,
-    modifier: Modifier = Modifier
-) {
-    RelayText(
-        content = "Crear una cuenta",
-        fontSize = 13.0.sp,
-        fontFamily = tomorrow,
-        color = Color(
-            alpha = 255,
-            red = 255,
-            green = 255,
-            blue = 255
-        ),
-        height = 1.200000029343825.em,
-        textAlign = TextAlign.Left,
-        maxLines = -1,
-        modifier = modifier
-            .tappable(onTap = createAccountTap)
-            .requiredWidth(124.0.dp)
-    )
-}
-
-@Composable
-fun RectangleSeparationMod(modifier: Modifier = Modifier) {
-    RelayVector(
-        vector = painterResource(R.drawable.acceso_usuario_rectangle_separation),
-        modifier = modifier
-            .requiredWidth(2.0.dp)
-            .requiredHeight(15.0.dp)
-    )
-}
-
-@Composable
-fun RemindPasswordTapMod(
-    remindPasswordTap: () -> Unit,
-    modifier: Modifier = Modifier
-) {
-    RelayText(
-        content = "Recordar contraseña",
-        fontSize = 13.0.sp,
-        fontFamily = tomorrow,
-        color = Color(
-            alpha = 255,
-            red = 255,
-            green = 255,
-            blue = 255
-        ),
-        height = 1.200000029343825.em,
-        textAlign = TextAlign.Left,
-        maxLines = -1,
-        modifier = modifier
-            .tappable(onTap = remindPasswordTap)
-            .requiredWidth(165.0.dp)
     )
 }
 

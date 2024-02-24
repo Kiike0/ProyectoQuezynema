@@ -1,7 +1,9 @@
 package com.example.proyectofinal_quizynema.progresoquiz
 
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.requiredHeight
 import androidx.compose.foundation.layout.requiredWidth
 import androidx.compose.material3.MaterialTheme
@@ -31,13 +33,13 @@ import com.google.relay.compose.tappable
 @Composable
 fun ProgresoQuiz(
     modifier: Modifier = Modifier,
-    points: String = "",
-    quizTitle: String = "",
-    onQuizButton: () -> Unit = {}
+    completedTimes: String = "",
+    titleQuiz: String = "",
+    onCardPopularQuiz: () -> Unit = {}
 ) {
     TopLevel(modifier = modifier) {
-        RectangleButton(
-            onQuizButton = onQuizButton,
+        CardPopularQuiz(
+            onCardPopularQuiz = onCardPopularQuiz,
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
@@ -46,18 +48,18 @@ fun ProgresoQuiz(
                 )
             )
         )
-        Points(
-            points = points,
+        CompletedTimes(
+            completedTimes = completedTimes,
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
-                    x = -28.0.dp,
+                    x = 4.0.dp,
                     y = 20.0.dp
                 )
             )
         )
-        QuizTitle(
-            quizTitle = quizTitle,
+        TitleQuiz(
+            titleQuiz = titleQuiz,
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
@@ -66,15 +68,17 @@ fun ProgresoQuiz(
                 )
             )
         )
-        VectorTrophy(
+        IconFilm(
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
-                    x = -49.0.dp,
-                    y = 20.375.dp
+                    x = -48.5.dp,
+                    y = 20.5.dp
                 )
             )
-        )
+        ) {
+            VectorFilm(modifier = Modifier.rowWeight(1.0f).columnWeight(1.0f))
+        }
     }
 }
 
@@ -84,9 +88,9 @@ private fun ProgresoQuizPreview() {
     MaterialTheme {
         RelayContainer {
             ProgresoQuiz(
-                onQuizButton = {},
-                points = "3/5",
-                quizTitle = "¿Lo sabes todo sobre Star Wars?",
+                onCardPopularQuiz = {},
+                completedTimes = "5 completadas",
+                titleQuiz = "¿Lo sabes todo sobre Star Wars?",
                 modifier = Modifier.rowWeight(1.0f).columnWeight(1.0f)
             )
         }
@@ -94,23 +98,23 @@ private fun ProgresoQuizPreview() {
 }
 
 @Composable
-fun RectangleButton(
-    onQuizButton: () -> Unit,
+fun CardPopularQuiz(
+    onCardPopularQuiz: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     RelayVector(
-        vector = painterResource(R.drawable.progreso_quiz_rectangle_button),
-        modifier = modifier.tappable(onTap = onQuizButton).requiredWidth(128.0.dp).requiredHeight(88.0.dp)
+        vector = painterResource(R.drawable.progreso_quiz_card_popular_quiz),
+        modifier = modifier.tappable(onTap = onCardPopularQuiz).requiredWidth(128.0.dp).requiredHeight(88.0.dp)
     )
 }
 
 @Composable
-fun Points(
-    points: String,
+fun CompletedTimes(
+    completedTimes: String,
     modifier: Modifier = Modifier
 ) {
     RelayText(
-        content = points,
+        content = completedTimes,
         fontSize = 10.0.sp,
         fontFamily = tomorrow,
         color = Color(
@@ -126,12 +130,12 @@ fun Points(
 }
 
 @Composable
-fun QuizTitle(
-    quizTitle: String,
+fun TitleQuiz(
+    titleQuiz: String,
     modifier: Modifier = Modifier
 ) {
     RelayText(
-        content = quizTitle,
+        content = titleQuiz,
         fontSize = 12.0.sp,
         fontFamily = tomorrow,
         color = Color(
@@ -149,10 +153,29 @@ fun QuizTitle(
 }
 
 @Composable
-fun VectorTrophy(modifier: Modifier = Modifier) {
+fun VectorFilm(modifier: Modifier = Modifier) {
     RelayVector(
-        vector = painterResource(R.drawable.progreso_quiz_vector_trophy),
-        modifier = modifier.requiredWidth(11.625.dp).requiredHeight(9.375.dp)
+        vector = painterResource(R.drawable.progreso_quiz_vector_film),
+        modifier = modifier.padding(
+            paddingValues = PaddingValues(
+                start = 0.625.dp,
+                top = 0.625.dp,
+                end = 0.000003814697265625.dp,
+                bottom = 0.6249971389770508.dp
+            )
+        ).fillMaxWidth(1.0f).fillMaxHeight(1.0f)
+    )
+}
+
+@Composable
+fun IconFilm(
+    modifier: Modifier = Modifier,
+    content: @Composable RelayContainerScope.() -> Unit
+) {
+    RelayContainer(
+        isStructured = false,
+        content = content,
+        modifier = modifier.requiredWidth(15.0.dp).requiredHeight(15.0.dp)
     )
 }
 

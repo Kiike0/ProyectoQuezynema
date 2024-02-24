@@ -30,16 +30,23 @@ sealed class Routes(val route: String) {
      */
     object HomeScreen : Routes("homeScreen")
 
-    /**
-     * Objeto que representa la pantalla de las preguntas.
-     */
-    object QuestionScreen : Routes("questionScreen")
 
 
     /**
      * Objeto que representa la pantalla del usuario.
      */
     object UserScreen : Routes("userScreen")
+
+    /**
+     * Objeto que representa la pantalla de las preguntas.
+     */
+    object QuizScreen : Routes("quizScreen")
+
+    /**
+     * Objeto que representa la pantalla de las preguntas.
+     */
+    object Question1Screen : Routes("question1Screen")
+
 
     /**
      * Objeto que representa la pantalla de Quiz disponibles.

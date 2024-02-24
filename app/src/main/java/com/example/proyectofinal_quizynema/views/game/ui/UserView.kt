@@ -6,9 +6,11 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.example.proyectofinal_quizynema.R
@@ -18,6 +20,7 @@ import com.example.proyectofinal_quizynema.navegacion.Navegacion
 import com.example.proyectofinal_quizynema.navigation.Routes
 import com.example.proyectofinal_quizynema.presentacionusuario.PresentacionUsuario
 import com.example.proyectofinal_quizynema.quizsinterminar.QuizSinTerminar
+import com.example.proyectofinal_quizynema.ranking.Ranking
 import com.example.proyectofinal_quizynema.ui.theme.BackGroundApp
 import com.example.proyectofinal_quizynema.viewModels.UserViewModel
 import com.example.proyectofinal_quizynema.views.components.CustomizedRelayText
@@ -27,6 +30,10 @@ fun UserView(
     navController: NavHostController,
     currentUserViewModel: UserViewModel
 ) {
+
+    LaunchedEffect(Unit) {
+        currentUserViewModel.getNickname()
+    }
 
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -43,12 +50,12 @@ fun UserView(
         )
         PresentacionUsuario(
             modifier = Modifier.size(300.dp, 250.dp),
-            avatarImg = painterResource(R.drawable.presentacion_usuario_avatar_img),
-            nickname = "Nickname",
-            levelText = "Jugador nivel"
+            nicknameText = currentUserViewModel.getSaludo(),
+            levelText = "Jugador nivel",
+            imgQuizyAvatar = painterResource(R.drawable.presentacion_usuario_img_quizy_avatar)
         )
         DatosUsuario(
-            modifier = Modifier.size(300.dp, 140.dp),
+            modifier = Modifier.size(300.dp, 5.dp),
             pointsNumber = "12",
             pointsTxt = "Puntuación",
             jugadosNumber = "31",
@@ -57,34 +64,31 @@ fun UserView(
             puestoRankingTxt = "Puesto Ranking"
         )
         BotonesUsuario(
-            modifier = Modifier.size(300.dp, 50.dp),
-            editarPerfilText = "Editar Perfil",
-            verRankingText = "Ver Ranking",
-            onEditarPerfilButton = {},
-            onRankingButton = {}
+            modifier = Modifier.size(300.dp, 250.dp),
+            playMoreText = "Juega una vez más",
+            signOutText = "Cerrar sesión",
+            onPlayAgainIcon = {},
+            onSignOutIcon = {
+                currentUserViewModel.signOut()
+                navController.popBackStack()
+            }
         )
-        CustomizedRelayText(
-            greetings = "Últimas quiz",
-            Modifier
-                .align(Alignment.Start)
-                .padding(top = 20.dp, start = 30.dp)
+        Ranking(
+            modifier = Modifier.size(400.dp, 300.dp),
+            goldMedal = painterResource(R.drawable.ranking_gold_medal),
+            silverMedal = painterResource(R.drawable.ranking_silver_medal),
+            bronzeMedal = painterResource(R.drawable.ranking_bronze_medal),
+            firstUserName = "1. nickname",
+            firstPointsText = "33 puntos",
+            secondUserName = "2. dfsd",
+            secondPointsText = AnnotatedString("23 puntos"),
+            thirdUserName = "3. sdfsdf",
+            thirtPointsText = "14 puntos",
+            fourthUserName = "4. sdfsdf",
+            fourthPointsText = "12 puntos",
+            textRankingTitle = "Ranking Mundial"
         )
-        QuizSinTerminar(
-            modifier = Modifier.size(300.dp, 110.dp),
-            pointstext = "5/10",
-            iniciadaText = "Iniciada sin terminar",
-            titleUnfinishedQuiz = "Título de la quiz",
-            onImageButtonUQ = {},
-            onRectangleButtonUQ = {}
-        )
-        QuizSinTerminar(
-            modifier = Modifier.size(300.dp, 70.dp),
-            pointstext = "5/10",
-            iniciadaText = "Iniciada sin terminar",
-            titleUnfinishedQuiz = "Título de la quiz",
-            onImageButtonUQ = {},
-            onRectangleButtonUQ = {}
-        )
+
     }
 
 

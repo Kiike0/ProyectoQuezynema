@@ -36,13 +36,13 @@ import com.google.relay.compose.tappable
 fun AccesoUsuario(
     modifier: Modifier = Modifier,
     accessText: String = "",
+    createText: String = "",
     textDescription: String = "",
     passwordText: String = "",
     emailText: String = "",
     rectangleImg: Painter = EmptyPainter(),
     onAccessButton: () -> Unit = {},
-    createAccountTap: () -> Unit = {},
-    remindPasswordTap: () -> Unit = {},
+    onCreateButton: () -> Unit = {},
     onAlterTextPassword: () -> Unit = {},
     onAlterEmailText: () -> Unit = {}
 ) {
@@ -53,7 +53,7 @@ fun AccesoUsuario(
                 alignment = Alignment.Center,
                 offset = DpOffset(
                     x = 4.5.dp,
-                    y = 220.5.dp
+                    y = 228.5.dp
                 )
             )
         )
@@ -63,36 +63,27 @@ fun AccesoUsuario(
                 alignment = Alignment.Center,
                 offset = DpOffset(
                     x = 4.0.dp,
-                    y = 220.5.dp
+                    y = 228.5.dp
                 )
             )
         )
-        CreateAccountTap(
-            createAccountTap = createAccountTap,
+        CreateButton(
+            onCreateButton = onCreateButton,
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
-                    x = 89.5.dp,
-                    y = 149.5.dp
+                    x = 4.5.dp,
+                    y = 157.5.dp
                 )
             )
         )
-        RectangleSeparation(
+        CreateText(
+            createText = createText,
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
-                    x = 5.5.dp,
-                    y = 150.0.dp
-                )
-            )
-        )
-        RemindPasswordTap(
-            remindPasswordTap = remindPasswordTap,
-            modifier = Modifier.boxAlign(
-                alignment = Alignment.Center,
-                offset = DpOffset(
-                    x = -65.0.dp,
-                    y = 149.5.dp
+                    x = 4.0.dp,
+                    y = 155.5.dp
                 )
             )
         )
@@ -167,8 +158,8 @@ private fun AccesoUsuarioPreview() {
             AccesoUsuario(
                 onAccessButton = {},
                 accessText = "Acceder",
-                createAccountTap = {},
-                remindPasswordTap = {},
+                onCreateButton = {},
+                createText = "Crear cuenta",
                 textDescription = "Si no tienes cuenta debes crear una para acceder",
                 onAlterTextPassword = {},
                 passwordText = "Contraseña",
@@ -215,43 +206,24 @@ fun AccessText(
 }
 
 @Composable
-fun CreateAccountTap(
-    createAccountTap: () -> Unit,
+fun CreateButton(
+    onCreateButton: () -> Unit,
     modifier: Modifier = Modifier
 ) {
-    RelayText(
-        content = "Crear una cuenta",
-        fontSize = 13.0.sp,
-        fontFamily = tomorrow,
-        color = Color(
-            alpha = 255,
-            red = 255,
-            green = 255,
-            blue = 255
-        ),
-        height = 1.200000029343825.em,
-        textAlign = TextAlign.Left,
-        maxLines = -1,
-        modifier = modifier.tappable(onTap = createAccountTap).requiredWidth(124.0.dp)
-    )
-}
-
-@Composable
-fun RectangleSeparation(modifier: Modifier = Modifier) {
     RelayVector(
-        vector = painterResource(R.drawable.acceso_usuario_rectangle_separation),
-        modifier = modifier.requiredWidth(2.0.dp).requiredHeight(15.0.dp)
+        vector = painterResource(R.drawable.acceso_usuario_create_button),
+        modifier = modifier.tappable(onTap = onCreateButton).requiredWidth(230.0.dp).requiredHeight(58.0.dp)
     )
 }
 
 @Composable
-fun RemindPasswordTap(
-    remindPasswordTap: () -> Unit,
+fun CreateText(
+    createText: String,
     modifier: Modifier = Modifier
 ) {
     RelayText(
-        content = "Recordar contraseña",
-        fontSize = 13.0.sp,
+        content = createText,
+        fontSize = 20.0.sp,
         fontFamily = tomorrow,
         color = Color(
             alpha = 255,
@@ -259,10 +231,10 @@ fun RemindPasswordTap(
             green = 255,
             blue = 255
         ),
-        height = 1.200000029343825.em,
+        height = 1.2.em,
         textAlign = TextAlign.Left,
-        maxLines = -1,
-        modifier = modifier.tappable(onTap = remindPasswordTap).requiredWidth(165.0.dp)
+        fontWeight = FontWeight(700.0.toInt()),
+        modifier = modifier
     )
 }
 

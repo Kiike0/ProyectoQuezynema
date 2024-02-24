@@ -1,7 +1,9 @@
 package com.example.proyectofinal_quizynema.botonesusuario
 
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.requiredHeight
 import androidx.compose.foundation.layout.requiredWidth
 import androidx.compose.material3.MaterialTheme
@@ -10,7 +12,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.DpOffset
@@ -31,65 +32,70 @@ import com.google.relay.compose.tappable
 @Composable
 fun BotonesUsuario(
     modifier: Modifier = Modifier,
-    editarPerfilText: String = "",
-    verRankingText: String = "",
-    onEditarPerfilButton: () -> Unit = {},
-    onRankingButton: () -> Unit = {}
+    playMoreText: String = "",
+    signOutText: String = "",
+    onPlayAgainIcon: () -> Unit = {},
+    onSignOutIcon: () -> Unit = {}
 ) {
     TopLevel(modifier = modifier) {
-        EditarPerfilButton(
-            onEditarPerfilButton = onEditarPerfilButton,
+        PlayAgainIcon(
+            onPlayAgainIcon = onPlayAgainIcon,
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
-                    x = -93.0.dp,
-                    y = 0.0.dp
+                    x = -86.0.dp,
+                    y = -15.5.dp
+                )
+            )
+        ) {
+            VectorAgain(modifier = Modifier.rowWeight(1.0f).columnWeight(1.0f))
+            VectorPlay(modifier = Modifier.rowWeight(1.0f).columnWeight(1.0f))
+        }
+        PlayMoreText(
+            playMoreText = playMoreText,
+            modifier = Modifier.boxAlign(
+                alignment = Alignment.Center,
+                offset = DpOffset(
+                    x = -83.5.dp,
+                    y = 44.5.dp
                 )
             )
         )
-        EditarPerfilText(
-            editarPerfilText = editarPerfilText,
+        SignOutIcon(
+            onSignOutIcon = onSignOutIcon,
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
-                    x = -94.5.dp,
-                    y = -1.0.dp
+                    x = 99.0.dp,
+                    y = -16.5.dp
                 )
             )
-        )
-        RankingButton(
-            onRankingButton = onRankingButton,
+        ) {
+            VectorSignOut(modifier = Modifier.rowWeight(1.0f).columnWeight(1.0f))
+        }
+        SignOutText(
+            signOutText = signOutText,
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
-                    x = 93.0.dp,
-                    y = 0.0.dp
-                )
-            )
-        )
-        VerRankingText(
-            verRankingText = verRankingText,
-            modifier = Modifier.boxAlign(
-                alignment = Alignment.Center,
-                offset = DpOffset(
-                    x = 93.5.dp,
-                    y = -1.0.dp
+                    x = 92.5.dp,
+                    y = 44.5.dp
                 )
             )
         )
     }
 }
 
-@Preview(widthDp = 345, heightDp = 36)
+@Preview(widthDp = 285, heightDp = 108)
 @Composable
 private fun BotonesUsuarioPreview() {
     MaterialTheme {
         RelayContainer {
             BotonesUsuario(
-                onEditarPerfilButton = {},
-                editarPerfilText = "Editar Perfil",
-                onRankingButton = {},
-                verRankingText = "Ver Ranking",
+                onPlayAgainIcon = {},
+                playMoreText = "Juega una más",
+                onSignOutIcon = {},
+                signOutText = "Cierra sesión",
                 modifier = Modifier.rowWeight(1.0f).columnWeight(1.0f)
             )
         }
@@ -97,24 +103,56 @@ private fun BotonesUsuarioPreview() {
 }
 
 @Composable
-fun EditarPerfilButton(
-    onEditarPerfilButton: () -> Unit,
-    modifier: Modifier = Modifier
-) {
+fun VectorAgain(modifier: Modifier = Modifier) {
     RelayVector(
-        vector = painterResource(R.drawable.botones_usuario_editar_perfil_button),
-        modifier = modifier.tappable(onTap = onEditarPerfilButton).requiredWidth(159.0.dp).requiredHeight(36.0.dp)
+        vector = painterResource(R.drawable.botones_usuario_vector_again),
+        modifier = modifier.padding(
+            paddingValues = PaddingValues(
+                start = 9.375.dp,
+                top = 3.125.dp,
+                end = 9.374992370605469.dp,
+                bottom = 6.249992370605469.dp
+            )
+        ).fillMaxWidth(1.0f).fillMaxHeight(1.0f)
     )
 }
 
 @Composable
-fun EditarPerfilText(
-    editarPerfilText: String,
+fun VectorPlay(modifier: Modifier = Modifier) {
+    RelayVector(
+        vector = painterResource(R.drawable.botones_usuario_vector_play),
+        modifier = modifier.padding(
+            paddingValues = PaddingValues(
+                start = 29.765625.dp,
+                top = 31.56414794921875.dp,
+                end = 26.243318557739258.dp,
+                bottom = 22.564727783203125.dp
+            )
+        ).fillMaxWidth(1.0f).fillMaxHeight(1.0f)
+    )
+}
+
+@Composable
+fun PlayAgainIcon(
+    onPlayAgainIcon: () -> Unit,
+    modifier: Modifier = Modifier,
+    content: @Composable RelayContainerScope.() -> Unit
+) {
+    RelayContainer(
+        isStructured = false,
+        content = content,
+        modifier = modifier.tappable(onTap = onPlayAgainIcon).requiredWidth(75.0.dp).requiredHeight(75.0.dp)
+    )
+}
+
+@Composable
+fun PlayMoreText(
+    playMoreText: String,
     modifier: Modifier = Modifier
 ) {
     RelayText(
-        content = editarPerfilText,
-        fontSize = 18.0.sp,
+        content = playMoreText,
+        fontSize = 16.0.sp,
         fontFamily = tomorrow,
         color = Color(
             alpha = 255,
@@ -122,32 +160,48 @@ fun EditarPerfilText(
             green = 255,
             blue = 255
         ),
-        height = 1.2000000211927626.em,
+        height = 1.2000000476837158.em,
         textAlign = TextAlign.Left,
-        fontWeight = FontWeight(700.0.toInt()),
         modifier = modifier
     )
 }
 
 @Composable
-fun RankingButton(
-    onRankingButton: () -> Unit,
-    modifier: Modifier = Modifier
-) {
+fun VectorSignOut(modifier: Modifier = Modifier) {
     RelayVector(
-        vector = painterResource(R.drawable.botones_usuario_ranking_button),
-        modifier = modifier.tappable(onTap = onRankingButton).requiredWidth(159.0.dp).requiredHeight(36.0.dp)
+        vector = painterResource(R.drawable.botones_usuario_vector_sign_out),
+        modifier = modifier.padding(
+            paddingValues = PaddingValues(
+                start = 6.25.dp,
+                top = 11.262542724609375.dp,
+                end = 6.260231018066406.dp,
+                bottom = 12.502010345458984.dp
+            )
+        ).fillMaxWidth(1.0f).fillMaxHeight(1.0f)
     )
 }
 
 @Composable
-fun VerRankingText(
-    verRankingText: String,
+fun SignOutIcon(
+    onSignOutIcon: () -> Unit,
+    modifier: Modifier = Modifier,
+    content: @Composable RelayContainerScope.() -> Unit
+) {
+    RelayContainer(
+        isStructured = false,
+        content = content,
+        modifier = modifier.tappable(onTap = onSignOutIcon).requiredWidth(75.0.dp).requiredHeight(75.0.dp)
+    )
+}
+
+@Composable
+fun SignOutText(
+    signOutText: String,
     modifier: Modifier = Modifier
 ) {
     RelayText(
-        content = verRankingText,
-        fontSize = 18.0.sp,
+        content = signOutText,
+        fontSize = 16.0.sp,
         fontFamily = tomorrow,
         color = Color(
             alpha = 255,
@@ -155,9 +209,8 @@ fun VerRankingText(
             green = 255,
             blue = 255
         ),
-        height = 1.2000000211927626.em,
+        height = 1.2000000476837158.em,
         textAlign = TextAlign.Left,
-        fontWeight = FontWeight(700.0.toInt()),
         modifier = modifier
     )
 }

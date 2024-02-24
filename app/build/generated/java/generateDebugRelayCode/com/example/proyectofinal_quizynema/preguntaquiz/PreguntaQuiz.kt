@@ -35,146 +35,115 @@ import com.google.relay.compose.tappable
 @Composable
 fun PreguntaQuiz(
     modifier: Modifier = Modifier,
-    imgQuestionImageContent: Painter = EmptyPainter(),
-    questionDesc: String = "",
-    question1: String = "",
-    question2: String = "",
-    question3: String = "",
-    question4: String = "",
-    confirmAnswer: String = "",
-    onQuestion1Button: () -> Unit = {},
-    onQuestion2Button: () -> Unit = {},
-    onQuestion3Button: () -> Unit = {},
-    onQuestion4Button: () -> Unit = {},
-    onButtonConfirm: () -> Unit = {}
+    quizImg: Painter = EmptyPainter(),
+    quizTitle: String = "",
+    answerText1: String = "",
+    answerText2: String = "",
+    answerText3: String = "",
+    answerText4: String = "",
+    onAnswerButton1: () -> Unit = {},
+    onAnswerButton2: () -> Unit = {},
+    onAnswerButton3: () -> Unit = {},
+    onAnswerButton4: () -> Unit = {}
 ) {
     TopLevel(modifier = modifier) {
-        CardBox(
+        QuizImg(
+            quizImg = quizImg,
+            modifier = Modifier.boxAlign(
+                alignment = Alignment.Center,
+                offset = DpOffset(
+                    x = 2.0.dp,
+                    y = -189.5.dp
+                )
+            )
+        )
+        QuizTitle(
+            quizTitle = quizTitle,
+            modifier = Modifier.boxAlign(
+                alignment = Alignment.Center,
+                offset = DpOffset(
+                    x = 0.5.dp,
+                    y = -8.0.dp
+                )
+            )
+        )
+        AnswerButton1(
+            onAnswerButton1 = onAnswerButton1,
+            modifier = Modifier.boxAlign(
+                alignment = Alignment.Center,
+                offset = DpOffset(
+                    x = 0.5.dp,
+                    y = 70.5.dp
+                )
+            )
+        )
+        AnswerText1(
+            answerText1 = answerText1,
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
                     x = 0.0.dp,
-                    y = 0.0.dp
+                    y = 69.5.dp
                 )
             )
         )
-        ImgQuestion(
-            imgQuestionImageContent = imgQuestionImageContent,
+        AnswerButton2(
+            onAnswerButton2 = onAnswerButton2,
+            modifier = Modifier.boxAlign(
+                alignment = Alignment.Center,
+                offset = DpOffset(
+                    x = 0.5.dp,
+                    y = 136.5.dp
+                )
+            )
+        )
+        AnswerText2(
+            answerText2 = answerText2,
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
                     x = 0.0.dp,
-                    y = -160.5.dp
+                    y = 135.5.dp
                 )
             )
         )
-        QuestionDesc(
-            questionDesc = questionDesc,
+        AnswerButton3(
+            onAnswerButton3 = onAnswerButton3,
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
-                    x = -4.5.dp,
-                    y = 24.0.dp
+                    x = -0.5.dp,
+                    y = 202.5.dp
                 )
             )
         )
-        Question1Button(
-            onQuestion1Button = onQuestion1Button,
+        AnswerText3(
+            answerText3 = answerText3,
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
-                    x = -76.5.dp,
-                    y = 97.0.dp
+                    x = -1.0.dp,
+                    y = 201.5.dp
                 )
             )
         )
-        Question1(
-            question1 = question1,
+        AnswerButton4(
+            onAnswerButton4 = onAnswerButton4,
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
-                    x = -77.5.dp,
-                    y = 95.0.dp
+                    x = -0.5.dp,
+                    y = 268.5.dp
                 )
             )
         )
-        Question2Button(
-            onQuestion2Button = onQuestion2Button,
+        AnswerText4(
+            answerText4 = answerText4,
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
-                    x = 76.5.dp,
-                    y = 97.0.dp
-                )
-            )
-        )
-        Question2(
-            question2 = question2,
-            modifier = Modifier.boxAlign(
-                alignment = Alignment.Center,
-                offset = DpOffset(
-                    x = 76.5.dp,
-                    y = 94.0.dp
-                )
-            )
-        )
-        Question3Button(
-            onQuestion3Button = onQuestion3Button,
-            modifier = Modifier.boxAlign(
-                alignment = Alignment.Center,
-                offset = DpOffset(
-                    x = -76.5.dp,
-                    y = 163.0.dp
-                )
-            )
-        )
-        Question3(
-            question3 = question3,
-            modifier = Modifier.boxAlign(
-                alignment = Alignment.Center,
-                offset = DpOffset(
-                    x = -75.5.dp,
-                    y = 163.0.dp
-                )
-            )
-        )
-        Question4Button(
-            onQuestion4Button = onQuestion4Button,
-            modifier = Modifier.boxAlign(
-                alignment = Alignment.Center,
-                offset = DpOffset(
-                    x = 76.5.dp,
-                    y = 163.0.dp
-                )
-            )
-        )
-        Question4(
-            question4 = question4,
-            modifier = Modifier.boxAlign(
-                alignment = Alignment.Center,
-                offset = DpOffset(
-                    x = 78.5.dp,
-                    y = 163.0.dp
-                )
-            )
-        )
-        ConfirmAnswer(
-            confirmAnswer = confirmAnswer,
-            modifier = Modifier.boxAlign(
-                alignment = Alignment.Center,
-                offset = DpOffset(
-                    x = -7.0.dp,
-                    y = 243.5.dp
-                )
-            )
-        )
-        ButtonConfirm(
-            onButtonConfirm = onButtonConfirm,
-            modifier = Modifier.boxAlign(
-                alignment = Alignment.Center,
-                offset = DpOffset(
-                    x = -7.5.dp,
-                    y = 243.5.dp
+                    x = -1.0.dp,
+                    y = 267.5.dp
                 )
             )
         )
@@ -187,18 +156,16 @@ private fun PreguntaQuizPreview() {
     MaterialTheme {
         RelayContainer {
             PreguntaQuiz(
-                imgQuestionImageContent = painterResource(R.drawable.pregunta_quiz_img_question),
-                questionDesc = "¿Cuál de estas frases dice Yoda en alguna de las películas?",
-                onQuestion1Button = {},
-                question1 = "El mejor profesor, el fracaso es",
-                onQuestion2Button = {},
-                question2 = "El miedo, al fracaso conduce",
-                onQuestion3Button = {},
-                question3 = "Si creer no puedes, es por eso que debes",
-                onQuestion4Button = {},
-                question4 = "Imposible nada es, fácil muchas cosas son",
-                confirmAnswer = "Confirmar respuesta",
-                onButtonConfirm = {},
+                quizImg = painterResource(R.drawable.pregunta_quiz_quiz_img),
+                quizTitle = "¿Cómo se llama la aprendiz de Anakin Skywalker en las Guerras Clon?",
+                onAnswerButton1 = {},
+                answerText1 = "Leia",
+                onAnswerButton2 = {},
+                answerText2 = "Pacme",
+                onAnswerButton3 = {},
+                answerText3 = "Ahsoka",
+                onAnswerButton4 = {},
+                answerText4 = "No tiene",
                 modifier = Modifier.rowWeight(1.0f).columnWeight(1.0f)
             )
         }
@@ -206,20 +173,12 @@ private fun PreguntaQuizPreview() {
 }
 
 @Composable
-fun CardBox(modifier: Modifier = Modifier) {
-    RelayVector(
-        vector = painterResource(R.drawable.pregunta_quiz_card_box),
-        modifier = modifier.requiredWidth(344.0.dp).requiredHeight(660.0.dp)
-    )
-}
-
-@Composable
-fun ImgQuestion(
-    imgQuestionImageContent: Painter,
+fun QuizImg(
+    quizImg: Painter,
     modifier: Modifier = Modifier
 ) {
     RelayImage(
-        image = imgQuestionImageContent,
+        image = quizImg,
         radius = 15.0,
         contentScale = ContentScale.Crop,
         modifier = modifier.requiredWidth(296.0.dp).requiredHeight(281.0.dp)
@@ -227,190 +186,157 @@ fun ImgQuestion(
 }
 
 @Composable
-fun QuestionDesc(
-    questionDesc: String,
+fun QuizTitle(
+    quizTitle: String,
     modifier: Modifier = Modifier
 ) {
     RelayText(
-        content = questionDesc,
+        content = quizTitle,
         fontSize = 15.0.sp,
         fontFamily = tomorrow,
         color = Color(
             alpha = 255,
-            red = 0,
-            green = 0,
-            blue = 0
+            red = 255,
+            green = 255,
+            blue = 255
         ),
         height = 1.2.em,
         textAlign = TextAlign.Left,
         fontWeight = FontWeight(700.0.toInt()),
         maxLines = -1,
-        modifier = modifier.requiredWidth(281.0.dp)
+        modifier = modifier.requiredWidth(325.0.dp)
     )
 }
 
 @Composable
-fun Question1Button(
-    onQuestion1Button: () -> Unit,
+fun AnswerButton1(
+    onAnswerButton1: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     RelayVector(
-        vector = painterResource(R.drawable.pregunta_quiz_question1button),
-        modifier = modifier.tappable(onTap = onQuestion1Button).requiredWidth(143.0.dp).requiredHeight(48.0.dp)
+        vector = painterResource(R.drawable.pregunta_quiz_answer_button1),
+        modifier = modifier.tappable(onTap = onAnswerButton1).requiredWidth(325.0.dp).requiredHeight(53.0.dp)
     )
 }
 
 @Composable
-fun Question1(
-    question1: String,
+fun AnswerText1(
+    answerText1: String,
     modifier: Modifier = Modifier
 ) {
     RelayText(
-        content = question1,
-        fontSize = 12.0.sp,
-        fontFamily = tomorrow,
-        color = Color(
-            alpha = 255,
-            red = 0,
-            green = 0,
-            blue = 0
-        ),
-        height = 1.2000000476837158.em,
-        fontWeight = FontWeight(600.0.toInt()),
-        maxLines = -1,
-        modifier = modifier.requiredWidth(123.0.dp)
-    )
-}
-
-@Composable
-fun Question2Button(
-    onQuestion2Button: () -> Unit,
-    modifier: Modifier = Modifier
-) {
-    RelayVector(
-        vector = painterResource(R.drawable.pregunta_quiz_question2button),
-        modifier = modifier.tappable(onTap = onQuestion2Button).requiredWidth(143.0.dp).requiredHeight(48.0.dp)
-    )
-}
-
-@Composable
-fun Question2(
-    question2: String,
-    modifier: Modifier = Modifier
-) {
-    RelayText(
-        content = question2,
-        fontSize = 12.0.sp,
-        fontFamily = tomorrow,
-        color = Color(
-            alpha = 255,
-            red = 0,
-            green = 0,
-            blue = 0
-        ),
-        height = 1.2000000476837158.em,
-        fontWeight = FontWeight(600.0.toInt()),
-        maxLines = -1,
-        modifier = modifier.requiredWidth(123.0.dp)
-    )
-}
-
-@Composable
-fun Question3Button(
-    onQuestion3Button: () -> Unit,
-    modifier: Modifier = Modifier
-) {
-    RelayVector(
-        vector = painterResource(R.drawable.pregunta_quiz_question3button),
-        modifier = modifier.tappable(onTap = onQuestion3Button).requiredWidth(143.0.dp).requiredHeight(48.0.dp)
-    )
-}
-
-@Composable
-fun Question3(
-    question3: String,
-    modifier: Modifier = Modifier
-) {
-    RelayText(
-        content = question3,
-        fontSize = 12.0.sp,
-        fontFamily = tomorrow,
-        color = Color(
-            alpha = 255,
-            red = 0,
-            green = 0,
-            blue = 0
-        ),
-        height = 1.2000000476837158.em,
-        fontWeight = FontWeight(600.0.toInt()),
-        maxLines = -1,
-        modifier = modifier.requiredWidth(123.0.dp)
-    )
-}
-
-@Composable
-fun Question4Button(
-    onQuestion4Button: () -> Unit,
-    modifier: Modifier = Modifier
-) {
-    RelayVector(
-        vector = painterResource(R.drawable.pregunta_quiz_question4button),
-        modifier = modifier.tappable(onTap = onQuestion4Button).requiredWidth(143.0.dp).requiredHeight(48.0.dp)
-    )
-}
-
-@Composable
-fun Question4(
-    question4: String,
-    modifier: Modifier = Modifier
-) {
-    RelayText(
-        content = question4,
-        fontSize = 12.0.sp,
-        fontFamily = tomorrow,
-        color = Color(
-            alpha = 255,
-            red = 0,
-            green = 0,
-            blue = 0
-        ),
-        height = 1.2000000476837158.em,
-        fontWeight = FontWeight(600.0.toInt()),
-        maxLines = -1,
-        modifier = modifier.requiredWidth(123.0.dp)
-    )
-}
-
-@Composable
-fun ConfirmAnswer(
-    confirmAnswer: String,
-    modifier: Modifier = Modifier
-) {
-    RelayText(
-        content = confirmAnswer,
+        content = answerText1,
         fontSize = 16.0.sp,
         fontFamily = tomorrow,
         color = Color(
             alpha = 255,
-            red = 0,
-            green = 0,
-            blue = 0
+            red = 255,
+            green = 255,
+            blue = 255
         ),
         height = 1.2000000476837158.em,
-        textAlign = TextAlign.Left,
         fontWeight = FontWeight(600.0.toInt()),
-        modifier = modifier
+        maxLines = -1,
+        modifier = modifier.requiredWidth(292.0.dp)
     )
 }
 
 @Composable
-fun ButtonConfirm(
-    onButtonConfirm: () -> Unit,
+fun AnswerButton2(
+    onAnswerButton2: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     RelayVector(
-        vector = painterResource(R.drawable.pregunta_quiz_button_confirm),
-        modifier = modifier.tappable(onTap = onButtonConfirm).requiredWidth(193.0.dp).requiredHeight(49.0.dp)
+        vector = painterResource(R.drawable.pregunta_quiz_answer_button2),
+        modifier = modifier.tappable(onTap = onAnswerButton2).requiredWidth(325.0.dp).requiredHeight(53.0.dp)
+    )
+}
+
+@Composable
+fun AnswerText2(
+    answerText2: String,
+    modifier: Modifier = Modifier
+) {
+    RelayText(
+        content = answerText2,
+        fontSize = 16.0.sp,
+        fontFamily = tomorrow,
+        color = Color(
+            alpha = 255,
+            red = 255,
+            green = 255,
+            blue = 255
+        ),
+        height = 1.2000000476837158.em,
+        fontWeight = FontWeight(600.0.toInt()),
+        maxLines = -1,
+        modifier = modifier.requiredWidth(292.0.dp)
+    )
+}
+
+@Composable
+fun AnswerButton3(
+    onAnswerButton3: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+    RelayVector(
+        vector = painterResource(R.drawable.pregunta_quiz_answer_button3),
+        modifier = modifier.tappable(onTap = onAnswerButton3).requiredWidth(325.0.dp).requiredHeight(53.0.dp)
+    )
+}
+
+@Composable
+fun AnswerText3(
+    answerText3: String,
+    modifier: Modifier = Modifier
+) {
+    RelayText(
+        content = answerText3,
+        fontSize = 16.0.sp,
+        fontFamily = tomorrow,
+        color = Color(
+            alpha = 255,
+            red = 255,
+            green = 255,
+            blue = 255
+        ),
+        height = 1.2000000476837158.em,
+        fontWeight = FontWeight(600.0.toInt()),
+        maxLines = -1,
+        modifier = modifier.requiredWidth(292.0.dp)
+    )
+}
+
+@Composable
+fun AnswerButton4(
+    onAnswerButton4: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+    RelayVector(
+        vector = painterResource(R.drawable.pregunta_quiz_answer_button4),
+        modifier = modifier.tappable(onTap = onAnswerButton4).requiredWidth(325.0.dp).requiredHeight(53.0.dp)
+    )
+}
+
+@Composable
+fun AnswerText4(
+    answerText4: String,
+    modifier: Modifier = Modifier
+) {
+    RelayText(
+        content = answerText4,
+        fontSize = 16.0.sp,
+        fontFamily = tomorrow,
+        color = Color(
+            alpha = 255,
+            red = 255,
+            green = 255,
+            blue = 255
+        ),
+        height = 1.2000000476837158.em,
+        fontWeight = FontWeight(600.0.toInt()),
+        maxLines = -1,
+        modifier = modifier.requiredWidth(292.0.dp)
     )
 }
 

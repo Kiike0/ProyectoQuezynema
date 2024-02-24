@@ -1,25 +1,31 @@
 package com.example.proyectofinal_quizynema.quizexplored
 
-import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.requiredHeight
+import androidx.compose.foundation.layout.requiredWidth
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.em
 import androidx.compose.ui.unit.sp
 import com.example.proyectofinal_quizynema.R
+import com.google.relay.compose.EmptyPainter
 import com.google.relay.compose.RelayContainer
 import com.google.relay.compose.RelayContainerScope
 import com.google.relay.compose.RelayImage
 import com.google.relay.compose.RelayText
+import com.google.relay.compose.RelayVector
 import com.google.relay.compose.tappable
 
 /**
@@ -29,17 +35,42 @@ import com.google.relay.compose.tappable
 @Composable
 fun QuizExplored(
     modifier: Modifier = Modifier,
-    quizImg: () -> Unit = {},
-    quizTitle: () -> Unit = {}
+    quizImg: Painter = EmptyPainter(),
+    quizTitleText: String = "",
+    onBoxQuiz: () -> Unit = {},
+    onQuizImg: () -> Unit = {}
 ) {
     TopLevel(modifier = modifier) {
-        QuizImg(
-            quizImg = quizImg,
-            modifier = Modifier.rowWeight(1.0f).columnWeight(1.0f)
+        BoxQuiz(
+            onBoxQuiz = onBoxQuiz,
+            modifier = Modifier.boxAlign(
+                alignment = Alignment.Center,
+                offset = DpOffset(
+                    x = 0.0.dp,
+                    y = 63.0.dp
+                )
+            )
         )
-        QuizTitle(
-            quizTitle = quizTitle,
-            modifier = Modifier.rowWeight(1.0f).columnWeight(1.0f)
+        QuizImg(
+            onQuizImg = onQuizImg,
+            quizImg = quizImg,
+            modifier = Modifier.boxAlign(
+                alignment = Alignment.Center,
+                offset = DpOffset(
+                    x = 0.0.dp,
+                    y = -31.5.dp
+                )
+            )
+        )
+        QuizTitleText(
+            quizTitleText = quizTitleText,
+            modifier = Modifier.boxAlign(
+                alignment = Alignment.Center,
+                offset = DpOffset(
+                    x = 2.0.dp,
+                    y = 61.5.dp
+                )
+            )
         )
     }
 }
@@ -50,8 +81,10 @@ private fun QuizExploredPreview() {
     MaterialTheme {
         RelayContainer {
             QuizExplored(
-                quizImg = {},
-                quizTitle = {},
+                onBoxQuiz = {},
+                quizImg = painterResource(R.drawable.quiz_explored_quiz_img),
+                onQuizImg = {},
+                quizTitleText = "¿Lo sabes todo sobre Star Wars?",
                 modifier = Modifier.rowWeight(1.0f).columnWeight(1.0f)
             )
         }
@@ -59,40 +92,37 @@ private fun QuizExploredPreview() {
 }
 
 @Composable
-fun QuizImg(
-    quizImg: () -> Unit,
+fun BoxQuiz(
+    onBoxQuiz: () -> Unit,
     modifier: Modifier = Modifier
 ) {
-    RelayImage(
-        image = painterResource(R.drawable.quiz_explored_quiz_img),
-        radius = 15.0,
-        strokeColor = Color(
-            alpha = 255,
-            red = 255,
-            green = 211,
-            blue = 126
-        ),
-        strokeWidth = 2.0,
-        contentScale = ContentScale.Crop,
-        modifier = modifier.padding(
-            paddingValues = PaddingValues(
-                start = 0.0.dp,
-                top = 0.0.dp,
-                end = 0.0.dp,
-                bottom = 63.0.dp
-            )
-        ).tappable(onTap = quizImg).fillMaxWidth(1.0f).fillMaxHeight(1.0f)
+    RelayVector(
+        vector = painterResource(R.drawable.quiz_explored_box_quiz),
+        modifier = modifier.tappable(onTap = onBoxQuiz).requiredWidth(166.0.dp).requiredHeight(63.0.dp)
     )
 }
 
 @Composable
-fun QuizTitle(
-    quizTitle: () -> Unit,
+fun QuizImg(
+    onQuizImg: () -> Unit,
+    quizImg: Painter,
+    modifier: Modifier = Modifier
+) {
+    RelayImage(
+        image = quizImg,
+        contentScale = ContentScale.Crop,
+        modifier = modifier.tappable(onTap = onQuizImg).requiredWidth(166.0.dp).requiredHeight(126.0.dp)
+    )
+}
+
+@Composable
+fun QuizTitleText(
+    quizTitleText: String,
     modifier: Modifier = Modifier
 ) {
     RelayText(
-        content = "¿Lo sabes todo sobre Star Wars?",
-        fontSize = 15.0.sp,
+        content = quizTitleText,
+        fontSize = 13.0.sp,
         fontFamily = tomorrow,
         color = Color(
             alpha = 255,
@@ -100,17 +130,11 @@ fun QuizTitle(
             green = 255,
             blue = 255
         ),
-        height = 1.2.em,
+        height = 1.200000029343825.em,
         textAlign = TextAlign.Left,
+        fontWeight = FontWeight(600.0.toInt()),
         maxLines = -1,
-        modifier = modifier.padding(
-            paddingValues = PaddingValues(
-                start = 0.0.dp,
-                top = 153.0.dp,
-                end = 0.0.dp,
-                bottom = 0.0.dp
-            )
-        ).tappable(onTap = quizTitle).fillMaxWidth(1.0f).fillMaxHeight(1.0f)
+        modifier = modifier.requiredWidth(152.0.dp)
     )
 }
 

@@ -1,0 +1,752 @@
+{
+  "name": "ranking",
+  "version": 32,
+  "source-key": {
+    "type": "figma",
+    "file": "H7ukQQTqL9pUMovBZnfFnU",
+    "node": "146:2",
+    "version": "5217154745",
+    "component-id": "ed911973a0c640e84d8282b218f4e60200b1820a"
+  },
+  "default": "Ranking",
+  "design": {
+    "atoms": [
+      {
+        "type": "group",
+        "id": "top_level",
+        "root": "true"
+      },
+      {
+        "type": "vector",
+        "id": "RankingBox"
+      },
+      {
+        "type": "vector",
+        "id": "FirstRectangle"
+      },
+      {
+        "type": "vector",
+        "id": "SecondRectangle"
+      },
+      {
+        "type": "vector",
+        "id": "ThirdRectangle"
+      },
+      {
+        "type": "vector",
+        "id": "FourthRectangle"
+      },
+      {
+        "type": "image",
+        "id": "GoldMedal"
+      },
+      {
+        "type": "image",
+        "id": "SilverMedal"
+      },
+      {
+        "type": "image",
+        "id": "BronzeMedal"
+      },
+      {
+        "type": "text",
+        "id": "FirstUserName"
+      },
+      {
+        "type": "text",
+        "id": "FirstPointsText"
+      },
+      {
+        "type": "text",
+        "id": "SecondUserName"
+      },
+      {
+        "type": "text",
+        "id": "SecondPointsText"
+      },
+      {
+        "type": "text",
+        "id": "ThirdUserName"
+      },
+      {
+        "type": "text",
+        "id": "ThirtPointsText"
+      },
+      {
+        "type": "text",
+        "id": "FourthUserName"
+      },
+      {
+        "type": "text",
+        "id": "FourthPointsText"
+      },
+      {
+        "type": "text",
+        "id": "TextRankingTitle"
+      }
+    ],
+    "modes": {
+      "Ranking": {
+        "rules": [
+          {
+            "id": "top_level",
+            "is-structured": "false",
+            "children": [
+              "RankingBox",
+              "FirstRectangle",
+              "SecondRectangle",
+              "ThirdRectangle",
+              "FourthRectangle",
+              "GoldMedal",
+              "SilverMedal",
+              "BronzeMedal",
+              "FirstUserName",
+              "FirstPointsText",
+              "SecondUserName",
+              "SecondPointsText",
+              "ThirdUserName",
+              "ThirtPointsText",
+              "FourthUserName",
+              "FourthPointsText",
+              "TextRankingTitle"
+            ],
+            "clip-content": "false"
+          },
+          {
+            "id": "RankingBox",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "0.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "3.5"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "393.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "396.0"
+              }
+            },
+            "vector-content": "ranking_box.svg"
+          },
+          {
+            "id": "FirstRectangle",
+            "border-radius": "25.0",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "0.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "-97.5"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "342.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "56.0"
+              }
+            },
+            "vector-content": "first_rectangle.svg"
+          },
+          {
+            "id": "SecondRectangle",
+            "border-radius": "25.0",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "0.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "-9.5"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "342.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "56.0"
+              }
+            },
+            "vector-content": "second_rectangle.svg"
+          },
+          {
+            "id": "ThirdRectangle",
+            "border-radius": "25.0",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "0.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "79.5"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "342.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "56.0"
+              }
+            },
+            "vector-content": "third_rectangle.svg"
+          },
+          {
+            "id": "FourthRectangle",
+            "border-radius": "25.0",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "0.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "162.5"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "342.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "56.0"
+              }
+            },
+            "vector-content": "fourth_rectangle.svg"
+          },
+          {
+            "id": "GoldMedal",
+            "border-radius": "70.0",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-137.54505825042725"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "-97.85478210449219"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "23.909883499145508"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "33.290435791015625"
+              }
+            },
+            "image-content": "$GoldMedal",
+            "scale": "cover"
+          },
+          {
+            "id": "SilverMedal",
+            "border-radius": "70.0",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-137.54505825042725"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "-7.8547821044921875"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "23.909883499145508"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "33.290435791015625"
+              }
+            },
+            "image-content": "$SilverMedal",
+            "scale": "cover"
+          },
+          {
+            "id": "BronzeMedal",
+            "border-radius": "70.0",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-137.94032192230225"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "82.36433410644531"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "23.909883499145508"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "33.290435791015625"
+              }
+            },
+            "image-content": "$BronzeMedal",
+            "scale": "cover"
+          },
+          {
+            "id": "FirstUserName",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-35.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "-89.5"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "148.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "32.0"
+              }
+            },
+            "font-weight": "700.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "text-content": "$FirstUserName",
+            "overflow": "visible",
+            "max-lines": "-1",
+            "text-align": "left",
+            "text-size": "15.0",
+            "line-height": "1.2",
+            "typeface": "Tomorrow"
+          },
+          {
+            "id": "FirstPointsText",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "98.4651870727539"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "-90.45214080810547"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "84.16279602050781"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "30.353042602539062"
+              }
+            },
+            "font-weight": "700.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "text-content": "$FirstPointsText",
+            "overflow": "visible",
+            "max-lines": "-1",
+            "text-align": "left",
+            "text-size": "15.0",
+            "line-height": "1.2",
+            "typeface": "Tomorrow"
+          },
+          {
+            "id": "SecondUserName",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-37.292152404785156"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "-5.323478698730469"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "144.4156951904297"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "30.353042602539062"
+              }
+            },
+            "font-weight": "700.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "text-content": "$SecondUserName",
+            "overflow": "visible",
+            "max-lines": "-1",
+            "text-align": "left",
+            "text-size": "15.0",
+            "line-height": "1.2",
+            "typeface": "Tomorrow"
+          },
+          {
+            "id": "SecondPointsText",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "98.4651870727539"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "-6.246940612792969"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "84.16279602050781"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "30.353042602539062"
+              }
+            },
+            "font-weight": "700.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "annotated-text-content": "$SecondPointsText",
+            "overflow": "visible",
+            "max-lines": "-1",
+            "text-align": "left",
+            "text-size": "16.0",
+            "line-height": "1.2000000476837158",
+            "typeface": "Tomorrow"
+          },
+          {
+            "id": "ThirdUserName",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-37.292152404785156"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "83.67652130126953"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "144.4156951904297"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "30.353042602539062"
+              }
+            },
+            "font-weight": "700.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "text-content": "$ThirdUserName",
+            "overflow": "visible",
+            "max-lines": "-1",
+            "text-align": "left",
+            "text-size": "15.0",
+            "line-height": "1.2",
+            "typeface": "Tomorrow"
+          },
+          {
+            "id": "ThirtPointsText",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "97.03059005737305"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "83.83301544189453"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "81.2936019897461"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "30.353042602539062"
+              }
+            },
+            "font-weight": "700.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "text-content": "$ThirtPointsText",
+            "overflow": "visible",
+            "max-lines": "-1",
+            "text-align": "left",
+            "text-size": "15.0",
+            "line-height": "1.2",
+            "typeface": "Tomorrow"
+          },
+          {
+            "id": "FourthUserName",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-40.16133117675781"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "167.67652130126953"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "138.67733764648438"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "30.353042602539062"
+              }
+            },
+            "font-weight": "700.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "text-content": "$FourthUserName",
+            "overflow": "visible",
+            "max-lines": "-1",
+            "text-align": "left",
+            "text-size": "15.0",
+            "line-height": "1.2",
+            "typeface": "Tomorrow"
+          },
+          {
+            "id": "FourthPointsText",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "97.03059005737305"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "168.03821563720703"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "81.2936019897461"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "30.353042602539062"
+              }
+            },
+            "font-weight": "700.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "text-content": "$FourthPointsText",
+            "overflow": "visible",
+            "max-lines": "-1",
+            "text-align": "left",
+            "text-size": "15.0",
+            "line-height": "1.2",
+            "typeface": "Tomorrow"
+          },
+          {
+            "id": "TextRankingTitle",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-6.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "-168.5"
+              }
+            },
+            "font-weight": "700.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "text-content": "$TextRankingTitle",
+            "overflow": "visible",
+            "text-align": "left",
+            "text-size": "20.0",
+            "line-height": "1.2",
+            "typeface": "Tomorrow"
+          }
+        ]
+      }
+    }
+  },
+  "parameters": {
+    "GoldMedal": {
+      "data-type": "image",
+      "required": false,
+      "description": ""
+    },
+    "SilverMedal": {
+      "data-type": "image",
+      "required": false,
+      "description": ""
+    },
+    "BronzeMedal": {
+      "data-type": "image",
+      "required": false,
+      "description": ""
+    },
+    "FirstUserName": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    },
+    "FirstPointsText": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    },
+    "SecondUserName": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    },
+    "SecondPointsText": {
+      "data-type": "annotated-text-content",
+      "required": false,
+      "description": ""
+    },
+    "ThirdUserName": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    },
+    "ThirtPointsText": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    },
+    "FourthUserName": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    },
+    "FourthPointsText": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    },
+    "TextRankingTitle": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    }
+  },
+  "previews": [
+    {
+      "design": "Ranking",
+      "size": {
+        "width": 393.0,
+        "height": 403.0
+      },
+      "parameters": {
+        "GoldMedal": "gold_medal.png",
+        "SilverMedal": "silver_medal.png",
+        "BronzeMedal": "bronze_medal.png",
+        "FirstUserName": "Joker1231",
+        "FirstPointsText": "30 Puntos",
+        "SecondUserName": "Asoka888",
+        "SecondPointsText": {
+          "text": "28 Puntos",
+          "annotated-text-span-list": [
+            {
+              "span-start": 0,
+              "span-length": 3
+            },
+            {
+              "span-start": 3,
+              "span-length": 6,
+              "annotated-text-style": {
+                "text-size": 15.0,
+                "color": {
+                  "alpha": "1.0",
+                  "hue": "0.0",
+                  "saturation": "0.0",
+                  "value": "1.0"
+                }
+              }
+            }
+          ]
+        },
+        "ThirdUserName": "JohnWayne8",
+        "ThirtPointsText": "21 Puntos",
+        "FourthUserName": "Fox523",
+        "FourthPointsText": "15 Puntos",
+        "TextRankingTitle": "Ranking Mundial"
+      }
+    }
+  ],
+  "adin-component-search-paths": [],
+  "image-search-paths": [],
+  "vector-search-paths": []
+}

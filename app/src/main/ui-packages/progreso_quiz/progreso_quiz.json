@@ -5,7 +5,7 @@
     "type": "figma",
     "file": "H7ukQQTqL9pUMovBZnfFnU",
     "node": "93:6",
-    "version": "5179077080",
+    "version": "5217154745",
     "component-id": "d24c6751a98d0c87fb914411c52a23742d23e51f"
   },
   "default": "ProgresoQuiz",
@@ -18,19 +18,23 @@
       },
       {
         "type": "vector",
-        "id": "RectangleButton"
+        "id": "CardPopularQuiz"
       },
       {
         "type": "text",
-        "id": "Points"
+        "id": "CompletedTimes"
       },
       {
         "type": "text",
-        "id": "QuizTitle"
+        "id": "TitleQuiz"
+      },
+      {
+        "type": "group",
+        "id": "IconFilm"
       },
       {
         "type": "vector",
-        "id": "VectorTrophy"
+        "id": "VectorFilm"
       }
     ],
     "modes": {
@@ -40,15 +44,15 @@
             "id": "top_level",
             "is-structured": "false",
             "children": [
-              "RectangleButton",
-              "Points",
-              "QuizTitle",
-              "VectorTrophy"
+              "CardPopularQuiz",
+              "CompletedTimes",
+              "TitleQuiz",
+              "IconFilm"
             ],
             "clip-content": "false"
           },
           {
-            "id": "RectangleButton",
+            "id": "CardPopularQuiz",
             "border-radius": "15.0",
             "alignment": {
               "horizontal": {
@@ -60,7 +64,7 @@
                 "offset": "0.0"
               }
             },
-            "tap-handler": "$onQuizButton",
+            "tap-handler": "$onCardPopularQuiz",
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
@@ -71,14 +75,14 @@
                 "value": "88.0"
               }
             },
-            "vector-content": "rectangle_button.svg"
+            "vector-content": "card_popular_quiz.svg"
           },
           {
-            "id": "Points",
+            "id": "CompletedTimes",
             "alignment": {
               "horizontal": {
                 "attachment": "center",
-                "offset": "-28.0"
+                "offset": "4.0"
               },
               "vertical": {
                 "attachment": "center",
@@ -91,7 +95,7 @@
               "saturation": "0.0",
               "value": "1.0"
             },
-            "text-content": "$Points",
+            "text-content": "$CompletedTimes",
             "overflow": "visible",
             "text-align": "left",
             "text-size": "10.0",
@@ -99,7 +103,7 @@
             "typeface": "Tomorrow"
           },
           {
-            "id": "QuizTitle",
+            "id": "TitleQuiz",
             "alignment": {
               "horizontal": {
                 "attachment": "center",
@@ -126,7 +130,7 @@
               "saturation": "0.0",
               "value": "1.0"
             },
-            "text-content": "$QuizTitle",
+            "text-content": "$TitleQuiz",
             "overflow": "visible",
             "max-lines": "-1",
             "text-align": "left",
@@ -135,45 +139,68 @@
             "typeface": "Tomorrow"
           },
           {
-            "id": "VectorTrophy",
+            "id": "IconFilm",
             "alignment": {
               "horizontal": {
                 "attachment": "center",
-                "offset": "-49.0"
+                "offset": "-48.5"
               },
               "vertical": {
                 "attachment": "center",
-                "offset": "20.375"
+                "offset": "20.5"
               }
             },
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": "11.625"
+                "value": "15.0"
               },
               "height-constraints": {
                 "sizing-mode": "fixed",
-                "value": "9.375"
+                "value": "15.0"
               }
             },
-            "vector-content": "vector_trophy.svg"
+            "is-structured": "false",
+            "children": [
+              "VectorFilm"
+            ]
+          },
+          {
+            "id": "VectorFilm",
+            "margin": {
+              "left": "0.625",
+              "top": "0.625",
+              "right": "0.000003814697265625",
+              "bottom": "0.6249971389770508"
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              }
+            },
+            "vector-content": "vector_film.svg"
           }
         ]
       }
     }
   },
   "parameters": {
-    "onQuizButton": {
+    "onCardPopularQuiz": {
       "data-type": "void-callback",
       "required": false,
       "description": ""
     },
-    "Points": {
+    "CompletedTimes": {
       "data-type": "text",
       "required": false,
       "description": ""
     },
-    "QuizTitle": {
+    "TitleQuiz": {
       "data-type": "text",
       "required": false,
       "description": ""
@@ -187,8 +214,8 @@
         "height": 88.0
       },
       "parameters": {
-        "Points": "3/5",
-        "QuizTitle": "¿Lo sabes todo sobre Star Wars?"
+        "CompletedTimes": "5 completadas",
+        "TitleQuiz": "¿Lo sabes todo sobre Star Wars?"
       }
     }
   ],

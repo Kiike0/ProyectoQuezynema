@@ -32,53 +32,53 @@ import com.google.relay.compose.tappable
 @Composable
 fun WelcomeMsj(
     modifier: Modifier = Modifier,
-    greetings: String = "",
-    letsQuiz: String = "",
-    avatarImg: () -> Unit = {}
+    welcomeTextnick: String = "",
+    letsQuizText: String = "",
+    onQuizyAvatarImg: () -> Unit = {}
 ) {
     TopLevel(modifier = modifier) {
-        Greetings(
-            greetings = greetings,
+        WelcomeTextnick(
+            welcomeTextnick = welcomeTextnick,
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
-                    x = -62.0.dp,
-                    y = -16.0.dp
+                    x = 29.0.dp,
+                    y = -19.0.dp
                 )
             )
         )
-        LetsQuiz(
-            letsQuiz = letsQuiz,
+        LetsQuizText(
+            letsQuizText = letsQuizText,
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
-                    x = -89.0.dp,
-                    y = 18.5.dp
+                    x = -30.5.dp,
+                    y = 17.0.dp
                 )
             )
         )
-        AvatarImg(
-            avatarImg = avatarImg,
+        QuizyAvatarImg(
+            onQuizyAvatarImg = onQuizyAvatarImg,
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
-                    x = 152.0.dp,
-                    y = -8.0.dp
+                    x = -147.5.dp,
+                    y = -0.5.dp
                 )
             )
         )
     }
 }
 
-@Preview(widthDp = 344, heightDp = 56)
+@Preview(widthDp = 362, heightDp = 93)
 @Composable
 private fun WelcomeMsjPreview() {
     MaterialTheme {
         RelayContainer {
             WelcomeMsj(
-                greetings = "Buenos días, Senpai!",
-                letsQuiz = "Hagamos un quiz hoy",
-                avatarImg = {},
+                welcomeTextnick = "Buenos días, Joker1231!",
+                letsQuizText = "Hagamos un quiz hoy",
+                onQuizyAvatarImg = {},
                 modifier = Modifier.rowWeight(1.0f).columnWeight(1.0f)
             )
         }
@@ -86,34 +86,12 @@ private fun WelcomeMsjPreview() {
 }
 
 @Composable
-fun Greetings(
-    greetings: String,
+fun WelcomeTextnick(
+    welcomeTextnick: String,
     modifier: Modifier = Modifier
 ) {
     RelayText(
-        content = greetings,
-        fontSize = 20.0.sp,
-        fontFamily = tomorrow,
-        color = Color(
-            alpha = 255,
-            red = 255,
-            green = 255,
-            blue = 255
-        ),
-        height = 1.2.em,
-        textAlign = TextAlign.Left,
-        fontWeight = FontWeight(700.0.toInt()),
-        modifier = modifier
-    )
-}
-
-@Composable
-fun LetsQuiz(
-    letsQuiz: String,
-    modifier: Modifier = Modifier
-) {
-    RelayText(
-        content = letsQuiz,
+        content = welcomeTextnick,
         fontSize = 16.0.sp,
         fontFamily = tomorrow,
         color = Color(
@@ -124,20 +102,42 @@ fun LetsQuiz(
         ),
         height = 1.2000000476837158.em,
         textAlign = TextAlign.Left,
+        fontWeight = FontWeight(700.0.toInt()),
+        maxLines = -1,
+        modifier = modifier.requiredWidth(264.0.dp)
+    )
+}
+
+@Composable
+fun LetsQuizText(
+    letsQuizText: String,
+    modifier: Modifier = Modifier
+) {
+    RelayText(
+        content = letsQuizText,
+        fontFamily = tomorrow,
+        color = Color(
+            alpha = 255,
+            red = 255,
+            green = 255,
+            blue = 255
+        ),
+        height = 1.2000000817435128.em,
+        textAlign = TextAlign.Left,
         modifier = modifier
     )
 }
 
 @Composable
-fun AvatarImg(
-    avatarImg: () -> Unit,
+fun QuizyAvatarImg(
+    onQuizyAvatarImg: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     RelayImage(
-        image = painterResource(R.drawable.welcome_msj_avatar_img),
+        image = painterResource(R.drawable.welcome_msj_quizy_avatar_img),
         radius = 30.0,
         contentScale = ContentScale.Crop,
-        modifier = modifier.tappable(onTap = avatarImg).requiredWidth(40.0.dp).requiredHeight(40.0.dp)
+        modifier = modifier.tappable(onTap = onQuizyAvatarImg).requiredWidth(67.0.dp).requiredHeight(68.0.dp)
     )
 }
 

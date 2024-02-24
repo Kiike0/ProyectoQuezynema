@@ -15,6 +15,8 @@ import com.example.proyectofinal_quizynema.navigation.Routes
 import com.example.proyectofinal_quizynema.ui.theme.Proyectofinal_quizynemaTheme
 import com.example.proyectofinal_quizynema.viewModels.UserViewModel
 import com.example.proyectofinal_quizynema.views.game.ui.HomeView
+import com.example.proyectofinal_quizynema.views.game.ui.Question1View
+import com.example.proyectofinal_quizynema.views.game.ui.QuizView
 import com.example.proyectofinal_quizynema.views.game.ui.StartGameScreen
 import com.example.proyectofinal_quizynema.views.game.ui.UserView
 import com.example.proyectofinal_quizynema.views.login.EmptyView
@@ -67,6 +69,18 @@ class MainActivity : ComponentActivity() {
                         }
                         composable(Routes.UserScreen.route) {
                             UserView(
+                                navController = navController,
+                                currentUserViewModel = userViewModel
+                            )
+                        }
+                        composable(Routes.QuizScreen.route) {
+                            QuizView(
+                                navController = navController,
+                                currentUserViewModel = userViewModel
+                            )
+                        }
+                        composable(Routes.Question1Screen.route) {
+                            Question1View(
                                 navController = navController,
                                 currentUserViewModel = userViewModel
                             )

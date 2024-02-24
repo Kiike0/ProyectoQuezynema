@@ -5,7 +5,7 @@
     "type": "figma",
     "file": "H7ukQQTqL9pUMovBZnfFnU",
     "node": "93:3",
-    "version": "5179077080",
+    "version": "5217154745",
     "component-id": "a1b152526905a8e8f01698b3ba58cb37f1f295a7"
   },
   "default": "QuizSugerida",
@@ -102,7 +102,7 @@
               "alpha": "1.0",
               "hue": "0.0",
               "saturation": "0.0",
-              "value": "0.0"
+              "value": "1.0"
             },
             "text-content": "$quizsuggest",
             "overflow": "visible",
@@ -154,7 +154,7 @@
               "alpha": "1.0",
               "hue": "0.0",
               "saturation": "0.0",
-              "value": "0.0"
+              "value": "1.0"
             },
             "text-content": "$Comenzar",
             "overflow": "visible",

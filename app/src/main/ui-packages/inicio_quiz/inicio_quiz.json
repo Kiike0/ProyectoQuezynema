@@ -1,0 +1,298 @@
+{
+  "name": "inicio_quiz",
+  "version": 32,
+  "source-key": {
+    "type": "figma",
+    "file": "H7ukQQTqL9pUMovBZnfFnU",
+    "node": "163:344",
+    "version": "5217154745",
+    "component-id": "8308aefa791709c7e21b47f9f0db31c83beb2585"
+  },
+  "default": "InicioQuiz",
+  "design": {
+    "atoms": [
+      {
+        "type": "group",
+        "id": "top_level",
+        "root": "true"
+      },
+      {
+        "type": "vector",
+        "id": "StartButton"
+      },
+      {
+        "type": "text",
+        "id": "StartText"
+      },
+      {
+        "type": "vector",
+        "id": "RectQuizImg"
+      },
+      {
+        "type": "image",
+        "id": "LetsQuizImg"
+      },
+      {
+        "type": "text",
+        "id": "QuizTitleText"
+      },
+      {
+        "type": "text",
+        "id": "QuizDesc"
+      }
+    ],
+    "modes": {
+      "InicioQuiz": {
+        "rules": [
+          {
+            "id": "top_level",
+            "is-structured": "false",
+            "children": [
+              "StartButton",
+              "StartText",
+              "RectQuizImg",
+              "LetsQuizImg",
+              "QuizTitleText",
+              "QuizDesc"
+            ],
+            "clip-content": "false"
+          },
+          {
+            "id": "StartButton",
+            "border-radius": "25.0",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "0.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "205.5"
+              }
+            },
+            "tap-handler": "$onStartButton",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "230.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "58.0"
+              }
+            },
+            "vector-content": "start_button.svg"
+          },
+          {
+            "id": "StartText",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-0.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "205.5"
+              }
+            },
+            "font-weight": "700.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "text-content": "$StartText",
+            "overflow": "visible",
+            "text-align": "left",
+            "text-size": "20.0",
+            "line-height": "1.2",
+            "typeface": "Tomorrow"
+          },
+          {
+            "id": "RectQuizImg",
+            "border-radius": "100.0",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "0.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "-114.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "300.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "241.0"
+              }
+            },
+            "vector-content": "rect_quiz_img.svg"
+          },
+          {
+            "id": "LetsQuizImg",
+            "border-radius": "15.0",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "2.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "-114.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "303.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "241.0"
+              }
+            },
+            "image-content": "lets_quiz_img.png",
+            "scale": "cover",
+            "fills": [
+              {
+                "color": {},
+                "opacity": "1.0",
+                "fill-type": "image",
+                "blend-mode": "normal",
+                "color-stops": [],
+                "gradient-handle-positions": []
+              },
+              {
+                "color": {
+                  "alpha": "0.08627450980392157",
+                  "hue": "208.88888888888889",
+                  "saturation": "0.5192307692307693",
+                  "value": "0.20392156862745098"
+                },
+                "opacity": "1.0",
+                "fill-type": "solid",
+                "blend-mode": "normal",
+                "color-stops": [],
+                "gradient-handle-positions": []
+              }
+            ]
+          },
+          {
+            "id": "QuizTitleText",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "0.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "58.5"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "324.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "shrink"
+              }
+            },
+            "font-weight": "600.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "text-content": "$QuizTitleText",
+            "overflow": "visible",
+            "max-lines": "-1",
+            "text-size": "20.0",
+            "line-height": "1.2",
+            "typeface": "Tomorrow"
+          },
+          {
+            "id": "QuizDesc",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "0.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "118.5"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "324.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "shrink"
+              }
+            },
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "text-content": "$QuizDesc",
+            "overflow": "visible",
+            "max-lines": "-1",
+            "text-size": "15.0",
+            "line-height": "1.2",
+            "typeface": "Tomorrow"
+          }
+        ]
+      }
+    }
+  },
+  "parameters": {
+    "onStartButton": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": ""
+    },
+    "StartText": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    },
+    "QuizTitleText": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    },
+    "QuizDesc": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    }
+  },
+  "previews": [
+    {
+      "design": "InicioQuiz",
+      "size": {
+        "width": 324.0,
+        "height": 469.0
+      },
+      "parameters": {
+        "StartText": "Iniciar",
+        "QuizTitleText": "¿Lo sabes todo sobre Star Wars?",
+        "QuizDesc": "Responde a las preguntas del Quiz y ganarás puntos por respuesta correcta"
+      }
+    }
+  ],
+  "adin-component-search-paths": [],
+  "image-search-paths": [],
+  "vector-search-paths": []
+}

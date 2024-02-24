@@ -1,0 +1,254 @@
+{
+  "name": "congrats_component",
+  "version": 32,
+  "source-key": {
+    "type": "figma",
+    "file": "H7ukQQTqL9pUMovBZnfFnU",
+    "node": "172:386",
+    "version": "5217357516",
+    "component-id": "b1a6b1f831a9c25f179bb3899a6b6fec20cede5a"
+  },
+  "default": "CongratsComponent",
+  "design": {
+    "atoms": [
+      {
+        "type": "group",
+        "id": "top_level",
+        "root": "true"
+      },
+      {
+        "type": "vector",
+        "id": "ImgRect"
+      },
+      {
+        "type": "vector",
+        "id": "RectBx"
+      },
+      {
+        "type": "text",
+        "id": "GreatJob"
+      },
+      {
+        "type": "text",
+        "id": "Congrats"
+      },
+      {
+        "type": "vector",
+        "id": "ContinueButton"
+      },
+      {
+        "type": "text",
+        "id": "Continuar"
+      }
+    ],
+    "modes": {
+      "CongratsComponent": {
+        "rules": [
+          {
+            "id": "top_level",
+            "is-structured": "false",
+            "children": [
+              "ImgRect",
+              "RectBx",
+              "GreatJob",
+              "Congrats",
+              "ContinueButton",
+              "Continuar"
+            ],
+            "clip-content": "false"
+          },
+          {
+            "id": "ImgRect",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "0.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "-92.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "328.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "360.0"
+              }
+            },
+            "vector-content": "img_rect.svg"
+          },
+          {
+            "id": "RectBx",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "0.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "180.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "328.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "184.0"
+              }
+            },
+            "vector-content": "rect_bx.svg"
+          },
+          {
+            "id": "GreatJob",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "0.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "141.5"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "296.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "11.0"
+              }
+            },
+            "color": {
+              "alpha": "1.0",
+              "hue": "70.43478260869564",
+              "saturation": "0.30803571428571436",
+              "value": "0.8784313725490196"
+            },
+            "text-content": "Has hecho un gran trabajo en el test",
+            "overflow": "visible",
+            "max-lines": "-1",
+            "text-size": "13.0",
+            "line-height": "1.200000029343825",
+            "typeface": "Tomorrow"
+          },
+          {
+            "id": "Congrats",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "0.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "101.5"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "296.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "35.0"
+              }
+            },
+            "font-weight": "700.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "text-content": "¡Felicidades!",
+            "overflow": "visible",
+            "max-lines": "-1",
+            "text-size": "36.0",
+            "line-height": "1.2000000211927626",
+            "typeface": "Tomorrow"
+          },
+          {
+            "id": "ContinueButton",
+            "border-radius": "25.0",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "0.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "213.0"
+              }
+            },
+            "tap-handler": "$onContinueButton",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "230.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "58.0"
+              }
+            },
+            "vector-content": "continue_button.svg"
+          },
+          {
+            "id": "Continuar",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-0.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "213.0"
+              }
+            },
+            "font-weight": "700.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "text-content": "Continuar",
+            "overflow": "visible",
+            "text-align": "left",
+            "text-size": "20.0",
+            "line-height": "1.2",
+            "typeface": "Tomorrow"
+          }
+        ]
+      }
+    }
+  },
+  "parameters": {
+    "onContinueButton": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": ""
+    }
+  },
+  "previews": [
+    {
+      "design": "CongratsComponent",
+      "size": {
+        "width": 328.0,
+        "height": 544.0
+      }
+    }
+  ],
+  "adin-component-search-paths": [],
+  "image-search-paths": [],
+  "vector-search-paths": []
+}

@@ -5,7 +5,7 @@
     "type": "figma",
     "file": "H7ukQQTqL9pUMovBZnfFnU",
     "node": "85:40",
-    "version": "5186178695",
+    "version": "5217154745",
     "component-id": "ec9ec44b6141e6f1e635e08d16ac7713e4e5a729"
   },
   "default": "AccesoUsuario",
@@ -25,16 +25,12 @@
         "id": "AccessText"
       },
       {
-        "type": "text",
-        "id": "CreateAccountTap"
-      },
-      {
         "type": "vector",
-        "id": "RectangleSeparation"
+        "id": "CreateButton"
       },
       {
         "type": "text",
-        "id": "RemindPasswordTap"
+        "id": "CreateText"
       },
       {
         "type": "text",
@@ -70,9 +66,8 @@
             "children": [
               "AccessButtonRectangle",
               "AccessText",
-              "CreateAccountTap",
-              "RectangleSeparation",
-              "RemindPasswordTap",
+              "CreateButton",
+              "CreateText",
               "TextDescription",
               "AlterTextPassword",
               "Password",
@@ -92,7 +87,7 @@
               },
               "vertical": {
                 "attachment": "center",
-                "offset": "220.5"
+                "offset": "228.5"
               }
             },
             "tap-handler": "$onAccessButton",
@@ -117,7 +112,7 @@
               },
               "vertical": {
                 "attachment": "center",
-                "offset": "220.5"
+                "offset": "228.5"
               }
             },
             "font-weight": "700.0",
@@ -135,99 +130,55 @@
             "typeface": "Tomorrow"
           },
           {
-            "id": "CreateAccountTap",
+            "id": "CreateButton",
+            "border-radius": "25.0",
             "alignment": {
               "horizontal": {
                 "attachment": "center",
-                "offset": "89.5"
+                "offset": "4.5"
               },
               "vertical": {
                 "attachment": "center",
-                "offset": "149.5"
+                "offset": "157.5"
               }
             },
-            "tap-handler": "$CreateAccountTap",
+            "tap-handler": "$onCreateButton",
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": "124.0"
+                "value": "230.0"
               },
               "height-constraints": {
-                "sizing-mode": "shrink"
+                "sizing-mode": "fixed",
+                "value": "58.0"
               }
             },
+            "vector-content": "create_button.svg"
+          },
+          {
+            "id": "CreateText",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "4.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "155.5"
+              }
+            },
+            "font-weight": "700.0",
             "color": {
               "alpha": "1.0",
               "hue": "0.0",
               "saturation": "0.0",
               "value": "1.0"
             },
-            "text-content": "Crear una cuenta",
+            "text-content": "$CreateText",
             "overflow": "visible",
-            "max-lines": "-1",
             "text-align": "left",
-            "text-size": "13.0",
-            "line-height": "1.200000029343825",
-            "typeface": "Tomorrow"
-          },
-          {
-            "id": "RectangleSeparation",
-            "alignment": {
-              "horizontal": {
-                "attachment": "center",
-                "offset": "5.5"
-              },
-              "vertical": {
-                "attachment": "center",
-                "offset": "150.0"
-              }
-            },
-            "size-constraints": {
-              "width-constraints": {
-                "sizing-mode": "fixed",
-                "value": "2.0"
-              },
-              "height-constraints": {
-                "sizing-mode": "fixed",
-                "value": "15.0"
-              }
-            },
-            "vector-content": "rectangle_separation.svg"
-          },
-          {
-            "id": "RemindPasswordTap",
-            "alignment": {
-              "horizontal": {
-                "attachment": "center",
-                "offset": "-65.0"
-              },
-              "vertical": {
-                "attachment": "center",
-                "offset": "149.5"
-              }
-            },
-            "tap-handler": "$RemindPasswordTap",
-            "size-constraints": {
-              "width-constraints": {
-                "sizing-mode": "fixed",
-                "value": "165.0"
-              },
-              "height-constraints": {
-                "sizing-mode": "shrink"
-              }
-            },
-            "color": {
-              "alpha": "1.0",
-              "hue": "0.0",
-              "saturation": "0.0",
-              "value": "1.0"
-            },
-            "text-content": "Recordar contraseña",
-            "overflow": "visible",
-            "max-lines": "-1",
-            "text-align": "left",
-            "text-size": "13.0",
-            "line-height": "1.200000029343825",
+            "text-size": "20.0",
+            "line-height": "1.2",
             "typeface": "Tomorrow"
           },
           {
@@ -404,13 +355,13 @@
       "required": false,
       "description": ""
     },
-    "CreateAccountTap": {
+    "onCreateButton": {
       "data-type": "void-callback",
       "required": false,
       "description": ""
     },
-    "RemindPasswordTap": {
-      "data-type": "void-callback",
+    "CreateText": {
+      "data-type": "text",
       "required": false,
       "description": ""
     },
@@ -454,6 +405,7 @@
       },
       "parameters": {
         "AccessText": "Acceder",
+        "CreateText": "Crear cuenta",
         "TextDescription": "Si no tienes cuenta debes crear una para acceder",
         "PasswordText": "Contraseña",
         "EmailText": "Email",

@@ -4,9 +4,9 @@
   "source-key": {
     "type": "figma",
     "file": "H7ukQQTqL9pUMovBZnfFnU",
-    "node": "138:10",
-    "version": "5204266973",
-    "component-id": "dd133ad5cbe4ed4a35dba96e96217b8652691e30"
+    "node": "163:369",
+    "version": "5217154745",
+    "component-id": "353c58af07ad46b8ddfcb7e6d598e29c9fb76fee"
   },
   "default": "BotonesUsuario",
   "design": {
@@ -17,20 +17,32 @@
         "root": "true"
       },
       {
-        "type": "vector",
-        "id": "EditarPerfilButton"
+        "type": "group",
+        "id": "PlayAgainIcon"
       },
       {
         "type": "text",
-        "id": "EditarPerfilText"
+        "id": "PlayMoreText"
       },
       {
-        "type": "vector",
-        "id": "RankingButton"
+        "type": "group",
+        "id": "SignOutIcon"
       },
       {
         "type": "text",
-        "id": "VerRankingText"
+        "id": "SignOutText"
+      },
+      {
+        "type": "vector",
+        "id": "VectorAgain"
+      },
+      {
+        "type": "vector",
+        "id": "VectorPlay"
+      },
+      {
+        "type": "vector",
+        "id": "VectorSignOut"
       }
     ],
     "modes": {
@@ -40,138 +52,201 @@
             "id": "top_level",
             "is-structured": "false",
             "children": [
-              "EditarPerfilButton",
-              "EditarPerfilText",
-              "RankingButton",
-              "VerRankingText"
+              "PlayAgainIcon",
+              "PlayMoreText",
+              "SignOutIcon",
+              "SignOutText"
             ],
             "clip-content": "false"
           },
           {
-            "id": "EditarPerfilButton",
-            "border-radius": "15.0",
+            "id": "PlayAgainIcon",
             "alignment": {
               "horizontal": {
                 "attachment": "center",
-                "offset": "-93.0"
+                "offset": "-86.0"
               },
               "vertical": {
                 "attachment": "center",
-                "offset": "0.0"
+                "offset": "-15.5"
               }
             },
-            "tap-handler": "$onEditarPerfilButton",
+            "tap-handler": "$onPlayAgainIcon",
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": "159.0"
+                "value": "75.0"
               },
               "height-constraints": {
                 "sizing-mode": "fixed",
-                "value": "36.0"
+                "value": "75.0"
               }
             },
-            "vector-content": "editar_perfil_button.svg"
+            "is-structured": "false",
+            "children": [
+              "VectorAgain",
+              "VectorPlay"
+            ]
           },
           {
-            "id": "EditarPerfilText",
+            "id": "PlayMoreText",
             "alignment": {
               "horizontal": {
                 "attachment": "center",
-                "offset": "-94.5"
+                "offset": "-83.5"
               },
               "vertical": {
                 "attachment": "center",
-                "offset": "-1.0"
+                "offset": "44.5"
               }
             },
-            "font-weight": "700.0",
             "color": {
               "alpha": "1.0",
               "hue": "0.0",
               "saturation": "0.0",
               "value": "1.0"
             },
-            "text-content": "$EditarPerfilText",
+            "text-content": "$PlayMoreText",
             "overflow": "visible",
             "text-align": "left",
-            "text-size": "18.0",
-            "line-height": "1.2000000211927626",
+            "text-size": "16.0",
+            "line-height": "1.2000000476837158",
             "typeface": "Tomorrow"
           },
           {
-            "id": "RankingButton",
-            "border-radius": "15.0",
+            "id": "SignOutIcon",
             "alignment": {
               "horizontal": {
                 "attachment": "center",
-                "offset": "93.0"
+                "offset": "99.0"
               },
               "vertical": {
                 "attachment": "center",
-                "offset": "0.0"
+                "offset": "-16.5"
               }
             },
-            "tap-handler": "$onRankingButton",
+            "tap-handler": "$onSignOutIcon",
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": "159.0"
+                "value": "75.0"
               },
               "height-constraints": {
                 "sizing-mode": "fixed",
-                "value": "36.0"
+                "value": "75.0"
               }
             },
-            "vector-content": "ranking_button.svg"
+            "is-structured": "false",
+            "children": [
+              "VectorSignOut"
+            ]
           },
           {
-            "id": "VerRankingText",
+            "id": "SignOutText",
             "alignment": {
               "horizontal": {
                 "attachment": "center",
-                "offset": "93.5"
+                "offset": "92.5"
               },
               "vertical": {
                 "attachment": "center",
-                "offset": "-1.0"
+                "offset": "44.5"
               }
             },
-            "font-weight": "700.0",
             "color": {
               "alpha": "1.0",
               "hue": "0.0",
               "saturation": "0.0",
               "value": "1.0"
             },
-            "text-content": "$VerRankingText",
+            "text-content": "$SignOutText",
             "overflow": "visible",
             "text-align": "left",
-            "text-size": "18.0",
-            "line-height": "1.2000000211927626",
+            "text-size": "16.0",
+            "line-height": "1.2000000476837158",
             "typeface": "Tomorrow"
+          },
+          {
+            "id": "VectorAgain",
+            "margin": {
+              "left": "9.375",
+              "top": "3.125",
+              "right": "9.374992370605469",
+              "bottom": "6.249992370605469"
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              }
+            },
+            "vector-content": "vector_again.svg"
+          },
+          {
+            "id": "VectorPlay",
+            "margin": {
+              "left": "29.765625",
+              "top": "31.56414794921875",
+              "right": "26.243318557739258",
+              "bottom": "22.564727783203125"
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              }
+            },
+            "vector-content": "vector_play.svg"
+          },
+          {
+            "id": "VectorSignOut",
+            "margin": {
+              "left": "6.25",
+              "top": "11.262542724609375",
+              "right": "6.260231018066406",
+              "bottom": "12.502010345458984"
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              }
+            },
+            "vector-content": "vector_sign_out.svg"
           }
         ]
       }
     }
   },
   "parameters": {
-    "onEditarPerfilButton": {
+    "onPlayAgainIcon": {
       "data-type": "void-callback",
       "required": false,
       "description": ""
     },
-    "EditarPerfilText": {
+    "PlayMoreText": {
       "data-type": "text",
       "required": false,
       "description": ""
     },
-    "onRankingButton": {
+    "onSignOutIcon": {
       "data-type": "void-callback",
       "required": false,
       "description": ""
     },
-    "VerRankingText": {
+    "SignOutText": {
       "data-type": "text",
       "required": false,
       "description": ""
@@ -181,12 +256,12 @@
     {
       "design": "BotonesUsuario",
       "size": {
-        "width": 345.0,
-        "height": 36.0
+        "width": 285.0,
+        "height": 108.0
       },
       "parameters": {
-        "EditarPerfilText": "Editar Perfil",
-        "VerRankingText": "Ver Ranking"
+        "PlayMoreText": "Juega una más",
+        "SignOutText": "Cierra sesión"
       }
     }
   ],

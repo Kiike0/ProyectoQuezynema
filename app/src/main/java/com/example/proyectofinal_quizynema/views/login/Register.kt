@@ -33,27 +33,15 @@ fun Register(
     ) {
         Navegacion(
             modifier = Modifier
-                .size(300.dp, 60.dp)
+                .size(300.dp, 120.dp)
                 .align(Alignment.Start),
             textNav = "Registro",
             onBack = { navController.navigate(Routes.AccessScreen.route) }
         )
         UserRegisterMod(
-            modifier = Modifier.size(400.dp, 700.dp),
+            modifier = Modifier.size(400.dp, 600.dp),
             registUserViewModel = registerViewModel,
-            onbuttonCreateAcc = {},
-            avatar1 = {},
-            avatar2 = {},
-            avatar3 = {},
-            avatar4 = {},
-            avatar5 = {},
-            avatar6 = {},
-            avatar7 = {},
-            avatar8 = {},
-            avatar9 = {},
-            avatar10 = {},
-            avatar11 = {},
-            avatar12 = {}
+            onbuttonCreateAcc = {}
         )
 
     }

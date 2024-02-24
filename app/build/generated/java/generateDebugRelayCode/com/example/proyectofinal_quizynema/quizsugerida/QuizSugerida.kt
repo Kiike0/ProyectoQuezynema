@@ -127,9 +127,9 @@ fun Quizsuggest(
         fontFamily = tomorrow,
         color = Color(
             alpha = 255,
-            red = 0,
-            green = 0,
-            blue = 0
+            red = 255,
+            green = 255,
+            blue = 255
         ),
         height = 1.2000000476837158.em,
         textAlign = TextAlign.Left,
@@ -160,9 +160,9 @@ fun Comenzar(
         fontFamily = tomorrow,
         color = Color(
             alpha = 255,
-            red = 0,
-            green = 0,
-            blue = 0
+            red = 255,
+            green = 255,
+            blue = 255
         ),
         height = 1.2000000476837158.em,
         textAlign = TextAlign.Left,

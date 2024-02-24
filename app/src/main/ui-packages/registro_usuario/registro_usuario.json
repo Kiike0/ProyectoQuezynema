@@ -5,7 +5,7 @@
     "type": "figma",
     "file": "H7ukQQTqL9pUMovBZnfFnU",
     "node": "120:140",
-    "version": "5187410248",
+    "version": "5217154745",
     "component-id": "431399819980311ceab613d5ce0ae44a6f6820b2"
   },
   "default": "RegistroUsuario",
@@ -23,58 +23,6 @@
       {
         "type": "text",
         "id": "CreateAccount"
-      },
-      {
-        "type": "image",
-        "id": "Avatar4"
-      },
-      {
-        "type": "image",
-        "id": "Avatar8"
-      },
-      {
-        "type": "image",
-        "id": "Avatar12"
-      },
-      {
-        "type": "image",
-        "id": "Avatar11"
-      },
-      {
-        "type": "image",
-        "id": "Avatar7"
-      },
-      {
-        "type": "image",
-        "id": "Avatar3"
-      },
-      {
-        "type": "image",
-        "id": "Avatar10"
-      },
-      {
-        "type": "image",
-        "id": "Avatar6"
-      },
-      {
-        "type": "image",
-        "id": "Avatar2"
-      },
-      {
-        "type": "image",
-        "id": "Avatar9"
-      },
-      {
-        "type": "image",
-        "id": "Avatar5"
-      },
-      {
-        "type": "image",
-        "id": "Avatar1"
-      },
-      {
-        "type": "text",
-        "id": "ChooseAvatar"
       },
       {
         "type": "vector",
@@ -118,19 +66,6 @@
             "children": [
               "RectanglebuttonCreateAcc",
               "CreateAccount",
-              "Avatar4",
-              "Avatar8",
-              "Avatar12",
-              "Avatar11",
-              "Avatar7",
-              "Avatar3",
-              "Avatar10",
-              "Avatar6",
-              "Avatar2",
-              "Avatar9",
-              "Avatar5",
-              "Avatar1",
-              "ChooseAvatar",
               "AlterRepeatPassword",
               "RepeatPassword",
               "AlterPassword",
@@ -148,11 +83,11 @@
             "alignment": {
               "horizontal": {
                 "attachment": "center",
-                "offset": "-4.5"
+                "offset": "-0.5"
               },
               "vertical": {
                 "attachment": "center",
-                "offset": "283.5"
+                "offset": "29.5"
               }
             },
             "tap-handler": "$onbuttonCreateAcc",
@@ -173,11 +108,11 @@
             "alignment": {
               "horizontal": {
                 "attachment": "center",
-                "offset": "-1.0"
+                "offset": "3.0"
               },
               "vertical": {
                 "attachment": "center",
-                "offset": "283.5"
+                "offset": "29.5"
               }
             },
             "font-weight": "700.0",
@@ -195,459 +130,15 @@
             "typeface": "Tomorrow"
           },
           {
-            "id": "Avatar4",
-            "border-radius": "40.0",
-            "alignment": {
-              "horizontal": {
-                "attachment": "center",
-                "offset": "131.5"
-              },
-              "vertical": {
-                "attachment": "center",
-                "offset": "-19.5"
-              }
-            },
-            "tap-handler": "$Avatar4",
-            "size-constraints": {
-              "width-constraints": {
-                "sizing-mode": "fixed",
-                "value": "70.0"
-              },
-              "height-constraints": {
-                "sizing-mode": "fixed",
-                "value": "70.0"
-              }
-            },
-            "stroke-width": "1.0",
-            "stroke-color": {
-              "alpha": "1.0",
-              "hue": "0.0",
-              "saturation": "0.0",
-              "value": "1.0"
-            },
-            "image-content": "avatar4.png",
-            "scale": "cover"
-          },
-          {
-            "id": "Avatar8",
-            "border-radius": "40.0",
-            "alignment": {
-              "horizontal": {
-                "attachment": "center",
-                "offset": "131.5"
-              },
-              "vertical": {
-                "attachment": "center",
-                "offset": "72.5"
-              }
-            },
-            "tap-handler": "$Avatar8",
-            "size-constraints": {
-              "width-constraints": {
-                "sizing-mode": "fixed",
-                "value": "70.0"
-              },
-              "height-constraints": {
-                "sizing-mode": "fixed",
-                "value": "70.0"
-              }
-            },
-            "stroke-width": "1.0",
-            "stroke-color": {
-              "alpha": "1.0",
-              "hue": "0.0",
-              "saturation": "0.0",
-              "value": "1.0"
-            },
-            "image-content": "avatar8.png",
-            "scale": "cover"
-          },
-          {
-            "id": "Avatar12",
-            "border-radius": "40.0",
-            "alignment": {
-              "horizontal": {
-                "attachment": "center",
-                "offset": "131.5"
-              },
-              "vertical": {
-                "attachment": "center",
-                "offset": "164.5"
-              }
-            },
-            "tap-handler": "$Avatar12",
-            "size-constraints": {
-              "width-constraints": {
-                "sizing-mode": "fixed",
-                "value": "70.0"
-              },
-              "height-constraints": {
-                "sizing-mode": "fixed",
-                "value": "70.0"
-              }
-            },
-            "stroke-width": "1.0",
-            "stroke-color": {
-              "alpha": "1.0",
-              "hue": "0.0",
-              "saturation": "0.0",
-              "value": "1.0"
-            },
-            "image-content": "avatar12.png",
-            "scale": "cover"
-          },
-          {
-            "id": "Avatar11",
-            "border-radius": "40.0",
-            "alignment": {
-              "horizontal": {
-                "attachment": "center",
-                "offset": "42.5"
-              },
-              "vertical": {
-                "attachment": "center",
-                "offset": "164.5"
-              }
-            },
-            "tap-handler": "$Avatar11",
-            "size-constraints": {
-              "width-constraints": {
-                "sizing-mode": "fixed",
-                "value": "70.0"
-              },
-              "height-constraints": {
-                "sizing-mode": "fixed",
-                "value": "70.0"
-              }
-            },
-            "stroke-width": "1.0",
-            "stroke-color": {
-              "alpha": "1.0",
-              "hue": "0.0",
-              "saturation": "0.0",
-              "value": "1.0"
-            },
-            "image-content": "avatar11.png",
-            "scale": "cover"
-          },
-          {
-            "id": "Avatar7",
-            "border-radius": "40.0",
-            "alignment": {
-              "horizontal": {
-                "attachment": "center",
-                "offset": "42.5"
-              },
-              "vertical": {
-                "attachment": "center",
-                "offset": "72.5"
-              }
-            },
-            "tap-handler": "$Avatar7",
-            "size-constraints": {
-              "width-constraints": {
-                "sizing-mode": "fixed",
-                "value": "70.0"
-              },
-              "height-constraints": {
-                "sizing-mode": "fixed",
-                "value": "70.0"
-              }
-            },
-            "stroke-width": "1.0",
-            "stroke-color": {
-              "alpha": "1.0",
-              "hue": "0.0",
-              "saturation": "0.0",
-              "value": "1.0"
-            },
-            "image-content": "avatar7.png",
-            "scale": "cover"
-          },
-          {
-            "id": "Avatar3",
-            "border-radius": "40.0",
-            "alignment": {
-              "horizontal": {
-                "attachment": "center",
-                "offset": "42.5"
-              },
-              "vertical": {
-                "attachment": "center",
-                "offset": "-19.5"
-              }
-            },
-            "tap-handler": "$Avatar3",
-            "size-constraints": {
-              "width-constraints": {
-                "sizing-mode": "fixed",
-                "value": "70.0"
-              },
-              "height-constraints": {
-                "sizing-mode": "fixed",
-                "value": "70.0"
-              }
-            },
-            "stroke-width": "1.0",
-            "stroke-color": {
-              "alpha": "1.0",
-              "hue": "0.0",
-              "saturation": "0.0",
-              "value": "1.0"
-            },
-            "image-content": "avatar3.png",
-            "scale": "cover"
-          },
-          {
-            "id": "Avatar10",
-            "border-radius": "40.0",
-            "alignment": {
-              "horizontal": {
-                "attachment": "center",
-                "offset": "-46.5"
-              },
-              "vertical": {
-                "attachment": "center",
-                "offset": "164.5"
-              }
-            },
-            "tap-handler": "$Avatar10",
-            "size-constraints": {
-              "width-constraints": {
-                "sizing-mode": "fixed",
-                "value": "70.0"
-              },
-              "height-constraints": {
-                "sizing-mode": "fixed",
-                "value": "70.0"
-              }
-            },
-            "stroke-width": "1.0",
-            "stroke-color": {
-              "alpha": "1.0",
-              "hue": "0.0",
-              "saturation": "0.0",
-              "value": "1.0"
-            },
-            "image-content": "avatar10.png",
-            "scale": "cover"
-          },
-          {
-            "id": "Avatar6",
-            "border-radius": "40.0",
-            "alignment": {
-              "horizontal": {
-                "attachment": "center",
-                "offset": "-46.5"
-              },
-              "vertical": {
-                "attachment": "center",
-                "offset": "72.5"
-              }
-            },
-            "tap-handler": "$Avatar6",
-            "size-constraints": {
-              "width-constraints": {
-                "sizing-mode": "fixed",
-                "value": "70.0"
-              },
-              "height-constraints": {
-                "sizing-mode": "fixed",
-                "value": "70.0"
-              }
-            },
-            "stroke-width": "1.0",
-            "stroke-color": {
-              "alpha": "1.0",
-              "hue": "0.0",
-              "saturation": "0.0",
-              "value": "1.0"
-            },
-            "image-content": "avatar6.png",
-            "scale": "cover"
-          },
-          {
-            "id": "Avatar2",
-            "border-radius": "40.0",
-            "alignment": {
-              "horizontal": {
-                "attachment": "center",
-                "offset": "-46.5"
-              },
-              "vertical": {
-                "attachment": "center",
-                "offset": "-19.5"
-              }
-            },
-            "tap-handler": "$Avatar2",
-            "size-constraints": {
-              "width-constraints": {
-                "sizing-mode": "fixed",
-                "value": "70.0"
-              },
-              "height-constraints": {
-                "sizing-mode": "fixed",
-                "value": "70.0"
-              }
-            },
-            "stroke-width": "1.0",
-            "stroke-color": {
-              "alpha": "1.0",
-              "hue": "0.0",
-              "saturation": "0.0",
-              "value": "1.0"
-            },
-            "image-content": "avatar2.png",
-            "scale": "cover"
-          },
-          {
-            "id": "Avatar9",
-            "border-radius": "40.0",
-            "alignment": {
-              "horizontal": {
-                "attachment": "center",
-                "offset": "-135.5"
-              },
-              "vertical": {
-                "attachment": "center",
-                "offset": "164.5"
-              }
-            },
-            "tap-handler": "$Avatar9",
-            "size-constraints": {
-              "width-constraints": {
-                "sizing-mode": "fixed",
-                "value": "70.0"
-              },
-              "height-constraints": {
-                "sizing-mode": "fixed",
-                "value": "70.0"
-              }
-            },
-            "stroke-width": "1.0",
-            "stroke-color": {
-              "alpha": "1.0",
-              "hue": "0.0",
-              "saturation": "0.0",
-              "value": "1.0"
-            },
-            "image-content": "avatar9.png",
-            "scale": "cover"
-          },
-          {
-            "id": "Avatar5",
-            "border-radius": "40.0",
-            "alignment": {
-              "horizontal": {
-                "attachment": "center",
-                "offset": "-135.5"
-              },
-              "vertical": {
-                "attachment": "center",
-                "offset": "72.5"
-              }
-            },
-            "tap-handler": "$Avatar5",
-            "size-constraints": {
-              "width-constraints": {
-                "sizing-mode": "fixed",
-                "value": "70.0"
-              },
-              "height-constraints": {
-                "sizing-mode": "fixed",
-                "value": "70.0"
-              }
-            },
-            "stroke-width": "1.0",
-            "stroke-color": {
-              "alpha": "1.0",
-              "hue": "0.0",
-              "saturation": "0.0",
-              "value": "1.0"
-            },
-            "image-content": "avatar5.png",
-            "scale": "cover"
-          },
-          {
-            "id": "Avatar1",
-            "border-radius": "40.0",
-            "alignment": {
-              "horizontal": {
-                "attachment": "center",
-                "offset": "-135.5"
-              },
-              "vertical": {
-                "attachment": "center",
-                "offset": "-19.5"
-              }
-            },
-            "tap-handler": "$Avatar1",
-            "size-constraints": {
-              "width-constraints": {
-                "sizing-mode": "fixed",
-                "value": "70.0"
-              },
-              "height-constraints": {
-                "sizing-mode": "fixed",
-                "value": "70.0"
-              }
-            },
-            "stroke-width": "1.0",
-            "stroke-color": {
-              "alpha": "1.0",
-              "hue": "0.0",
-              "saturation": "0.0",
-              "value": "1.0"
-            },
-            "image-content": "avatar1.png",
-            "scale": "cover"
-          },
-          {
-            "id": "ChooseAvatar",
-            "alignment": {
-              "horizontal": {
-                "attachment": "center",
-                "offset": "-129.5"
-              },
-              "vertical": {
-                "attachment": "center",
-                "offset": "-82.0"
-              }
-            },
-            "size-constraints": {
-              "width-constraints": {
-                "sizing-mode": "fixed",
-                "value": "68.0"
-              },
-              "height-constraints": {
-                "sizing-mode": "fixed",
-                "value": "11.0"
-              }
-            },
-            "color": {
-              "alpha": "1.0",
-              "hue": "0.0",
-              "saturation": "0.0",
-              "value": "1.0"
-            },
-            "text-content": "$ChooseAvatar",
-            "overflow": "visible",
-            "max-lines": "-1",
-            "text-align": "left",
-            "text-size": "10.0",
-            "line-height": "1.2",
-            "typeface": "Tomorrow"
-          },
-          {
             "id": "AlterRepeatPassword",
             "alignment": {
               "horizontal": {
                 "attachment": "center",
-                "offset": "-1.5"
+                "offset": "0.5"
               },
               "vertical": {
                 "attachment": "center",
-                "offset": "-128.0"
+                "offset": "-44.0"
               }
             },
             "tap-handler": "$onAlterRepeatPassword",
@@ -658,7 +149,7 @@
               },
               "height-constraints": {
                 "sizing-mode": "fixed",
-                "value": "37.0"
+                "value": "45.0"
               }
             },
             "vector-content": "alter_repeat_password.svg"
@@ -668,11 +159,11 @@
             "alignment": {
               "horizontal": {
                 "attachment": "center",
-                "offset": "-118.0"
+                "offset": "-116.0"
               },
               "vertical": {
                 "attachment": "center",
-                "offset": "-137.0"
+                "offset": "-57.0"
               }
             },
             "size-constraints": {
@@ -704,11 +195,11 @@
             "alignment": {
               "horizontal": {
                 "attachment": "center",
-                "offset": "-1.5"
+                "offset": "0.5"
               },
               "vertical": {
                 "attachment": "center",
-                "offset": "-183.5"
+                "offset": "-100.0"
               }
             },
             "tap-handler": "$onAlterPassword",
@@ -719,7 +210,7 @@
               },
               "height-constraints": {
                 "sizing-mode": "fixed",
-                "value": "38.0"
+                "value": "45.0"
               }
             },
             "vector-content": "alter_password.svg"
@@ -729,11 +220,11 @@
             "alignment": {
               "horizontal": {
                 "attachment": "center",
-                "offset": "-135.5"
+                "offset": "-133.5"
               },
               "vertical": {
                 "attachment": "center",
-                "offset": "-192.5"
+                "offset": "-112.5"
               }
             },
             "size-constraints": {
@@ -765,11 +256,11 @@
             "alignment": {
               "horizontal": {
                 "attachment": "center",
-                "offset": "-1.5"
+                "offset": "0.5"
               },
               "vertical": {
                 "attachment": "center",
-                "offset": "-239.0"
+                "offset": "-155.0"
               }
             },
             "tap-handler": "$onAlterNickname",
@@ -780,7 +271,7 @@
               },
               "height-constraints": {
                 "sizing-mode": "fixed",
-                "value": "37.0"
+                "value": "45.0"
               }
             },
             "vector-content": "alter_nickname.svg"
@@ -790,11 +281,11 @@
             "alignment": {
               "horizontal": {
                 "attachment": "center",
-                "offset": "-117.5"
+                "offset": "-115.5"
               },
               "vertical": {
                 "attachment": "center",
-                "offset": "-249.5"
+                "offset": "-169.5"
               }
             },
             "size-constraints": {
@@ -826,11 +317,11 @@
             "alignment": {
               "horizontal": {
                 "attachment": "center",
-                "offset": "-1.5"
+                "offset": "0.5"
               },
               "vertical": {
                 "attachment": "center",
-                "offset": "-294.0"
+                "offset": "-210.0"
               }
             },
             "tap-handler": "$onAlterNickname",
@@ -842,7 +333,7 @@
               },
               "height-constraints": {
                 "sizing-mode": "fixed",
-                "value": "37.0"
+                "value": "45.0"
               }
             },
             "vector-content": "alter_email_text.svg"
@@ -852,11 +343,11 @@
             "alignment": {
               "horizontal": {
                 "attachment": "center",
-                "offset": "-116.5"
+                "offset": "-114.5"
               },
               "vertical": {
                 "attachment": "center",
-                "offset": "-304.5"
+                "offset": "-224.5"
               }
             },
             "size-constraints": {
@@ -894,71 +385,6 @@
       "description": ""
     },
     "CreateAccount": {
-      "data-type": "text",
-      "required": false,
-      "description": ""
-    },
-    "Avatar4": {
-      "data-type": "void-callback",
-      "required": false,
-      "description": ""
-    },
-    "Avatar8": {
-      "data-type": "void-callback",
-      "required": false,
-      "description": ""
-    },
-    "Avatar12": {
-      "data-type": "void-callback",
-      "required": false,
-      "description": ""
-    },
-    "Avatar11": {
-      "data-type": "void-callback",
-      "required": false,
-      "description": ""
-    },
-    "Avatar7": {
-      "data-type": "void-callback",
-      "required": false,
-      "description": ""
-    },
-    "Avatar3": {
-      "data-type": "void-callback",
-      "required": false,
-      "description": ""
-    },
-    "Avatar10": {
-      "data-type": "void-callback",
-      "required": false,
-      "description": ""
-    },
-    "Avatar6": {
-      "data-type": "void-callback",
-      "required": false,
-      "description": ""
-    },
-    "Avatar2": {
-      "data-type": "void-callback",
-      "required": false,
-      "description": ""
-    },
-    "Avatar9": {
-      "data-type": "void-callback",
-      "required": false,
-      "description": ""
-    },
-    "Avatar5": {
-      "data-type": "void-callback",
-      "required": false,
-      "description": ""
-    },
-    "Avatar1": {
-      "data-type": "void-callback",
-      "required": false,
-      "description": ""
-    },
-    "ChooseAvatar": {
       "data-type": "text",
       "required": false,
       "description": ""
@@ -1008,7 +434,6 @@
       },
       "parameters": {
         "CreateAccount": "Crear cuenta",
-        "ChooseAvatar": "Elige tu avatar",
         "RepeatPassword": "Repetir contraseña",
         "Password": "Contraseña",
         "Nickname": "Email"

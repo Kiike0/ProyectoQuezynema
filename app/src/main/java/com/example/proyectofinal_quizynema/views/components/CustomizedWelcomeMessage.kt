@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.requiredHeight
 import androidx.compose.foundation.layout.requiredWidth
 import androidx.compose.foundation.layout.width
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -18,6 +19,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.em
@@ -28,40 +30,44 @@ import com.google.relay.compose.RelayContainer
 import com.google.relay.compose.RelayContainerScope
 import com.google.relay.compose.RelayImage
 import com.google.relay.compose.RelayText
+import com.google.relay.compose.RowScopeInstanceImpl.align
 import com.google.relay.compose.tappable
-
 /**
  * This composable was generated from the UI Package 'welcome_msj'.
  * Generated code; do not edit directly
  */
 @Composable
 fun CustomizedWelcomeMessage(
+    modifier: Modifier = Modifier,
     greetings: String = "",
-    letsQuiz: String = "",
-    avatarImg: () -> Unit = {}
+    letsQuizText: String = "",
+    onQuizyAvatarImg: () -> Unit = {}
 ) {
     Column(
         Modifier
             .fillMaxWidth()
-            .padding(top = 40.dp, start = 30.dp)
+            .align(Alignment.Top)
+            .padding(start = 30.dp)
     ) {
         Row(){
+            CustomizedQuizyAvatarImg(
+                onQuizyAvatarImg = onQuizyAvatarImg,
+                modifier = Modifier.padding(top = 40.dp)
+            )
+            Spacer(modifier = Modifier.width(10.dp))
             Column {
                 CustomizedGreetings(
                     greetings = greetings,
-                    modifier = Modifier
+                    modifier = Modifier.padding(top = 50.dp)
                 )
                 Spacer(modifier = Modifier.height(10.dp))
-                CustomizedLetsQuiz(
-                    letsQuiz = letsQuiz,
+                CustomizedLetsQuizText(
+                    letsQuizText = letsQuizText,
                     modifier = Modifier
                 )
             }
-            Spacer(modifier = Modifier.width(55.dp))
-            CustomizedAvatarImg(
-                avatarImg = avatarImg,
-                modifier = Modifier
-            )
+
+
         }
 
 
@@ -75,7 +81,7 @@ fun CustomizedGreetings(
 ) {
     RelayText(
         content = greetings,
-        fontSize = 20.0.sp,
+        fontSize = 16.0.sp,
         fontFamily = tomorrow,
         color = Color(
             alpha = 255,
@@ -91,13 +97,12 @@ fun CustomizedGreetings(
 }
 
 @Composable
-fun CustomizedLetsQuiz(
-    letsQuiz: String,
+fun CustomizedLetsQuizText(
+    letsQuizText: String,
     modifier: Modifier = Modifier
 ) {
     RelayText(
-        content = letsQuiz,
-        fontSize = 16.0.sp,
+        content = letsQuizText,
         fontFamily = tomorrow,
         color = Color(
             alpha = 255,
@@ -112,17 +117,14 @@ fun CustomizedLetsQuiz(
 }
 
 @Composable
-fun CustomizedAvatarImg(
-    avatarImg: () -> Unit,
+fun CustomizedQuizyAvatarImg(
+    onQuizyAvatarImg: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     RelayImage(
-        image = painterResource(R.drawable.welcome_msj_avatar_img),
+        image = painterResource(R.drawable.welcome_msj_quizy_avatar_img),
         radius = 30.0,
         contentScale = ContentScale.Crop,
-        modifier = modifier
-            .tappable(onTap = avatarImg)
-            .requiredWidth(60.0.dp) // Aquí cambias el ancho
-            .requiredHeight(60.0.dp) // Aquí cambias el alto
+        modifier = modifier.tappable(onTap = onQuizyAvatarImg).requiredWidth(67.0.dp).requiredHeight(68.0.dp)
     )
 }
