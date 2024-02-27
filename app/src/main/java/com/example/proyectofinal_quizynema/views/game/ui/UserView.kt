@@ -3,7 +3,6 @@ package com.example.proyectofinal_quizynema.views.game.ui
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -19,11 +18,9 @@ import com.example.proyectofinal_quizynema.datosusuario.DatosUsuario
 import com.example.proyectofinal_quizynema.navegacion.Navegacion
 import com.example.proyectofinal_quizynema.navigation.Routes
 import com.example.proyectofinal_quizynema.presentacionusuario.PresentacionUsuario
-import com.example.proyectofinal_quizynema.quizsinterminar.QuizSinTerminar
 import com.example.proyectofinal_quizynema.ranking.Ranking
 import com.example.proyectofinal_quizynema.ui.theme.BackGroundApp
 import com.example.proyectofinal_quizynema.viewModels.UserViewModel
-import com.example.proyectofinal_quizynema.views.components.CustomizedRelayText
 
 @Composable
 fun UserView(
@@ -70,23 +67,8 @@ fun UserView(
             onPlayAgainIcon = {},
             onSignOutIcon = {
                 currentUserViewModel.signOut()
-                navController.popBackStack()
+                navController.navigate(Routes.StartGameScreen.route)
             }
-        )
-        Ranking(
-            modifier = Modifier.size(400.dp, 300.dp),
-            goldMedal = painterResource(R.drawable.ranking_gold_medal),
-            silverMedal = painterResource(R.drawable.ranking_silver_medal),
-            bronzeMedal = painterResource(R.drawable.ranking_bronze_medal),
-            firstUserName = "1. nickname",
-            firstPointsText = "33 puntos",
-            secondUserName = "2. dfsd",
-            secondPointsText = AnnotatedString("23 puntos"),
-            thirdUserName = "3. sdfsdf",
-            thirtPointsText = "14 puntos",
-            fourthUserName = "4. sdfsdf",
-            fourthPointsText = "12 puntos",
-            textRankingTitle = "Ranking Mundial"
         )
 
     }

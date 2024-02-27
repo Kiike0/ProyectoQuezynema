@@ -1,5 +1,7 @@
 package com.example.proyectofinal_quizynema.views.game.ui
 
+import android.content.ContentValues.TAG
+import android.util.Log
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -12,47 +14,89 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyRow
-import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
+import androidx.wear.compose.material.Button
+import androidx.wear.compose.material.ButtonDefaults
 import com.example.proyectofinal_quizynema.R
 import com.example.proyectofinal_quizynema.navigation.Routes
 import com.example.proyectofinal_quizynema.quizexplored.QuizExplored
 import com.example.proyectofinal_quizynema.ui.theme.BackGroundApp
+import com.example.proyectofinal_quizynema.viewModels.QuizViewModel
 import com.example.proyectofinal_quizynema.viewModels.UserViewModel
 import com.example.proyectofinal_quizynema.views.components.CustomizedBigTextWhite
-import com.example.proyectofinal_quizynema.views.components.CustomizedTextWhite
 import com.example.proyectofinal_quizynema.views.components.CustomizedTextWhiteSmaller
 import com.example.proyectofinal_quizynema.views.components.CustomizedWelcomeMessage
-import com.example.proyectofinal_quizynema.views.components.GenreButton
 import com.example.proyectofinal_quizynema.views.components.PopularQuiz
 import com.example.proyectofinal_quizynema.views.components.QuizSugeridaMod
-import com.example.proyectofinal_quizynema.welcomemsj.WelcomeMsj
 
 
 @Composable
 fun HomeView(
     navController: NavHostController,
-    currentUserViewModel: UserViewModel
+    currentUserViewModel: UserViewModel,
+    quizVM: QuizViewModel
 ) {
 
-    //Lista inventada de las quiz del progreso
-    val progresoBoxes = listOf(
-        Triple("10 completadas", "Título de la pregunta 1") { /* Comportamiento del botón 1 */ },
-        Triple("20 completadas", "Título de la pregunta 2") { /* Comportamiento del botón 2 */ },
-        Triple("30 completadas", "Título de la pregunta 3") { /* Comportamiento del botón 3 */ }
-        // Agrega más triples si es necesario
-    )
+    val quizIdsList: ArrayList<String> by quizVM.quizIdsList.observeAsState(ArrayList())
+    //val quizList: List<String> by quizVM.quizTitles.observeAsState(emptyList())
+
 
     LaunchedEffect(Unit) {
         currentUserViewModel.getNickname()
+        quizVM.fetchQuiz()
     }
+
+    val datos by quizVM.quizData.collectAsState()
+
+    //var miListaMutable: MutableList<String> = mutableListOf()
+    // IMPORTANTE: Si intentamos acceder a miArrayList[0] no funciona, se rompe el programa
+    // Por esa razon se pasa a "JSON"
+    val titulosArrayList = ArrayList<String>()
+    val totalCompletedArrayList = ArrayList<Int>()
+
+    datos.forEach { item ->
+        titulosArrayList.add(item.title)
+        totalCompletedArrayList.add(item.totalCompleted)
+    }
+
+    val listaTitulosJSON = titulosArrayList.toString()
+
+    // Elimina los corchetes "[" y "]" del principio y final de la cadena
+    val jsonSinCorchetes = listaTitulosJSON.substring(1, listaTitulosJSON.length - 1)
+    // Divide la cadena por las comas para obtener los valores individuales
+    val valores = jsonSinCorchetes.split(", ")
+    // Accede al primer valor de la lista
+    val primerValor = valores[0]
+    // IMPORTANTE: Usamos getOrNull para evitar excepciones si el índice está fuera de los límites
+    // Si no hacemos esto se rompe el programa
+    val segundoValor = valores.getOrNull(1)
+
+    val listaCompletadosJSON = totalCompletedArrayList.toString()
+    Log.d(TAG, listaCompletadosJSON)
+
+    // Elimina los corchetes "[" y "]" del principio y final de la cadena
+    val jsonCompletadosSinCorchetes = listaCompletadosJSON.substring(1, listaCompletadosJSON.length - 1)
+    // Divide la cadena por las comas para obtener los valores individuales
+    val valoresCompletados = jsonCompletadosSinCorchetes.split(", ")
+    // Accede al primer valor de la lista
+    val primerValorCompletado = valoresCompletados[0]
+    // IMPORTANTE: Usamos getOrNull para evitar excepciones si el índice está fuera de los límites
+    // Si no hacemos esto se rompe el programa
+    val segundoValorCompletado = valoresCompletados.getOrNull(1)
+    Log.d(TAG, "${valoresCompletados.getOrNull(1)}")
+
+
 
     Box(
         modifier = Modifier
@@ -66,53 +110,88 @@ fun HomeView(
             onQuizyAvatarImg = { navController.navigate(Routes.UserScreen.route) }
         )
 
-        Column (
+        Column(
             Modifier
                 .fillMaxWidth()
                 .padding(start = 30.dp, top = 110.dp)
-        ){
+        ) {
             Spacer(modifier = Modifier.height(20.dp))
             QuizSugeridaMod(
                 modifier = Modifier,
                 img = painterResource(id = R.drawable.palomitas),
-                onComenzarButton = {}
+                onComenzarButton = {
+
+                    val randomIndex = (0 until 2 ).random()
+
+                    quizVM.changeQuizId(quizIdsList[randomIndex])
+                    navController.navigate(Routes.QuizScreen.route)
+                }
             )
             Spacer(modifier = Modifier.height(20.dp))
             CustomizedBigTextWhite(customizedText = "Quiz Populares", Modifier)
             Spacer(modifier = Modifier.height(20.dp))
+
             LazyRow {
-                items(progresoBoxes.size) { index ->
-                    val (times, quizTitle, onQuizButton) = progresoBoxes[index]
+                items(1) { index ->
                     PopularQuiz(
-                        times = times as String,
-                        quizTitle = quizTitle as String,
-                        onQuizButton = onQuizButton as () -> Unit
+                        times = valoresCompletados.getOrNull(index) as String,
+                        quizTitle = valores.getOrNull(index) as String,
+                        onQuizButton = {
+                            quizVM.changeQuizId(quizIdsList[index])
+                            navController.navigate(Routes.QuizScreen.route)
+                        }
                     )
                     Spacer(modifier = Modifier.width(5.dp))
                 }
             }
+
             Spacer(modifier = Modifier.height(20.dp))
-            Row(){
+            Row() {
                 CustomizedBigTextWhite(customizedText = "Quiz disponibles", Modifier)
                 Spacer(modifier = Modifier.width(185.dp))
-                CustomizedTextWhiteSmaller(customizedText = "Ver todas", Modifier.padding(top = 1.dp))
+                Button(
+                    onClick = { navController.navigate(Routes.AllQuizzesScreen.route) },
+                    Modifier
+                        .padding(end = 15.dp)
+                        .size(90.dp, 20.dp)
+                        .background(Color.Transparent),
+                    colors = ButtonDefaults.buttonColors(backgroundColor = Color.Transparent)
+                ) {
+                    CustomizedTextWhiteSmaller(
+                        customizedText = "Ver todas",
+                        Modifier
+                    )
+                }
             }
             Spacer(modifier = Modifier.height(20.dp))
-            Row(){
+            //Text(text = stringnormal)
+            Row() {
                 QuizExplored(
-                    modifier = Modifier.size(155.dp, 200.dp).clip(RoundedCornerShape(25.dp, 25.dp, 0.dp, 0.dp)),
+                    modifier = Modifier
+                        .size(155.dp, 200.dp)
+                        .clip(RoundedCornerShape(25.dp, 25.dp, 0.dp, 0.dp)),
                     quizImg = painterResource(R.drawable.quiz_explored_quiz_img),
-                    quizTitleText = "Título de la quiz",
-                    onBoxQuiz = {},
-                    onQuizImg = { navController.navigate(Routes.QuizScreen.route) }
+                    quizTitleText = "$primerValor",
+                    onBoxQuiz = {
+                        //quizVM.changeQuizId(quizIdsList[0])
+                        navController.navigate(Routes.QuizScreen.route)
+                    },
+                    onQuizImg = {
+                        quizVM.changeQuizId(quizIdsList[0])
+                        navController.navigate(Routes.QuizScreen.route)
+                    }
                 )
                 Spacer(modifier = Modifier.width(25.dp))
                 QuizExplored(
                     modifier = Modifier.size(155.dp, 200.dp),
                     quizImg = painterResource(R.drawable.quiz_explored_quiz_img),
-                    quizTitleText = "Título de la quiz",
-                    onBoxQuiz = {},
-                    onQuizImg = {}
+                    quizTitleText = "$segundoValor",
+                    onBoxQuiz = { navController.navigate(Routes.AddQuizScreen.route) },
+                    onQuizImg = {
+                        quizVM.changeQuizId(quizIdsList[1])
+                        navController.navigate(Routes.QuizScreen.route)
+
+                    }
                 )
 
             }

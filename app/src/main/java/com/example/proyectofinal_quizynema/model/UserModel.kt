@@ -8,6 +8,6 @@ data class UserModel(
     val userId: String,
     val email: String,
     val nickname: String,
-    val favoriteFilm: String,
+    val totalCompleted: Int,
     val points: Int
 )

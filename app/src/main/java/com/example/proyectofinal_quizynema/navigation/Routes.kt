@@ -9,7 +9,7 @@ sealed class Routes(val route: String) {
     /**
      * Objeto que representa la pantalla Inicial.
      */
-    object InitialScreen : Routes("initialScreen")
+    object StartGameScreen : Routes("startGameScreen")
     /**
      * Objeto que representa la pantalla Inicial.
      */
@@ -29,6 +29,15 @@ sealed class Routes(val route: String) {
      * Objeto que representa la pantalla Home con las opciones del Juego.
      */
     object HomeScreen : Routes("homeScreen")
+
+
+    /**
+     * Objeto que representa la pantalla Home con las opciones del Juego.
+     */
+    object AddQuizScreen : Routes("addQuizScreen")
+
+
+
 
 
 
@@ -51,5 +60,5 @@ sealed class Routes(val route: String) {
     /**
      * Objeto que representa la pantalla de Quiz disponibles.
      */
-    object AvailableQuizsScreen : Routes("availablequizsScreen")
+    object AllQuizzesScreen : Routes("allQuizzesScreen")
 }

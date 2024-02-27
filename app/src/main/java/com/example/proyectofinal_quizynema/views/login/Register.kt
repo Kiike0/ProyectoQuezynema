@@ -13,7 +13,8 @@ import com.example.proyectofinal_quizynema.navegacion.Navegacion
 import com.example.proyectofinal_quizynema.navigation.Routes
 import com.example.proyectofinal_quizynema.ui.theme.BackGroundApp
 import com.example.proyectofinal_quizynema.viewModels.UserViewModel
-import com.example.proyectofinal_quizynema.views.components.UserRegisterMod
+import com.example.proyectofinal_quizynema.views.components.Alert
+import com.example.proyectofinal_quizynema.views.components.RegisterComposable
 
 /**
  * Función composable que representa la pantalla principal para seleccionar el tipo de juego.
@@ -24,25 +25,10 @@ import com.example.proyectofinal_quizynema.views.components.UserRegisterMod
 @Composable
 fun Register(
     navController: NavHostController,
-    registerViewModel: UserViewModel
+    newUserVM: UserViewModel
 ) {
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(BackGroundApp)
-    ) {
-        Navegacion(
-            modifier = Modifier
-                .size(300.dp, 120.dp)
-                .align(Alignment.Start),
-            textNav = "Registro",
-            onBack = { navController.navigate(Routes.AccessScreen.route) }
+        RegisterComposable(
+            newUserVM = newUserVM,
+            navController = navController
         )
-        UserRegisterMod(
-            modifier = Modifier.size(400.dp, 600.dp),
-            registUserViewModel = registerViewModel,
-            onbuttonCreateAcc = {}
-        )
-
-    }
 }

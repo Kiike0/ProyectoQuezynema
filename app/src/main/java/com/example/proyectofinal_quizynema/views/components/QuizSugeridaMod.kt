@@ -70,7 +70,9 @@ fun QuizSugeridaMod(
                 Spacer(Modifier.height(20.dp))
 
                 Button(
-                    onClick = { onComenzarButton },
+                    onClick = {
+                        onComenzarButton()
+                              },
                     shape = RoundedCornerShape(20.dp),
                     colors = ButtonDefaults.buttonColors(
                         containerColor = BackGroundCard,

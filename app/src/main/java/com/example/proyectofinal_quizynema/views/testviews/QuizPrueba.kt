@@ -1,17 +1,8 @@
 package com.example.proyectofinal_quizynema.views.testviews
 
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.getValue
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import com.example.proyectofinal_quizynema.viewModels.QuizState
-import com.example.proyectofinal_quizynema.viewModels.ViewModelPrueba
+import com.example.proyectofinal_quizynema.viewModels.QuizViewModel
 
 /**
  * Vista composable para la pantalla principal de la aplicación. Muestra una lista de notas y permite
@@ -19,12 +10,15 @@ import com.example.proyectofinal_quizynema.viewModels.ViewModelPrueba
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun QuizScreen(quizVM: ViewModelPrueba) {
+fun QuizScreen(quizVM: QuizViewModel) {
     // DCS - Estructura de la interfaz de la pantalla principal con una lista de notas y acciones para añadir o editar.
 
-    LaunchedEffect(Unit){
+    /*LaunchedEffect(Unit){
         quizVM.fetchQuiz()
     }
+
+     */
+    /*
     val state by quizVM.state.collectAsState()
 
     Column(modifier = Modifier.fillMaxSize()) {
@@ -65,5 +59,8 @@ fun QuizScreen(quizVM: ViewModelPrueba) {
     }
 
      */
+
+     */
+}
 
 

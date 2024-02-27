@@ -46,19 +46,15 @@ class UserViewModel : ViewModel() {
 
     private var currentNickname by mutableStateOf("")
 
-    var favoriteFilm by mutableStateOf("")
-        private set
-    var points by mutableIntStateOf(0)
-        private set
 
     /**
+     * El login del usuario
      * Intenta iniciar sesión con el email y la contraseña proporcionados.
      * Si el inicio de sesión es exitoso, ejecuta la acción de éxito proporcionada.
      * En caso de error, actualiza el estado para mostrar una alerta.
      *
      * @param onSuccess Acción a ejecutar si el inicio de sesión es exitoso.
      */
-
     fun login(onSuccess: () -> Unit) {
         viewModelScope.launch {
             try {
@@ -96,8 +92,8 @@ class UserViewModel : ViewModel() {
                 .get()
                 .addOnSuccessListener { documents ->
                     for (document in documents) {
-                        Log.d(TAG, "${document.id} => ${document.data.get("nickname")}")
-                        Log.d(TAG, "${document.data.get("nickname").toString()}")
+                        //Log.d(TAG, "${document.id} => ${document.data.get("nickname")}")
+                        //Log.d(TAG, "${document.data.get("nickname").toString()}")
                         currentNickname = document.data.get("nickname").toString()
                     }
                 }
@@ -137,30 +133,6 @@ class UserViewModel : ViewModel() {
         }
     }
 
-    /*
-    suspend fun fetchNickname() {
-        val uid = auth.currentUser?.uid
-        if (uid != null) {
-            try {
-                val document = firestore.collection("Users").document(uid).get().await()
-                if (document.exists()) {
-                    val receivedNickname = document.getString("nickname")
-                    if (receivedNickname != null) {
-                        nickname = receivedNickname
-                    }
-                } else {
-                    Log.d("TAG", "El documento del usuario no existe")
-                }
-            } catch (e: Exception) {
-                Log.d("TAG", "Error al obtener el documento del usuario: $e")
-            }
-        } else {
-            Log.d("TAG", "No hay usuario autenticado")
-        }
-    }
-
-     */
-
     /**
      * Guarda la información del usuario recién registrado en Firestore.
      *
@@ -175,7 +147,7 @@ class UserViewModel : ViewModel() {
                 userId = id.toString(),
                 email = email.toString(),
                 nickname = nickname,
-                favoriteFilm = favoriteFilm,
+                totalCompleted = 0,
                 points = 0
 
             )
@@ -191,6 +163,8 @@ class UserViewModel : ViewModel() {
                 .addOnFailureListener { Log.d("ERROR AL GUARDAR", "ERROR al guardar en Firestore") }
         }
     }
+
+
     /**
      * Cierra la sesión del usuario actual en Firebase Auth.
      */
@@ -230,15 +204,6 @@ class UserViewModel : ViewModel() {
      */
     fun changeUserName(userName: String) {
         this.nickname = userName
-    }
-
-    /**
-     * Actualiza el nombre de usuario.
-     *
-     * @param userName Nuevo nombre de usuario a establecer.
-     */
-    fun changeFavoriteFilm(favoriteFilm: String) {
-        this.favoriteFilm = favoriteFilm
     }
 
 }
