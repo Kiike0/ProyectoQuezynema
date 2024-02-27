@@ -15,3 +15,5 @@ val BackGroundApp = Color(0xFF192734)
 val BackGroundAccessBox = Color(0xFF35485A)
 
 val BackGroundCard = Color(0xFFFF7C32)
+
+val BackGroundCard2 = Color(0xFF98A8B8)

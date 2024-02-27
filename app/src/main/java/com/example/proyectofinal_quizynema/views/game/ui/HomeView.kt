@@ -38,7 +38,8 @@ import com.example.proyectofinal_quizynema.views.components.CustomizedBigTextWhi
 import com.example.proyectofinal_quizynema.views.components.CustomizedTextWhiteSmaller
 import com.example.proyectofinal_quizynema.views.components.CustomizedWelcomeMessage
 import com.example.proyectofinal_quizynema.views.components.PopularQuiz
-import com.example.proyectofinal_quizynema.views.components.QuizSugeridaMod
+import com.example.proyectofinal_quizynema.views.components.QuizCardComposable
+import com.example.proyectofinal_quizynema.views.components.RandomQuiz
 
 
 @Composable
@@ -85,14 +86,10 @@ fun HomeView(
     val listaCompletadosJSON = totalCompletedArrayList.toString()
     Log.d(TAG, listaCompletadosJSON)
 
-    // Elimina los corchetes "[" y "]" del principio y final de la cadena
+
     val jsonCompletadosSinCorchetes = listaCompletadosJSON.substring(1, listaCompletadosJSON.length - 1)
-    // Divide la cadena por las comas para obtener los valores individuales
     val valoresCompletados = jsonCompletadosSinCorchetes.split(", ")
-    // Accede al primer valor de la lista
     val primerValorCompletado = valoresCompletados[0]
-    // IMPORTANTE: Usamos getOrNull para evitar excepciones si el índice está fuera de los límites
-    // Si no hacemos esto se rompe el programa
     val segundoValorCompletado = valoresCompletados.getOrNull(1)
     Log.d(TAG, "${valoresCompletados.getOrNull(1)}")
 
@@ -116,7 +113,7 @@ fun HomeView(
                 .padding(start = 30.dp, top = 110.dp)
         ) {
             Spacer(modifier = Modifier.height(20.dp))
-            QuizSugeridaMod(
+            RandomQuiz(
                 modifier = Modifier,
                 img = painterResource(id = R.drawable.palomitas),
                 onComenzarButton = {
@@ -164,14 +161,12 @@ fun HomeView(
                 }
             }
             Spacer(modifier = Modifier.height(20.dp))
-            //Text(text = stringnormal)
             Row() {
-                QuizExplored(
+                QuizCardComposable(
                     modifier = Modifier
-                        .size(155.dp, 200.dp)
-                        .clip(RoundedCornerShape(25.dp, 25.dp, 0.dp, 0.dp)),
+                        .size(155.dp, 200.dp),
                     quizImg = painterResource(R.drawable.quiz_explored_quiz_img),
-                    quizTitleText = "$primerValor",
+                    quizTitleText = primerValor,
                     onBoxQuiz = {
                         //quizVM.changeQuizId(quizIdsList[0])
                         navController.navigate(Routes.QuizScreen.route)
@@ -182,7 +177,7 @@ fun HomeView(
                     }
                 )
                 Spacer(modifier = Modifier.width(25.dp))
-                QuizExplored(
+                QuizCardComposable(
                     modifier = Modifier.size(155.dp, 200.dp),
                     quizImg = painterResource(R.drawable.quiz_explored_quiz_img),
                     quizTitleText = "$segundoValor",

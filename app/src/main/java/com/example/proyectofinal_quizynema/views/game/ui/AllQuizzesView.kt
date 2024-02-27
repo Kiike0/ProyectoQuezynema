@@ -1,7 +1,6 @@
 package com.example.proyectofinal_quizynema.views.game.ui
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -9,8 +8,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -18,17 +15,16 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.example.proyectofinal_quizynema.R
 import com.example.proyectofinal_quizynema.navegacion.Navegacion
 import com.example.proyectofinal_quizynema.navigation.Routes
-import com.example.proyectofinal_quizynema.quizexplored.QuizExplored
 import com.example.proyectofinal_quizynema.ui.theme.BackGroundApp
 import com.example.proyectofinal_quizynema.viewModels.QuizViewModel
 import com.example.proyectofinal_quizynema.viewModels.UserViewModel
+import com.example.proyectofinal_quizynema.views.components.QuizCardComposable
 
 @Composable
 fun AllQuizzesView(
@@ -43,7 +39,6 @@ fun AllQuizzesView(
 
     LaunchedEffect(Unit) {
         currentUserViewModel.getNickname()
-        //quizVM.fetchQuiz(quizIdsList[0])
         quizVM.fetchQuiz()
     }
 
@@ -87,10 +82,9 @@ fun AllQuizzesView(
         LazyColumn {
             items(2) {
                 Row() {
-                    QuizExplored(
+                    QuizCardComposable(
                         modifier = Modifier
-                            .size(155.dp, 200.dp)
-                            .clip(RoundedCornerShape(25.dp, 25.dp, 0.dp, 0.dp)),
+                            .size(155.dp, 200.dp),
                         quizImg = painterResource(R.drawable.quiz_explored_quiz_img),
                         quizTitleText = "$primerValor",
                         onBoxQuiz = {
@@ -103,7 +97,7 @@ fun AllQuizzesView(
                         }
                     )
                     Spacer(modifier = Modifier.width(25.dp))
-                    QuizExplored(
+                    QuizCardComposable(
                         modifier = Modifier.size(155.dp, 200.dp),
                         quizImg = painterResource(R.drawable.quiz_explored_quiz_img),
                         quizTitleText = "$segundoValor",

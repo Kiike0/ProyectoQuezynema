@@ -5,7 +5,7 @@
     "type": "figma",
     "file": "H7ukQQTqL9pUMovBZnfFnU",
     "node": "172:386",
-    "version": "5217357516",
+    "version": "5233345547",
     "component-id": "b1a6b1f831a9c25f179bb3899a6b6fec20cede5a"
   },
   "default": "CongratsComponent",
@@ -133,7 +133,7 @@
               "saturation": "0.30803571428571436",
               "value": "0.8784313725490196"
             },
-            "text-content": "Has hecho un gran trabajo en el test",
+            "text-content": "$GreatJobText",
             "overflow": "visible",
             "max-lines": "-1",
             "text-size": "13.0",
@@ -233,6 +233,11 @@
     }
   },
   "parameters": {
+    "GreatJobText": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    },
     "onContinueButton": {
       "data-type": "void-callback",
       "required": false,
@@ -245,6 +250,9 @@
       "size": {
         "width": 328.0,
         "height": 544.0
+      },
+      "parameters": {
+        "GreatJobText": "Has hecho un gran trabajo en el test"
       }
     }
   ],

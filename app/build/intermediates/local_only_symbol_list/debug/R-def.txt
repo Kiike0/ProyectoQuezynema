@@ -21,6 +21,7 @@ drawable botones_usuario_vector_sign_out
 drawable congrats_component_continue_button
 drawable congrats_component_img_rect
 drawable congrats_component_rect_bx
+drawable congratsimg
 drawable datos_usuario_separation_rectangle1
 drawable datos_usuario_separation_rectangle2
 drawable ic_launcher_background

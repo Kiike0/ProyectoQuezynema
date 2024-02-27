@@ -108,8 +108,7 @@ class MainActivity : ComponentActivity() {
                             QuestionView(
                                 navController = navController,
                                 currentUserViewModel = userViewModel,
-                                quizVM = quizViewModel,
-                                documentId = ""
+                                quizVM = quizViewModel
                             )
                         }
                     }

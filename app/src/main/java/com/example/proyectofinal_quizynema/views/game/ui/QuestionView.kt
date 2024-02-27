@@ -9,6 +9,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.livedata.observeAsState
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
@@ -18,22 +19,21 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
-import androidx.wear.compose.material.Text
 import com.example.proyectofinal_quizynema.R
 import com.example.proyectofinal_quizynema.navegacionsalir.NavegacionSalir
-import com.example.proyectofinal_quizynema.preguntaquiz.PreguntaQuiz
 import com.example.proyectofinal_quizynema.ui.theme.BackGroundApp
 import com.example.proyectofinal_quizynema.model.states.QuizState
 import com.example.proyectofinal_quizynema.navigation.Routes
 import com.example.proyectofinal_quizynema.viewModels.QuizViewModel
 import com.example.proyectofinal_quizynema.viewModels.UserViewModel
+import com.example.proyectofinal_quizynema.views.components.Congratulations
+import com.example.proyectofinal_quizynema.views.components.QuestionsComposable
 
 @Composable
 fun QuestionView(
     navController: NavHostController,
     currentUserViewModel: UserViewModel,
-    quizVM: QuizViewModel,
-    documentId: String
+    quizVM: QuizViewModel
 ) {
 
     val quizId: String by quizVM.quizId.observeAsState(initial = "")
@@ -60,7 +60,9 @@ fun QuestionView(
 
             var questionTitle by rememberSaveable { mutableStateOf("") }
 
-            var currentQuestionIndex by rememberSaveable { mutableStateOf(0) }
+            var currentQuestionIndex by rememberSaveable { mutableIntStateOf(0) }
+
+            var correctCount by rememberSaveable { mutableIntStateOf(0) }
 
 
             Column(
@@ -87,19 +89,19 @@ fun QuestionView(
                         textQuestionNumber = "${currentQuestionIndex + 1}/5",
                         onExit = { navController.navigate(Routes.HomeScreen.route) }
                     )
-                    PreguntaQuiz(
+                    QuestionsComposable(
                         modifier = Modifier.size(400.dp, 800.dp),
                         quizImg = painterResource(R.drawable.pregunta_quiz_quiz_img),
-                        quizTitle = "$questionTitle",
-                        answerText1 = "${answerList[0]}",
-                        answerText2 = "${answerList[1]}",
-                        answerText3 = "${answerList[2]}",
-                        answerText4 = "${answerList[3]}",
+                        quizTitle = questionTitle,
+                        answerText1 = answerList[0],
+                        answerText2 = answerList[1],
+                        answerText3 = answerList[2],
+                        answerText4 = answerList[3],
                         onAnswerButton1 = {
                             val selectedAnswer = answerList[0]
                             val correctAnswer = answerList[4]
                             if (selectedAnswer == correctAnswer) {
-                                // Incrementar el puntaje del usuario u otra lógica
+                                correctCount++
                             }
                             currentQuestionIndex++
                         },
@@ -107,7 +109,7 @@ fun QuestionView(
                             val selectedAnswer = answerList[1]
                             val correctAnswer = answerList[4]
                             if (selectedAnswer == correctAnswer) {
-                                // Incrementar el puntaje del usuario u otra lógica
+                                correctCount++
                             }
                             currentQuestionIndex++
                         },
@@ -115,7 +117,7 @@ fun QuestionView(
                             val selectedAnswer = answerList[2]
                             val correctAnswer = answerList[4]
                             if (selectedAnswer == correctAnswer) {
-                                // Incrementar el puntaje del usuario u otra lógica
+                                correctCount++
                             }
                             currentQuestionIndex++
                         },
@@ -123,15 +125,17 @@ fun QuestionView(
                             val selectedAnswer = answerList[3]
                             val correctAnswer = answerList[4]
                             if (selectedAnswer == correctAnswer) {
-                                // Incrementar el puntaje del usuario u otra lógica
+                                correctCount++
                             }
                             currentQuestionIndex++
                         }
                     )
                 } else {
-                    // Se ha completado el cuestionario, puedes mostrar un mensaje o realizar otra acción
-                    // Por ejemplo:
-                    Text(text = "¡Cuestionario completado!")
+                    Congratulations(
+                        greatJobText = "¡Buen trabajo! has conseguido $correctCount de 5 " +
+                                "respuestas correctas",
+                        onContinueButton = { navController.navigate(Routes.HomeScreen.route) }
+                    )
                 }
             }
         }

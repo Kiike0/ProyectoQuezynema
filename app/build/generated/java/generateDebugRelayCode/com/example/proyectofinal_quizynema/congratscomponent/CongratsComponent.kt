@@ -31,6 +31,7 @@ import com.google.relay.compose.tappable
 @Composable
 fun CongratsComponent(
     modifier: Modifier = Modifier,
+    greatJobText: String = "",
     onContinueButton: () -> Unit = {}
 ) {
     TopLevel(modifier = modifier) {
@@ -53,6 +54,7 @@ fun CongratsComponent(
             )
         )
         GreatJob(
+            greatJobText = greatJobText,
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
@@ -98,6 +100,7 @@ private fun CongratsComponentPreview() {
     MaterialTheme {
         RelayContainer {
             CongratsComponent(
+                greatJobText = "Has hecho un gran trabajo en el test",
                 onContinueButton = {},
                 modifier = Modifier.rowWeight(1.0f).columnWeight(1.0f)
             )
@@ -122,9 +125,12 @@ fun RectBx(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun GreatJob(modifier: Modifier = Modifier) {
+fun GreatJob(
+    greatJobText: String,
+    modifier: Modifier = Modifier
+) {
     RelayText(
-        content = "Has hecho un gran trabajo en el test",
+        content = greatJobText,
         fontSize = 13.0.sp,
         fontFamily = tomorrow,
         color = Color(

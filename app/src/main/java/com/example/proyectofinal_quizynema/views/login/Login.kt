@@ -12,7 +12,7 @@ import com.example.proyectofinal_quizynema.navigation.Routes
 import com.example.proyectofinal_quizynema.ui.theme.BackGroundApp
 import com.example.proyectofinal_quizynema.viewModels.UserViewModel
 import com.example.proyectofinal_quizynema.views.components.Alert
-import com.example.proyectofinal_quizynema.views.components.UserAccessMod
+import com.example.proyectofinal_quizynema.views.components.LoginComposable
 
 /**
  * Función composable que representa la pantalla principal para seleccionar el tipo de juego.
@@ -31,7 +31,7 @@ fun Login(
             .background(BackGroundApp),
         contentAlignment = Alignment.Center
     ) {
-        UserAccessMod(
+        LoginComposable(
             modifier = Modifier,
             onAccessButton = {
                 accessViewModel.login {
