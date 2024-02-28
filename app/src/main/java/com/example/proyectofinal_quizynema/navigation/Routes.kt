@@ -52,13 +52,4 @@ sealed class Routes(val route: String) {
      */
     object AllQuizzesScreen : Routes("allQuizzesScreen")
 
-
-
-
-    /**
-     * Objeto que representa la pantalla del usuario.
-     */
-    object UserScreen : Routes("userScreen")
-
-
 }

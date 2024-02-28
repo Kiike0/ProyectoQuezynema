@@ -34,7 +34,7 @@ import com.google.relay.compose.RelayText
 
 /**
  * This composable was generated from the UI Package 'congrats_component'.
- * Generated code; do not edit directly
+ * Modificado para mostrar el mensaje de fin de quiz
  */
 @Composable
 fun Congratulations(

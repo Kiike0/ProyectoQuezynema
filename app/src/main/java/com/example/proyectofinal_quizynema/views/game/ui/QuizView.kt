@@ -19,22 +19,21 @@ import com.example.proyectofinal_quizynema.inicioquiz.InicioQuiz
 import com.example.proyectofinal_quizynema.navigation.Routes
 import com.example.proyectofinal_quizynema.ui.theme.BackGroundApp
 import com.example.proyectofinal_quizynema.model.states.QuizState
-import com.example.proyectofinal_quizynema.navegacion.Navegacion
 import com.example.proyectofinal_quizynema.viewModels.QuizViewModel
-import com.example.proyectofinal_quizynema.viewModels.UserViewModel
+import com.example.proyectofinal_quizynema.views.components.CustomizedNavigationWithText
 
 /**
  * Función composable que representa la pantalla del título de la quiz.
  *
  *
  * @param navController El controlador de navegación utilizado para navegar en las diferentes pantallas.
- * @param currentUserViewModel El ViewModel responsable de gestionar la lógica del usuario.
+ *
  * @param quizVM El ViewModel responsable de gestionar la lógica de la colección de quizzes.
  */
 @Composable
 fun QuizView(
     navController: NavHostController,
-    currentUserViewModel: UserViewModel,
+    //currentUserViewModel: UserViewModel,
     quizVM: QuizViewModel
 ) {
 
@@ -59,7 +58,7 @@ fun QuizView(
                     .background(BackGroundApp)
             ) {
                 // Navegación con el titulo de la pantalla para poder volver atrás
-                Navegacion(
+                CustomizedNavigationWithText(
                     modifier = Modifier
                         .size(300.dp, 120.dp)
                         .align(Alignment.Start),
@@ -69,7 +68,7 @@ fun QuizView(
                 InicioQuiz(
                     modifier = Modifier.size(400.dp, 500.dp),
                     startText = "Iniciar",
-                    quizTitleText = "${quiz.title}",
+                    quizTitleText = quiz.title,
                     quizDesc = "Responde a las preguntas y disfruta de la Quiz creada por los usuarios",
                     onStartButton = { navController.navigate(Routes.QuestionsScreen.route) }
                 )
@@ -78,7 +77,6 @@ fun QuizView(
 
         is QuizState.Error -> Text(text = (stateFlow as QuizState.Error).message, color = Color.Red)
     }
-
 
 
 }

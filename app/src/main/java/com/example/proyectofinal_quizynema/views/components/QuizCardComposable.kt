@@ -35,8 +35,8 @@ import com.google.relay.compose.tappable
 
 
 /**
- * This composable was generated from the UI Package 'quiz_explored'.
- * Generated code; do not edit directly
+ * Composable del relay modificado del Relay para adaptarlo a las características de la aplicación
+ * Representa a la composable de cada quiz en disponibles
  */
 @Composable
 fun QuizCardComposable(
@@ -64,7 +64,7 @@ fun QuizCardComposable(
                 alignment = Alignment.Center,
                 offset = DpOffset(
                     x = 0.0.dp,
-                    y = -31.5.dp
+                    y = (-31.5).dp
                 )
             )
         )
@@ -138,8 +138,8 @@ fun QuizTitleTextQuizCard(
         height = 1.200000029343825.em,
         textAlign = TextAlign.Center,
         fontWeight = FontWeight.SemiBold,
-        maxLines = -1,
-        modifier = modifier.requiredWidth(152.0.dp)
+        maxLines = 2,
+        modifier = modifier.requiredWidth(160.0.dp)
     )
 }
 

@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.requiredHeight
 import androidx.compose.foundation.layout.requiredWidth
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.LocalTextStyle
 import androidx.compose.material3.OutlinedTextField
@@ -20,6 +21,8 @@ import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
@@ -38,6 +41,7 @@ import com.google.relay.compose.tappable
 
 /**
  * Composable del relay modificado del Relay para adaptarlo a las características de la aplicación
+ * Representa al logueo del usuario
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -54,7 +58,7 @@ fun LoginComposable(
                 alignment = Alignment.Center,
                 offset = DpOffset(
                     x = 3.5.dp,
-                    y = -173.0.dp
+                    y = (-173.0).dp
                 )
             )
         )
@@ -67,7 +71,7 @@ fun LoginComposable(
                     alignment = Alignment.Center,
                     offset = DpOffset(
                         x = 0.0.dp,
-                        y = -44.5.dp
+                        y = (-44.5).dp
                     )
                 )
                 .clip(RoundedCornerShape(25.dp))
@@ -98,14 +102,16 @@ fun LoginComposable(
                 focusedBorderColor = Color.Transparent,
                 unfocusedBorderColor = Color.Transparent
             ),
-            textStyle = LocalTextStyle.current.copy(color = Color.White)
+            textStyle = LocalTextStyle.current.copy(color = Color.White),
+            visualTransformation = PasswordVisualTransformation(),
+            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
         )
         TextDescriptionMod(
             textDescription = "Si no tienes cuenta debes crear una para acceder",
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
-                    x = -0.5.dp,
+                    x = (-0.5).dp,
                     y = 88.5.dp
                 )
             )

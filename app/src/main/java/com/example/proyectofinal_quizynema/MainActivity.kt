@@ -21,7 +21,6 @@ import com.example.proyectofinal_quizynema.views.game.ui.HomeView
 import com.example.proyectofinal_quizynema.views.game.ui.QuestionView
 import com.example.proyectofinal_quizynema.views.game.ui.QuizView
 import com.example.proyectofinal_quizynema.views.game.ui.StartGameView
-import com.example.proyectofinal_quizynema.views.game.ui.UserView
 import com.example.proyectofinal_quizynema.views.login.EmptyView
 import com.example.proyectofinal_quizynema.views.login.Login
 import com.example.proyectofinal_quizynema.views.login.Register
@@ -47,8 +46,7 @@ class MainActivity : ComponentActivity() {
                     ) {
                         composable(Routes.EmptyScreen.route) {
                             EmptyView(
-                                navController = navController,
-                                quizVM = quizViewModel
+                                navController = navController
                             )
                         }
                         composable(Routes.StartGameScreen.route) {
@@ -85,27 +83,18 @@ class MainActivity : ComponentActivity() {
                         composable(Routes.AddQuizScreen.route) {
                             AddQuizView(
                                 navController = navController,
-                                newUserVM = userViewModel,
                                 quizVM = quizViewModel
-                            )
-                        }
-                        composable(Routes.UserScreen.route) {
-                            UserView(
-                                navController = navController,
-                                currentUserViewModel = userViewModel
                             )
                         }
                         composable(Routes.QuizScreen.route) {
                             QuizView(
                                 navController = navController,
-                                currentUserViewModel = userViewModel,
                                 quizVM = quizViewModel
                             )
                         }
                         composable(Routes.QuestionsScreen.route) {
                             QuestionView(
                                 navController = navController,
-                                currentUserViewModel = userViewModel,
                                 quizVM = quizViewModel
                             )
                         }

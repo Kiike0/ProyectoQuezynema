@@ -19,8 +19,8 @@ import com.google.relay.compose.RelayVector
 import com.google.relay.compose.tappable
 
 /**
- * This composable was generated from the UI Package 'barra_navegacion'.
- * Generated code; do not edit directly
+ * Composable del relay modificado del Relay para adaptarlo a las características de la aplicación
+ * Representa a la barra de navegación de la aplicación (la que muestra los iconos)
  */
 @Composable
 fun NavigationBar(
@@ -46,7 +46,7 @@ fun NavigationBar(
                 alignment = Alignment.Center,
                 offset = DpOffset(
                     x = 129.0.dp,
-                    y = -1.5.dp
+                    y = (-1.5).dp
                 )
             )
         ) {
@@ -57,8 +57,8 @@ fun NavigationBar(
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
-                    x = -44.0.dp,
-                    y = -0.5.dp
+                    x = (-44.0).dp,
+                    y = (-0.5).dp
                 )
             )
         ) {
@@ -69,8 +69,8 @@ fun NavigationBar(
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
-                    x = -127.5.dp,
-                    y = -1.0.dp
+                    x = (-127.5).dp,
+                    y = (-1.0).dp
                 )
             )
         ) {
@@ -82,7 +82,7 @@ fun NavigationBar(
                 alignment = Alignment.Center,
                 offset = DpOffset(
                     x = 39.5.dp,
-                    y = -2.0.dp
+                    y = (-2.0).dp
                 )
             )
         ) {

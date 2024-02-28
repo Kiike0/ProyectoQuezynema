@@ -20,25 +20,21 @@ import com.example.proyectofinal_quizynema.ui.theme.BackGroundAccessBox
 import com.google.relay.compose.RelayText
 
 /**
- * This composable was generated from the UI Package 'congrats_component'.
- * Generated code; do not edit directly
+ * Fichero que contiene varios composable de botones personalizados
  */
 @Composable
 fun CustomizedButton(
-    onCreateButton: () -> Unit = {},
-    modifier: Modifier
+    onCreateButton: () -> Unit = {}
 ) {
         ButtonBlue(
-            onCreateButton = onCreateButton,
-            modifier = modifier
+            onCreateButton = onCreateButton
         )
 
 }
 
 @Composable
 fun ButtonBlue(
-    onCreateButton: () -> Unit,
-    modifier: Modifier
+    onCreateButton: () -> Unit
 ) {
     Button(
         onClick = onCreateButton,

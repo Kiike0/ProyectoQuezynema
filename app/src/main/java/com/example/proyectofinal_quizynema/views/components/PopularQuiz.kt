@@ -19,8 +19,8 @@ import com.example.proyectofinal_quizynema.ui.theme.BackGroundAccessBox
 import com.google.relay.compose.RelayVector
 
 /**
- * This composable was generated from the UI Package 'progreso_quiz'.
- * Generated code; do not edit directly
+ * Composable del relay modificado del Relay para adaptarlo a las características de la aplicación
+ * Representa a las quiz más populares
  */
 @Composable
 fun PopularQuiz(
@@ -36,9 +36,9 @@ fun PopularQuiz(
                 onClick = onQuizButton
             )
     ){
-        Column(){
+        Column{
             CustomizedTextBoldSmaller(customizedText = quizTitle, Modifier.padding(start = 10.dp, top = 10.dp))
-            Row(){
+            Row{
                 VectorFilmMod(
                     modifier = Modifier.padding(start = 10.dp, top = 23.5.dp)
                 )

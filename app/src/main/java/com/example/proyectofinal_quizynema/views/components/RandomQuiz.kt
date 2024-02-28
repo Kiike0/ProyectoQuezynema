@@ -31,12 +31,11 @@ import com.google.relay.compose.RelayImage
 import com.google.relay.compose.RelayText
 
 /**
- * This composable was generated from the UI Package 'quiz_sugerida'.
- * Generated code; do not edit directly
+ * Composable del relay modificado del Relay para adaptarlo a las características de la aplicación
+ * Representa a la composable para jugar una quiz al azar
  */
 @Composable
 fun RandomQuiz(
-    modifier: Modifier = Modifier,
     img: Painter = EmptyPainter(),
     onComenzarButton: () -> Unit = {}
 ) {
@@ -45,8 +44,8 @@ fun RandomQuiz(
             .size(330.0.dp, 184.0.dp)
             .background(BackGroundCard, RoundedCornerShape(20.dp))
     ){
-        Row(){
-            Column(){
+        Row{
+            Column{
                 Spacer(Modifier.height(20.dp))
 
                 QuizSuggestText(

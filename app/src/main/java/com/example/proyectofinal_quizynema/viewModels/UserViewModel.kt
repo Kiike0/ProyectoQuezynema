@@ -25,8 +25,7 @@ import java.lang.Exception
  * @property showAlert Estado que determina si se debe mostrar una alerta de error en la UI.
  * @property email Email del usuario, utilizado para el inicio de sesión y registro.
  * @property password Contraseña del usuario, utilizada para el inicio de sesión y registro.
- * @property userName Nombre de usuario, utilizado solo en el proceso de registro.
- * @property selectedTab Índice de la pestaña seleccionada en la UI, utilizado para alternar entre las vistas de inicio de sesión y registro.
+ * @property nickName Nombre de usuario, utilizado solo en el proceso de registro.
  */
 class UserViewModel : ViewModel() {
     // DCS - Definición de variables y funciones para manejar el inicio de sesión y registro de usuarios.
@@ -40,7 +39,7 @@ class UserViewModel : ViewModel() {
         private set
     var password by mutableStateOf("")
         private set
-    var nickname by mutableStateOf("")
+    var nickName by mutableStateOf("")
         private set
 
     private var currentNickname by mutableStateOf("")
@@ -79,11 +78,9 @@ class UserViewModel : ViewModel() {
     }
 
 
-    fun getSaludo() = if (currentNickname.isBlank()) "" else "$currentNickname"
+    fun getCurrentNickName() = currentNickname.ifBlank { "" }
 
-    //fun getCurrentNickname() = if (currentNickname.isBlank()) "" else "$currentNickname"
-
-    fun getNickname() {
+    fun getNickName() {
         val uid = auth.currentUser?.uid
         if (uid != null) {
             firestore.collection("Users")
@@ -93,7 +90,7 @@ class UserViewModel : ViewModel() {
                     for (document in documents) {
                         //Log.d(TAG, "${document.id} => ${document.data.get("nickname")}")
                         //Log.d(TAG, "${document.data.get("nickname").toString()}")
-                        currentNickname = document.data.get("nickname").toString()
+                        currentNickname = document.data["nickname"].toString()
                     }
                 }
                 .addOnFailureListener { exception ->
@@ -119,7 +116,7 @@ class UserViewModel : ViewModel() {
                     .addOnCompleteListener { task ->
                         if (task.isSuccessful) {
                             // DCS - Si se realiza con éxito, almacenamos el usuario en la colección "Users"
-                            saveUser(nickname)
+                            saveUser(nickName)
                             onSuccess()
                         } else {
                             Log.d("ERROR EN FIREBASE", "Error al crear usuario")
@@ -135,9 +132,9 @@ class UserViewModel : ViewModel() {
     /**
      * Guarda la información del usuario recién registrado en Firestore.
      *
-     * @param username Nombre de usuario a guardar.
+     * @param nickName Nombre de usuario a guardar.
      */
-    private fun saveUser(username: String) {
+    private fun saveUser(nickName: String) {
         val id = auth.currentUser?.uid
         val email = auth.currentUser?.email
 
@@ -145,7 +142,7 @@ class UserViewModel : ViewModel() {
             val user = UserModel(
                 userId = id.toString(),
                 email = email.toString(),
-                nickname = nickname,
+                nickname = nickName,
                 totalCompleted = 0,
                 points = 0
 
@@ -202,7 +199,7 @@ class UserViewModel : ViewModel() {
      * @param userName Nuevo nombre de usuario a establecer.
      */
     fun changeUserName(userName: String) {
-        this.nickname = userName
+        this.nickName = userName
     }
 
 }

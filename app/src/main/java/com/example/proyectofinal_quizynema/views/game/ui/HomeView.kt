@@ -58,7 +58,7 @@ fun HomeView(
 
 
     LaunchedEffect(Unit) {
-        currentUserViewModel.getNickname()
+        currentUserViewModel.getNickName()
         quizVM.fetchQuiz()
     }
 
@@ -96,8 +96,6 @@ fun HomeView(
     val jsonCompletadosSinCorchetes =
         listaCompletadosJSON.substring(1, listaCompletadosJSON.length - 1)
     val valoresCompletados = jsonCompletadosSinCorchetes.split(", ")
-    val primerValorCompletado = valoresCompletados[0]
-    val segundoValorCompletado = valoresCompletados.getOrNull(1)
     Log.d(TAG, "${valoresCompletados.getOrNull(1)}")
 
 
@@ -108,10 +106,12 @@ fun HomeView(
             .background(BackGroundApp)
     ) {
         CustomizedWelcomeMessage(
-            modifier = Modifier,
-            greetings = "Buenos días, ${currentUserViewModel.getSaludo()}!",
+            greetings = "Buenos días, ${currentUserViewModel.getCurrentNickName()}!",
             letsQuizText = "Hagamos una quiz hoy",
             onQuizyAvatarImg = {
+                // Esto era un boton que se usaba para ir a la pantalla de usuario que teniamos
+                // pero por motivos de optimización se ha quitado esa pantalla, no obstante, dejo
+                // la imagen como botón por si quisiera crear de nuevo
                 //navController.navigate(Routes.UserScreen.route)
             }
         )
@@ -123,7 +123,6 @@ fun HomeView(
         ) {
             Spacer(modifier = Modifier.height(15.dp))
             RandomQuiz(
-                modifier = Modifier,
                 img = painterResource(id = R.drawable.palomitas),
                 onComenzarButton = {
 
@@ -185,29 +184,11 @@ fun HomeView(
             }
 
             Spacer(modifier = Modifier.height(15.dp))
-            Row() {
+            Row {
                 CustomizedBigTextWhite(customizedText = "Quiz disponibles", Modifier)
-
-                /* Botón que hice que no utilicé después, no lo quiero eliminar por si acaso
-                Spacer(modifier = Modifier.width(185.dp))
-                Button(
-                    onClick = { navController.navigate(Routes.AllQuizzesScreen.route) },
-                    Modifier
-                        .padding(end = 15.dp)
-                        .size(90.dp, 20.dp)
-                        .background(Color.Transparent),
-                    colors = ButtonDefaults.buttonColors(backgroundColor = Color.Transparent)
-                ) {
-                    CustomizedTextWhiteSmaller(
-                        customizedText = "Ver todas",
-                        Modifier
-                    )
-                }
-
-                 */
             }
             Spacer(modifier = Modifier.height(10.dp))
-            Row() {
+            Row {
                 QuizCardComposable(
                     modifier = Modifier
                         .size(155.dp, 200.dp),
@@ -251,7 +232,7 @@ fun HomeView(
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(70.dp)
+                    .height(68.dp) // Es el mismo parámetro que el requiredHeight del NavigationBar
                     .background(color = Color.Transparent)
                     .align(Alignment.BottomCenter)
             ) {

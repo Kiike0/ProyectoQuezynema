@@ -17,8 +17,8 @@ import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.em
 import androidx.compose.ui.unit.sp
-import com.example.proyectofinal_quizynema.R
 import com.example.proyectofinal_quizynema.preguntaquiz.tomorrow
+import com.example.proyectofinal_quizynema.ui.painters.normalAnswerImage
 import com.google.relay.compose.EmptyPainter
 import com.google.relay.compose.RelayContainer
 import com.google.relay.compose.RelayContainerScope
@@ -28,8 +28,8 @@ import com.google.relay.compose.RelayVector
 import com.google.relay.compose.tappable
 
 /**
- * This composable was generated from the UI Package 'pregunta_quiz'.
- * Generated code; do not edit directly
+ * Composable del relay modificado del Relay para adaptarlo a las características de la aplicación
+ * Representa a la composable de cada pregunta
  */
 @Composable
 fun QuestionsComposable(
@@ -52,7 +52,7 @@ fun QuestionsComposable(
                 alignment = Alignment.Center,
                 offset = DpOffset(
                     x = 2.0.dp,
-                    y = -189.5.dp
+                    y = (-189.5).dp
                 )
             )
         )
@@ -62,7 +62,7 @@ fun QuestionsComposable(
                 alignment = Alignment.Center,
                 offset = DpOffset(
                     x = 0.5.dp,
-                    y = -8.0.dp
+                    y = (-8.0).dp
                 )
             )
         )
@@ -111,7 +111,7 @@ fun QuestionsComposable(
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
-                    x = -0.5.dp,
+                    x = (-0.5).dp,
                     y = 202.5.dp
                 )
             )
@@ -121,7 +121,7 @@ fun QuestionsComposable(
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
-                    x = -1.0.dp,
+                    x = (-1.0).dp,
                     y = 201.5.dp
                 )
             )
@@ -131,7 +131,7 @@ fun QuestionsComposable(
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
-                    x = -0.5.dp,
+                    x = (-0.5).dp,
                     y = 268.5.dp
                 )
             )
@@ -141,7 +141,7 @@ fun QuestionsComposable(
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
-                    x = -1.0.dp,
+                    x = (-1.0).dp,
                     y = 267.5.dp
                 )
             )
@@ -191,7 +191,7 @@ fun AnswerButton1QC(
     modifier: Modifier = Modifier
 ) {
     RelayVector(
-        vector = painterResource(R.drawable.pregunta_quiz_answer_button2),
+        vector = painterResource(normalAnswerImage),
         modifier = modifier.tappable(onTap = onAnswerButton1).requiredWidth(325.0.dp).requiredHeight(53.0.dp)
     )
 }
@@ -224,7 +224,7 @@ fun AnswerButton2QC(
     modifier: Modifier = Modifier
 ) {
     RelayVector(
-        vector = painterResource(R.drawable.pregunta_quiz_answer_button2),
+        vector = painterResource(normalAnswerImage),
         modifier = modifier.tappable(onTap = onAnswerButton2).requiredWidth(325.0.dp).requiredHeight(53.0.dp)
     )
 }
@@ -257,7 +257,7 @@ fun AnswerButton3QC(
     modifier: Modifier = Modifier
 ) {
     RelayVector(
-        vector = painterResource(R.drawable.pregunta_quiz_answer_button2),
+        vector = painterResource(normalAnswerImage),
         modifier = modifier.tappable(onTap = onAnswerButton3).requiredWidth(325.0.dp).requiredHeight(53.0.dp)
     )
 }
@@ -290,7 +290,7 @@ fun AnswerButton4QC(
     modifier: Modifier = Modifier
 ) {
     RelayVector(
-        vector = painterResource(R.drawable.pregunta_quiz_answer_button4),
+        vector = painterResource(normalAnswerImage),
         modifier = modifier.tappable(onTap = onAnswerButton4).requiredWidth(325.0.dp).requiredHeight(53.0.dp)
     )
 }

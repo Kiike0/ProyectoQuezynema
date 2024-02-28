@@ -25,7 +25,6 @@ import com.example.proyectofinal_quizynema.model.states.QuizState
 import com.example.proyectofinal_quizynema.navigation.Routes
 import com.example.proyectofinal_quizynema.ui.painters.imageQuestionsResources
 import com.example.proyectofinal_quizynema.viewModels.QuizViewModel
-import com.example.proyectofinal_quizynema.viewModels.UserViewModel
 import com.example.proyectofinal_quizynema.views.components.Congratulations
 import com.example.proyectofinal_quizynema.views.components.QuestionsComposable
 
@@ -34,19 +33,19 @@ import com.example.proyectofinal_quizynema.views.components.QuestionsComposable
  *
  *
  * @param navController El controlador de navegación utilizado para navegar en las diferentes pantallas.
- * @param currentUserViewModel El ViewModel responsable de gestionar la lógica del usuario.
+ *
  * @param quizVM El ViewModel responsable de gestionar la lógica de la colección de quizzes.
  */
 @Composable
 fun QuestionView(
     navController: NavHostController,
-    currentUserViewModel: UserViewModel,
+    //currentUserViewModel: UserViewModel,
     quizVM: QuizViewModel
 ) {
 
     val quizId: String by quizVM.quizId.observeAsState(initial = "")
 
-    LaunchedEffect(Unit){
+    LaunchedEffect(Unit) {
         quizVM.getQuizById(quizId)
     }
 
@@ -66,7 +65,7 @@ fun QuestionView(
             )
 
             // Guarda una lista de las respuestas actuales
-            var answerList: MutableList<String> = mutableListOf()
+            val answerList: MutableList<String> = mutableListOf()
 
             // Guarda el título de la pregunta actual
             var questionTitle by rememberSaveable { mutableStateOf("") }
@@ -102,6 +101,7 @@ fun QuestionView(
                         textQuestionNumber = "${currentQuestionIndex + 1}/5",
                         onExit = { navController.navigate(Routes.HomeScreen.route) }
                     )
+
                     QuestionsComposable(
                         modifier = Modifier.size(400.dp, 800.dp),
                         quizImg = painterResource(imageQuestionsResources[currentQuestionIndex]),
@@ -116,6 +116,7 @@ fun QuestionView(
                             if (selectedAnswer == correctAnswer) {
                                 correctCount++
                             }
+                            Thread.sleep(300)
                             currentQuestionIndex++
                         },
                         onAnswerButton2 = {
@@ -124,6 +125,7 @@ fun QuestionView(
                             if (selectedAnswer == correctAnswer) {
                                 correctCount++
                             }
+                            Thread.sleep(300)
                             currentQuestionIndex++
                         },
                         onAnswerButton3 = {
@@ -132,6 +134,7 @@ fun QuestionView(
                             if (selectedAnswer == correctAnswer) {
                                 correctCount++
                             }
+                            Thread.sleep(300)
                             currentQuestionIndex++
                         },
                         onAnswerButton4 = {
@@ -140,9 +143,11 @@ fun QuestionView(
                             if (selectedAnswer == correctAnswer) {
                                 correctCount++
                             }
+                            Thread.sleep(300)
                             currentQuestionIndex++
                         }
                     )
+
                 } else {
                     Congratulations(
                         greatJobText = "¡Buen trabajo! has conseguido $correctCount de 5 " +

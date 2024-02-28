@@ -44,3 +44,7 @@ val imageQuestionsResources = listOf(
     imageQuestions8,
     imageQuestions9
 )
+
+//val unCorrectAnswerImage = R.drawable.pregunta_quiz_answer_button1
+//val correctAnswerImage = R.drawable.pregunta_quiz_answer_button3
+val normalAnswerImage = R.drawable.pregunta_quiz_answer_button2

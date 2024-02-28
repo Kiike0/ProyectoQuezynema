@@ -1,6 +1,5 @@
 package com.example.proyectofinal_quizynema.views.components
 
-import android.widget.Toast
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -10,8 +9,6 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.LocalTextStyle
 import androidx.compose.material3.OutlinedTextField
@@ -21,10 +18,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
-import androidx.wear.compose.material.Text
 import com.example.proyectofinal_quizynema.navegacion.Navegacion
 import com.example.proyectofinal_quizynema.navigation.Routes
 import com.example.proyectofinal_quizynema.ui.theme.BackGroundAccessBox
@@ -35,16 +30,21 @@ import com.example.proyectofinal_quizynema.ui.theme.BackGroundOutlinedQuestion
 import com.example.proyectofinal_quizynema.viewModels.QuizViewModel
 
 /**
- * Composable del relay modificado del Relay para adaptarlo a las características de la aplicación
+ * Composable para agregar Quiz a la base de datos
+ * Esta composable peta mucho por la cantidad de outlinedtext que tiene, para que no se queje tanto
+ * Android studio, he tenido que poner el Supress para que se puedea modificar la composable sin
+ * problemas de rendimiento de la IDE
+ *
+ *  @param navController El controlador de navegación utilizado para navegar en las diferentes pantallas.
+ *  @param quizVM El ViewModel responsable de gestionar la lógica de la colección de quizzes.
  */
+@Suppress("DEPRECATION")
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun AddQuizComposable(
     quizVM: QuizViewModel,
     navController: NavHostController
 ) {
-
-    val context = LocalContext.current
 
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -695,8 +695,7 @@ fun AddQuizComposable(
                     onCreateButton = {
                         quizVM.addNewQuestion()
                         navController.navigate(Routes.HomeScreen.route)
-                    },
-                    modifier = Modifier
+                    }
                 )
             }
         }

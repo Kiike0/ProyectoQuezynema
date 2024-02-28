@@ -2,9 +2,7 @@ package com.example.proyectofinal_quizynema.views.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.requiredHeight
 import androidx.compose.foundation.layout.requiredWidth
@@ -16,10 +14,6 @@ import androidx.compose.material3.LocalTextStyle
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.saveable.rememberSaveable
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -40,8 +34,6 @@ import com.example.proyectofinal_quizynema.ui.theme.BackGroundAccessBox
 import com.example.proyectofinal_quizynema.ui.theme.BackGroundApp
 import com.example.proyectofinal_quizynema.viewModels.UserViewModel
 import com.google.relay.compose.BoxScopeInstance.boxAlign
-import com.google.relay.compose.RelayContainer
-import com.google.relay.compose.RelayContainerScope
 import com.google.relay.compose.RelayText
 import com.google.relay.compose.RelayVector
 import com.google.relay.compose.tappable
@@ -49,6 +41,10 @@ import com.google.relay.compose.tappable
 
 /**
  * Composable del relay modificado del Relay para adaptarlo a las características de la aplicación
+ * Representa a la composable para crear una nueva cuenta en la base de datos
+ *
+ *  @param navController El controlador de navegación utilizado para navegar en las diferentes pantallas.
+ *  @param newUserVM El ViewModel responsable de gestionar la lógica del usuario.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -92,7 +88,7 @@ fun RegisterComposable(
 
         // Texto editable para el Nombre de usuario
         OutlinedTextField(
-            value = newUserVM.nickname,
+            value = newUserVM.nickName,
             onValueChange = { newUserVM.changeUserName(it) },
             label = { CustomizedText(customizedText = "Nombre de usuario") },
             modifier = Modifier
@@ -130,7 +126,7 @@ fun RegisterComposable(
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
-                    x = -4.5.dp,
+                    x = (-4.5).dp,
                     y = 60.dp
                 )
             )
@@ -142,7 +138,7 @@ fun RegisterComposable(
             modifier = Modifier.boxAlign(
                 alignment = Alignment.Center,
                 offset = DpOffset(
-                    x = -1.0.dp,
+                    x = (-1.0).dp,
                     y = 20.dp
                 )
             )
@@ -193,20 +189,5 @@ fun CreateAccountRMod(
         textAlign = TextAlign.Left,
         fontWeight = FontWeight(700.0.toInt()),
         modifier = modifier
-    )
-}
-
-@Composable
-fun TopLevelRMod(
-    modifier: Modifier = Modifier,
-    content: @Composable RelayContainerScope.() -> Unit
-) {
-    RelayContainer(
-        isStructured = false,
-        clipToParent = false,
-        content = content,
-        modifier = modifier
-            .fillMaxWidth(1.0f)
-            .fillMaxHeight(1.0f)
     )
 }

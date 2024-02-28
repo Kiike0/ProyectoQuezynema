@@ -24,7 +24,7 @@ import kotlinx.coroutines.flow.StateFlow
  * Mantiene el estado de la lista de notas y la nota actualmente seleccionada o editada.
  *
  * @property auth Instancia de FirebaseAuth utilizada para obtener el usuario actual.
- * @property firestoreQuiz Instancia de FirebaseFirestore utilizada para operaciones en la base de datos.
+ * @property firestore Instancia de FirebaseFirestore utilizada para operaciones en la base de datos.
  * @property state Estado de la nota actualmente seleccionada o editada.
  * @property title Título de la nota actualmente seleccionada o editada.
  */

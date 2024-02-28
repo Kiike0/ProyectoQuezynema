@@ -12,17 +12,18 @@ import androidx.compose.ui.res.painterResource
 import androidx.navigation.NavController
 import com.example.proyectofinal_quizynema.R
 import com.example.proyectofinal_quizynema.navigation.Routes
-import com.example.proyectofinal_quizynema.viewModels.QuizViewModel
+import com.example.proyectofinal_quizynema.views.components.CustomizedBiggerTextBold
 import com.google.firebase.auth.FirebaseAuth
 
 /**
  * Vista composable que sirve como punto de entrada o pantalla inicial,
  * redirigiendo al usuario a la pantalla de inicio de sesión o al home según si hay una sesión iniciada.
+ *
+ * @param navController El controlador de navegación utilizado para navegar en las diferentes pantallas.
  */
 @Composable
 fun EmptyView(
-    navController: NavController,
-    quizVM: QuizViewModel
+    navController: NavController
 ){
 
     LaunchedEffect(Unit){
@@ -43,6 +44,11 @@ fun EmptyView(
             modifier = Modifier
                 .fillMaxSize(),
             contentScale = ContentScale.Crop
+        )
+
+        CustomizedBiggerTextBold(
+            customizedText = "Cargando ...",
+            modifier = Modifier.align(Alignment.BottomStart)
         )
 
     }

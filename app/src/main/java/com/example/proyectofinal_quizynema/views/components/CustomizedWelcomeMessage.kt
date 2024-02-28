@@ -28,11 +28,10 @@ import com.google.relay.compose.RowScopeInstanceImpl.align
 import com.google.relay.compose.tappable
 /**
  * This composable was generated from the UI Package 'welcome_msj'.
- * Generated code; do not edit directly
+ * Modificado para mostrar el mensaje de bienvenida
  */
 @Composable
 fun CustomizedWelcomeMessage(
-    modifier: Modifier = Modifier,
     greetings: String = "",
     letsQuizText: String = "",
     onQuizyAvatarImg: () -> Unit = {}
@@ -43,7 +42,7 @@ fun CustomizedWelcomeMessage(
             .align(Alignment.Top)
             .padding(start = 30.dp)
     ) {
-        Row(){
+        Row{
             CustomizedQuizyAvatarImg(
                 onQuizyAvatarImg = onQuizyAvatarImg,
                 modifier = Modifier.padding(top = 30.dp)
