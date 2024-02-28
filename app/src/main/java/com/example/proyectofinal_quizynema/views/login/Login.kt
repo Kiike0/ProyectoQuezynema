@@ -15,10 +15,10 @@ import com.example.proyectofinal_quizynema.views.components.Alert
 import com.example.proyectofinal_quizynema.views.components.LoginComposable
 
 /**
- * Función composable que representa la pantalla principal para seleccionar el tipo de juego.
+ * Función composable que representa la pantalla principal para loguearse.
  *
  * @param navController El controlador de navegación utilizado para navegar en las diferentes pantallas.
- * @param viewModel El ViewModel responsable de gestionar la lógica del juego de Blackjack.
+ * @param accessViewModel El ViewModel responsable de gestionar la lógica del usuario.
  */
 @Composable
 fun Login(

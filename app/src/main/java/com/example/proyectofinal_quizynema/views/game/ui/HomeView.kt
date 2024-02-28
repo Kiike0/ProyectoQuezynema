@@ -38,7 +38,14 @@ import com.example.proyectofinal_quizynema.views.components.PopularQuiz
 import com.example.proyectofinal_quizynema.views.components.QuizCardComposable
 import com.example.proyectofinal_quizynema.views.components.RandomQuiz
 
-
+/**
+ * Función composable que representa la pantalla Home del usuario.
+ *
+ *
+ * @param navController El controlador de navegación utilizado para navegar en las diferentes pantallas.
+ * @param currentUserViewModel El ViewModel responsable de gestionar la lógica del usuario.
+ * @param quizVM El ViewModel responsable de gestionar la lógica de la colección de quizzes.
+ */
 @Composable
 fun HomeView(
     navController: NavHostController,

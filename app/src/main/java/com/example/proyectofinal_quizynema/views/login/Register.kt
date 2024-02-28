@@ -7,10 +7,10 @@ import com.example.proyectofinal_quizynema.viewModels.UserViewModel
 import com.example.proyectofinal_quizynema.views.components.RegisterComposable
 
 /**
- * Función composable que representa la pantalla principal para seleccionar el tipo de juego.
+ * Función composable que representa la pantalla principal para registrarse.
  *
  * @param navController El controlador de navegación utilizado para navegar en las diferentes pantallas.
- * @param viewModel El ViewModel responsable de gestionar la lógica del juego de Blackjack.
+ * @param newUserVM El ViewModel responsable de gestionar la lógica del usuario.
  */
 @Composable
 fun Register(

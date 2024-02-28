@@ -32,6 +32,16 @@ import com.example.proyectofinal_quizynema.views.components.CustomizedTextScreen
 import com.example.proyectofinal_quizynema.views.components.NavigationBar
 import com.example.proyectofinal_quizynema.views.components.QuizCardComposable
 
+/**
+ * Función composable que representa la pantalla para ver todas las quiz disponibles.
+ *
+ * NOTA IMPORTANTE: Si no se ve tu quiz agregada, agrega otra, porque el tamaño de la coleccion de
+ * quiz debe ser par para que se vea en Quiz disponibles, una vez sea par, ya se verán ambas creadas.
+ *
+ * @param navController El controlador de navegación utilizado para navegar en las diferentes pantallas.
+ * @param currentUserViewModel El ViewModel responsable de gestionar la lógica del usuario.
+ * @param quizVM El ViewModel responsable de gestionar la lógica de la colección de quizzes.
+ */
 @Composable
 fun AllQuizzesView(
     navController: NavHostController,

@@ -23,6 +23,14 @@ import com.example.proyectofinal_quizynema.navegacion.Navegacion
 import com.example.proyectofinal_quizynema.viewModels.QuizViewModel
 import com.example.proyectofinal_quizynema.viewModels.UserViewModel
 
+/**
+ * Función composable que representa la pantalla del título de la quiz.
+ *
+ *
+ * @param navController El controlador de navegación utilizado para navegar en las diferentes pantallas.
+ * @param currentUserViewModel El ViewModel responsable de gestionar la lógica del usuario.
+ * @param quizVM El ViewModel responsable de gestionar la lógica de la colección de quizzes.
+ */
 @Composable
 fun QuizView(
     navController: NavHostController,

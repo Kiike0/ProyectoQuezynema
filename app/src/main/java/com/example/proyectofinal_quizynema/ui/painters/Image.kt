@@ -1,7 +1,11 @@
 package com.example.proyectofinal_quizynema.ui.painters
 
-import androidx.compose.ui.res.painterResource
 import com.example.proyectofinal_quizynema.R
+
+/**
+ * Fichero que guarda las imágenes en variables para poder acceder a ellas desde la aplicación
+ *
+ */
 
 val imageQuiz1 = R.drawable.filmreel
 val imageQuiz2 = R.drawable.camera
