@@ -9,7 +9,6 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.example.proyectofinal_quizynema.R
@@ -18,7 +17,6 @@ import com.example.proyectofinal_quizynema.datosusuario.DatosUsuario
 import com.example.proyectofinal_quizynema.navegacion.Navegacion
 import com.example.proyectofinal_quizynema.navigation.Routes
 import com.example.proyectofinal_quizynema.presentacionusuario.PresentacionUsuario
-import com.example.proyectofinal_quizynema.ranking.Ranking
 import com.example.proyectofinal_quizynema.ui.theme.BackGroundApp
 import com.example.proyectofinal_quizynema.viewModels.UserViewModel
 

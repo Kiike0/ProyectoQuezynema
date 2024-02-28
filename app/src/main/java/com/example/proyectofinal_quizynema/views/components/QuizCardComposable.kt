@@ -1,14 +1,14 @@
 package com.example.proyectofinal_quizynema.views.components
 
-import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.border
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.requiredHeight
 import androidx.compose.foundation.layout.requiredWidth
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -19,20 +19,21 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.em
 import androidx.compose.ui.unit.sp
 import com.example.proyectofinal_quizynema.R
 import com.example.proyectofinal_quizynema.quizexplored.tomorrow
+import com.example.proyectofinal_quizynema.ui.theme.BackGroundAccessBox
+import com.example.proyectofinal_quizynema.ui.theme.BackGroundCard2
 import com.google.relay.compose.EmptyPainter
 import com.google.relay.compose.RelayContainer
 import com.google.relay.compose.RelayContainerScope
-import com.google.relay.compose.RelayImage
 import com.google.relay.compose.RelayText
 import com.google.relay.compose.RelayVector
 import com.google.relay.compose.tappable
+
 
 /**
  * This composable was generated from the UI Package 'quiz_explored'.
@@ -89,7 +90,10 @@ fun BoxQuizQuizCard(
 ) {
     RelayVector(
         vector = painterResource(R.drawable.quiz_explored_box_quiz),
-        modifier = modifier.tappable(onTap = onBoxQuiz).requiredWidth(166.0.dp).requiredHeight(63.0.dp)
+        modifier = modifier
+            .tappable(onTap = onBoxQuiz)
+            .requiredWidth(166.0.dp)
+            .requiredHeight(63.0.dp)
     )
 }
 
@@ -99,16 +103,22 @@ fun QuizImgQuizCard(
     quizImg: Painter,
     modifier: Modifier = Modifier
 ) {
-    Image(
-        painter = quizImg,
-        contentDescription = "Description of the image",
-        contentScale = ContentScale.Crop,
+    Box(
         modifier = modifier
             .tappable(onTap = onQuizImg)
             .requiredWidth(166.0.dp)
             .requiredHeight(126.0.dp)
             .clip(RoundedCornerShape(20.dp, 20.dp, 0.dp, 0.dp))
-    )
+            .background(BackGroundCard2)
+    ){
+        Image(
+            painter = quizImg,
+            contentDescription = "Quiz card image",
+            contentScale = ContentScale.FillBounds, // Ajuste de contentScale para que ocupe toda la Box
+            modifier = Modifier.fillMaxSize()
+        )
+    }
+
 }
 
 @Composable
@@ -143,6 +153,8 @@ fun TopLevelQuizCard(
         isStructured = false,
         clipToParent = false,
         content = content,
-        modifier = modifier.fillMaxWidth(1.0f).fillMaxHeight(1.0f)
+        modifier = modifier
+            .fillMaxWidth(1.0f)
+            .fillMaxHeight(1.0f)
     )
 }

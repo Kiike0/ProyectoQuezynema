@@ -5,7 +5,6 @@ import androidx.navigation.NavHostController
 import com.example.proyectofinal_quizynema.viewModels.QuizViewModel
 import com.example.proyectofinal_quizynema.viewModels.UserViewModel
 import com.example.proyectofinal_quizynema.views.components.AddQuizComposable
-import com.example.proyectofinal_quizynema.views.components.RegisterComposable
 
 /**
  * Función composable que representa la pantalla principal para seleccionar el tipo de juego.

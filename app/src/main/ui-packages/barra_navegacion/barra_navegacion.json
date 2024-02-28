@@ -1,0 +1,319 @@
+{
+  "name": "barra_navegacion",
+  "version": 32,
+  "source-key": {
+    "type": "figma",
+    "file": "H7ukQQTqL9pUMovBZnfFnU",
+    "node": "212:156",
+    "version": "5237047147",
+    "component-id": "e3e23296a3cd5d39855f530d1641bb43aefdf9df"
+  },
+  "default": "BarraNavegacion",
+  "design": {
+    "atoms": [
+      {
+        "type": "group",
+        "id": "top_level",
+        "root": "true"
+      },
+      {
+        "type": "vector",
+        "id": "RectanguloBarra"
+      },
+      {
+        "type": "group",
+        "id": "CerrarSesionIcon"
+      },
+      {
+        "type": "group",
+        "id": "AgregarIcon"
+      },
+      {
+        "type": "group",
+        "id": "HomeIcon"
+      },
+      {
+        "type": "group",
+        "id": "VerQuizIcon"
+      },
+      {
+        "type": "vector",
+        "id": "CerrarSesionVector"
+      },
+      {
+        "type": "vector",
+        "id": "AgregarVector"
+      },
+      {
+        "type": "vector",
+        "id": "HomeVector"
+      },
+      {
+        "type": "vector",
+        "id": "VerQuizVector"
+      }
+    ],
+    "modes": {
+      "BarraNavegacion": {
+        "rules": [
+          {
+            "id": "top_level",
+            "is-structured": "false",
+            "children": [
+              "RectanguloBarra",
+              "CerrarSesionIcon",
+              "AgregarIcon",
+              "HomeIcon",
+              "VerQuizIcon"
+            ],
+            "clip-content": "false"
+          },
+          {
+            "id": "RectanguloBarra",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "0.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "0.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "393.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "68.0"
+              }
+            },
+            "vector-content": "rectangulo_barra.svg"
+          },
+          {
+            "id": "CerrarSesionIcon",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "129.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "-1.5"
+              }
+            },
+            "tap-handler": "$onCerrarSesion",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "45.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "45.0"
+              }
+            },
+            "is-structured": "false",
+            "children": [
+              "CerrarSesionVector"
+            ]
+          },
+          {
+            "id": "AgregarIcon",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-44.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "-0.5"
+              }
+            },
+            "tap-handler": "$onAgregar",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "33.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "33.0"
+              }
+            },
+            "is-structured": "false",
+            "children": [
+              "AgregarVector"
+            ]
+          },
+          {
+            "id": "HomeIcon",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-127.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "-1.0"
+              }
+            },
+            "tap-handler": "$onHome",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "40.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "40.0"
+              }
+            },
+            "is-structured": "false",
+            "children": [
+              "HomeVector"
+            ]
+          },
+          {
+            "id": "VerQuizIcon",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "39.5"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "-2.0"
+              }
+            },
+            "tap-handler": "$onVerQuizzes",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "40.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "40.0"
+              }
+            },
+            "is-structured": "false",
+            "children": [
+              "VerQuizVector"
+            ]
+          },
+          {
+            "id": "CerrarSesionVector",
+            "margin": {
+              "left": "3.75",
+              "top": "6.757568359375",
+              "right": "3.756134033203125",
+              "bottom": "7.501157760620117"
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              }
+            },
+            "vector-content": "cerrar_sesion_vector.svg"
+          },
+          {
+            "id": "AgregarVector",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              }
+            },
+            "vector-content": "agregar_vector.svg"
+          },
+          {
+            "id": "HomeVector",
+            "margin": {
+              "left": "3.408935546875",
+              "top": "3.4583740234375",
+              "right": "3.3333282470703125",
+              "bottom": "3.3332901000976562"
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              }
+            },
+            "vector-content": "home_vector.svg"
+          },
+          {
+            "id": "VerQuizVector",
+            "margin": {
+              "left": "3.33331298828125",
+              "top": "6.6666259765625",
+              "right": "1.66668701171875",
+              "bottom": "1.66668701171875"
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              }
+            },
+            "vector-content": "ver_quiz_vector.svg"
+          }
+        ]
+      }
+    }
+  },
+  "parameters": {
+    "onCerrarSesion": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": ""
+    },
+    "onAgregar": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": ""
+    },
+    "onHome": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": ""
+    },
+    "onVerQuizzes": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": ""
+    }
+  },
+  "previews": [
+    {
+      "design": "BarraNavegacion",
+      "size": {
+        "width": 393.0,
+        "height": 68.0
+      }
+    }
+  ],
+  "adin-component-search-paths": [],
+  "image-search-paths": [],
+  "vector-search-paths": []
+}

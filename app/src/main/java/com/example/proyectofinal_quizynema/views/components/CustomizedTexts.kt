@@ -13,6 +13,30 @@ import com.example.proyectofinal_quizynema.accesousuario.tomorrow
 import com.google.relay.compose.RelayText
 
 @Composable
+fun CustomizedSimpleText(
+    customizedText: String
+) {
+    Text(
+        text = customizedText,
+        fontSize = 14.0.sp,
+        fontFamily = tomorrow,
+        color = Color.White
+    )
+}
+
+@Composable
+fun CustomizedSimpleTextBlack(
+    customizedText: String
+) {
+    Text(
+        text = customizedText,
+        fontSize = 14.0.sp,
+        fontFamily = tomorrow,
+        color = Color.Black
+    )
+}
+
+@Composable
 fun CustomizedText(
     customizedText: String
 ) {
@@ -95,17 +119,41 @@ fun CustomizedTextBlack(
 }
 
 @Composable
-fun CustomizedTextBold(
-    customizedText: String
+fun CustomizedBiggerTextBold(
+    customizedText: String,
+    modifier: Modifier
 ) {
     Text(
         text = customizedText,
         style = TextStyle(
             color = Color.White,
-            fontSize = 14.0.sp,
+            fontSize = 20.0.sp,
             fontFamily = tomorrow,
             fontWeight = FontWeight.Bold // Esta línea establece el texto en negrita
-        )
+        ),
+        modifier = modifier
+    )
+}
+
+@Composable
+fun CustomizedTextScreen(
+    textNav: String,
+    modifier: Modifier = Modifier
+) {
+    RelayText(
+        content = textNav,
+        fontSize = 24.0.sp,
+        fontFamily = com.example.proyectofinal_quizynema.navegacion.tomorrow,
+        color = Color(
+            alpha = 255,
+            red = 255,
+            green = 255,
+            blue = 255
+        ),
+        height = 1.2000000476837158.em,
+        textAlign = TextAlign.Left,
+        fontWeight = FontWeight(700.0.toInt()),
+        modifier = modifier
     )
 }
 
@@ -118,9 +166,9 @@ fun CustomizedTextBoldSmaller(
         text = customizedText,
         style = TextStyle(
             color = Color.White,
-            fontSize = 12.0.sp,
+            fontSize = 13.0.sp,
             fontFamily = tomorrow,
-            fontWeight = FontWeight.Bold // Esta línea establece el texto en negrita
+            fontWeight = FontWeight.Bold
         ),
         modifier = modifier
     )

@@ -19,11 +19,11 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
-import com.example.proyectofinal_quizynema.R
 import com.example.proyectofinal_quizynema.navegacionsalir.NavegacionSalir
 import com.example.proyectofinal_quizynema.ui.theme.BackGroundApp
 import com.example.proyectofinal_quizynema.model.states.QuizState
 import com.example.proyectofinal_quizynema.navigation.Routes
+import com.example.proyectofinal_quizynema.ui.painters.imageQuestionsResources
 import com.example.proyectofinal_quizynema.viewModels.QuizViewModel
 import com.example.proyectofinal_quizynema.viewModels.UserViewModel
 import com.example.proyectofinal_quizynema.views.components.Congratulations
@@ -56,12 +56,17 @@ fun QuestionView(
                 quiz.question4,
                 quiz.question5
             )
+
+            // Guarda una lista de las respuestas actuales
             var answerList: MutableList<String> = mutableListOf()
 
+            // Guarda el título de la pregunta actual
             var questionTitle by rememberSaveable { mutableStateOf("") }
 
+            // Indice para pasar a la siguiente pregunta
             var currentQuestionIndex by rememberSaveable { mutableIntStateOf(0) }
 
+            // Contador para contar las respuestas correctas
             var correctCount by rememberSaveable { mutableIntStateOf(0) }
 
 
@@ -91,7 +96,7 @@ fun QuestionView(
                     )
                     QuestionsComposable(
                         modifier = Modifier.size(400.dp, 800.dp),
-                        quizImg = painterResource(R.drawable.pregunta_quiz_quiz_img),
+                        quizImg = painterResource(imageQuestionsResources[currentQuestionIndex]),
                         quizTitle = questionTitle,
                         answerText1 = answerList[0],
                         answerText2 = answerList[1],
@@ -134,10 +139,14 @@ fun QuestionView(
                     Congratulations(
                         greatJobText = "¡Buen trabajo! has conseguido $correctCount de 5 " +
                                 "respuestas correctas",
-                        onContinueButton = { navController.navigate(Routes.HomeScreen.route) }
+                        onContinueButton = {
+                            navController.navigate(Routes.HomeScreen.route)
+
+                        }
                     )
                 }
             }
+
         }
 
         is QuizState.Error -> androidx.compose.material3.Text(
@@ -148,4 +157,21 @@ fun QuestionView(
 
 
 }
+/*
+
+Intento para actualizar la nota al salir con el boton salir
+
+// Para acceder a la id de la quiz
+val idQuizActual = quiz.idQuiz
+
+// Para acceder al total de completados de la quiz
+var totalCompletedActual = quiz.totalCompleted
+
+totalCompletedActual++
+
+quizVM.updateQuizCompleted(idQuizActual, totalCompletedActual){
+    navController.navigate(Routes.HomeScreen.route)
+}
+
+ */
 

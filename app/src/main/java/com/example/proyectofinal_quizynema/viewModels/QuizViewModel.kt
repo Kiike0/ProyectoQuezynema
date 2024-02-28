@@ -3,11 +3,13 @@ package com.example.proyectofinal_quizynema.viewModels
 import android.content.ContentValues.TAG
 import android.util.Log
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.example.proyectofinal_quizynema.model.QuizModel
 import com.example.proyectofinal_quizynema.model.states.QuizState
 import com.google.firebase.auth.FirebaseAuth
@@ -15,8 +17,11 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.launch
+import java.lang.Exception
 
 /**
  * ViewModel responsable de gestionar la lógica y el estado de las notas de los usuarios.
@@ -53,7 +58,10 @@ class QuizViewModel : ViewModel() {
         MutableLiveData<ArrayList<String>>()
     val quizIdsList: LiveData<ArrayList<String>> = _quizIdsList
 
-    var currentList = _quizIdsList.value ?: ArrayList()
+    //var currentList = _quizIdsList.value ?: ArrayList()
+
+    var totalCompleted by mutableIntStateOf(0)
+        private set
 
 
     // ---------------------------------------------------------------------------------------- //
@@ -144,7 +152,9 @@ class QuizViewModel : ViewModel() {
                 // now, we have a populated shapshot
                 val allQuizs = ArrayList<QuizModel>()
                 val documents = snapshot.documents
-                currentList = _quizIdsList.value ?: ArrayList()
+                val currentList = _quizIdsList.value ?: ArrayList()
+
+                currentList.clear() // La vaciamos antes para que no se añadan más veces de lo necesario
 
                 documents.forEach {
 
@@ -160,6 +170,10 @@ class QuizViewModel : ViewModel() {
                 _allQuizzes.value = allQuizs // forma para imprimir toda la coleccion
                 //Log.d(TAG, allQuizs.toString())
                 _quizIdsList.value = currentList
+
+                Log.d(TAG, _quizIdsList.value.toString())
+
+                //Log.d(TAG, currentList.toString())
 
                 listenToQuezzys(currentList)
 
@@ -215,34 +229,48 @@ class QuizViewModel : ViewModel() {
                 }
             }
     }
-
 /*
     /**
-     * Recupera los detalles de una nota específica por su ID desde Firestore y actualiza el estado de la nota seleccionada.
+     * Intento para actualizar los completados pero no hay forma, la id de la quiz está correcta
+     * pero no actualiza
      *
-     * @param documentId ID del documento de la nota a recuperar.
      */
-    fun getQuizById(documentId: String) {
-        // DCS - Utiliza la instancia de Firestore para obtener la info de una nota por su id
-        firestore.collection("quiz")
-            .document(documentId)
-            .addSnapshotListener { documentSnapshot, error ->
-                if (error != null) {
-                    return@addSnapshotListener
-                }
-                val documents = mutableListOf<QuizModel>()
-                if (documentSnapshot != null) {
-                    val document = documentSnapshot.toObject(QuizModel::class.java)?.copy(idQuiz = documentSnapshot.id)
-                    if (document != null) {
-                        documents.add(document)
+    fun updateQuizCompleted(idDoc: String, totalCompletedActual: Int, onSuccess:() -> Unit) {
+        viewModelScope.launch(Dispatchers.IO) {
+            try {
+                val updateQuiz: MutableMap<String, Any> = hashMapOf(
+                    "totalCompleted" to totalCompletedActual as Any
+                )
+                // DCS - Utiliza la instancia de Firestore para actualizar la info de una nota por su id
+                firestore.collection("quiz").document(idDoc)
+                    .update(updateQuiz)
+                    .addOnSuccessListener {
+                        onSuccess()
+                        Log.d("ACTUALIZAR OK", "Se actualizó la nota correctamente en Firestore")
                     }
-                }
-                _quizData.value = documents
+                    .addOnFailureListener {
+                        Log.d("ERROR AL ACTUALIZAR", "ERROR al actualizar una quiz en Firestore")
+                    }
+                // DCS - Si se guarda con éxito limpiamos las variables
+                resetInfoQuiz()
+            } catch (e: Exception) {
+                Log.d("ERROR ACTUALIZAR QUIZ","Error al actualizar ${e.localizedMessage} ")
             }
+        }
     }
 
  */
 
+
+/*
+    /**
+     * Limpia las variables que controlan desde el ViewModel la info de la quiz.
+     */
+    private fun resetInfoQuiz() {
+        totalCompleted = 0
+    }
+
+ */
 
 
 

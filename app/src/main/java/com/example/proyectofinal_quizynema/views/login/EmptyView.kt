@@ -5,15 +5,12 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.navigation.NavController
 import com.example.proyectofinal_quizynema.R
-import com.example.proyectofinal_quizynema.model.QuizModel
 import com.example.proyectofinal_quizynema.navigation.Routes
 import com.example.proyectofinal_quizynema.viewModels.QuizViewModel
 import com.google.firebase.auth.FirebaseAuth

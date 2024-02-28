@@ -16,4 +16,8 @@ val BackGroundAccessBox = Color(0xFF35485A)
 
 val BackGroundCard = Color(0xFFFF7C32)
 
+val BackGroundOutlinedQuestion = Color(0xFFFFAD33)
+
+val BackGroundOutlinedAnswer = Color(0xFFEFF7F6)
+
 val BackGroundCard2 = Color(0xFF98A8B8)

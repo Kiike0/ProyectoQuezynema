@@ -52,13 +52,13 @@ fun CustomizedWelcomeMessage(
         Row(){
             CustomizedQuizyAvatarImg(
                 onQuizyAvatarImg = onQuizyAvatarImg,
-                modifier = Modifier.padding(top = 40.dp)
+                modifier = Modifier.padding(top = 30.dp)
             )
             Spacer(modifier = Modifier.width(10.dp))
             Column {
                 CustomizedGreetings(
                     greetings = greetings,
-                    modifier = Modifier.padding(top = 50.dp)
+                    modifier = Modifier.padding(top = 40.dp)
                 )
                 Spacer(modifier = Modifier.height(10.dp))
                 CustomizedLetsQuizText(
