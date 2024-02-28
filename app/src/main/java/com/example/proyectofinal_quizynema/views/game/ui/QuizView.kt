@@ -63,7 +63,7 @@ fun QuizView(
                     startText = "Iniciar",
                     quizTitleText = "${quiz.title}",
                     quizDesc = "Responde a las preguntas y disfruta de la Quiz creada por los usuarios",
-                    onStartButton = { navController.navigate(Routes.Question1Screen.route) }
+                    onStartButton = { navController.navigate(Routes.QuestionsScreen.route) }
                 )
             }
         }

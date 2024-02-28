@@ -3,13 +3,11 @@ package com.example.proyectofinal_quizynema.viewModels
 import android.content.ContentValues.TAG
 import android.util.Log
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
 import com.example.proyectofinal_quizynema.model.QuizModel
 import com.example.proyectofinal_quizynema.model.states.QuizState
 import com.google.firebase.auth.FirebaseAuth
@@ -17,11 +15,8 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.launch
-import java.lang.Exception
 
 /**
  * ViewModel responsable de gestionar la lógica y el estado de las notas de los usuarios.
@@ -60,8 +55,8 @@ class QuizViewModel : ViewModel() {
 
     //var currentList = _quizIdsList.value ?: ArrayList()
 
-    var totalCompleted by mutableIntStateOf(0)
-        private set
+    //var totalCompleted by mutableIntStateOf(0)
+        //private set
 
 
     // ---------------------------------------------------------------------------------------- //
@@ -275,7 +270,7 @@ class QuizViewModel : ViewModel() {
 
 
     /**
-     * Actualiza el título de la nota actualmente seleccionada o editada.
+     * Actualiza el id de la quiz actual.
      *
      */
     fun changeQuizId(quizId: String) {
@@ -353,7 +348,7 @@ class QuizViewModel : ViewModel() {
     // --------------------------------------------------------------------------------------- //
 
     /**
-     * Actualiza la contraseña del usuario.
+     * Crea el titulo de la quiz.
      *
      */
     fun createTitle(title: String) {
@@ -361,7 +356,7 @@ class QuizViewModel : ViewModel() {
     }
 
     /**
-     * Actualiza el nombre de usuario.
+     * Crea las preguntas.
      *
      */
     fun createQuestionTitle1(questionTitle1: String) {
@@ -389,7 +384,7 @@ class QuizViewModel : ViewModel() {
     }
 
     /**
-     * Actualiza el nombre de usuario.
+     * Crea las preguntas.
      *
      */
     fun createQuestionTitle2(questionTitle2: String) {
@@ -417,7 +412,7 @@ class QuizViewModel : ViewModel() {
     }
 
     /**
-     * Actualiza el nombre de usuario.
+     * Crea las preguntas.
      *
      */
     fun createQuestionTitle3(questionTitle3: String) {
@@ -445,7 +440,7 @@ class QuizViewModel : ViewModel() {
     }
 
     /**
-     * Actualiza el nombre de usuario.
+     * Crea las preguntas.
      *
      */
     fun createQuestionTitle4(questionTitle4: String) {
@@ -473,7 +468,7 @@ class QuizViewModel : ViewModel() {
     }
 
     /**
-     * Actualiza el nombre de usuario.
+     * Crea las preguntas.
      *
      */
     fun createQuestionTitle5(questionTitle5: String) {

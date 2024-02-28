@@ -189,6 +189,7 @@ int drawable pregunta_quiz_answer_button4 0x7f040050
 int drawable pregunta_quiz_quiz_img 0x7f040051
 int drawable presentacion_usuario_box_level 0x7f040052
 int drawable presentacion_usuario_img_quizy_avatar 0x7f040053
+int drawable profileimgavatar 0x7f04007c
 int drawable progreso_quiz_card_popular_quiz 0x7f040054
 int drawable progreso_quiz_vector_film 0x7f040055
 int drawable quezynematitle 0x7f040056

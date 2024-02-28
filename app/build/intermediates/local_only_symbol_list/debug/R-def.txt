@@ -48,6 +48,7 @@ drawable pregunta_quiz_answer_button4
 drawable pregunta_quiz_quiz_img
 drawable presentacion_usuario_box_level
 drawable presentacion_usuario_img_quizy_avatar
+drawable profileimgavatar
 drawable progreso_quiz_card_popular_quiz
 drawable progreso_quiz_vector_film
 drawable quezynematitle

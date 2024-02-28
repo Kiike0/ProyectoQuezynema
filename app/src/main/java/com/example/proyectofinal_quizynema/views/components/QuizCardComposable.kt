@@ -25,7 +25,6 @@ import androidx.compose.ui.unit.em
 import androidx.compose.ui.unit.sp
 import com.example.proyectofinal_quizynema.R
 import com.example.proyectofinal_quizynema.quizexplored.tomorrow
-import com.example.proyectofinal_quizynema.ui.theme.BackGroundAccessBox
 import com.example.proyectofinal_quizynema.ui.theme.BackGroundCard2
 import com.google.relay.compose.EmptyPainter
 import com.google.relay.compose.RelayContainer

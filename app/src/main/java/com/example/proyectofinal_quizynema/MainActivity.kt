@@ -7,8 +7,6 @@ import androidx.activity.viewModels
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -104,7 +102,7 @@ class MainActivity : ComponentActivity() {
                                 quizVM = quizViewModel
                             )
                         }
-                        composable(Routes.Question1Screen.route) {
+                        composable(Routes.QuestionsScreen.route) {
                             QuestionView(
                                 navController = navController,
                                 currentUserViewModel = userViewModel,
