@@ -1,5 +1,5 @@
 ---
-description: Una app para ampliar tu conocimiento cinéfilo de manera divertida
+description: Introducción
 cover: .gitbook/assets/assortment-cinema-supplies.jpg
 coverY: 0
 ---
