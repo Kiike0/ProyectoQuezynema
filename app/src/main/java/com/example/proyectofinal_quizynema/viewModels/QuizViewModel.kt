@@ -29,7 +29,6 @@ import kotlinx.coroutines.flow.StateFlow
  * @property title Título de la nota actualmente seleccionada o editada.
  */
 class QuizViewModel : ViewModel() {
-    // DCS - Definición de variables y funciones para manejar las operaciones sobre las quiz.
     private val auth: FirebaseAuth = Firebase.auth
     private val firestore = Firebase.firestore
 
@@ -60,6 +59,12 @@ class QuizViewModel : ViewModel() {
 
 
     // ---------------------------------------------------------------------------------------- //
+
+    /**
+     * Todos estos son los parámetros para crear una quiz, no se ha podido hacer de otra forma
+     * porque si no los outlinedtext no funcionan correctamente.
+     */
+
 
     var title by mutableStateOf("")
         private set
@@ -133,7 +138,8 @@ class QuizViewModel : ViewModel() {
     // ------------------------------------------------------------------------------------- //
 
     /**
-     * This will hear any updates from Firestore
+     * Recupera la coleccion de quiz para poder acceder a todos los datos de la colección y
+     * pasarle al método listenToQuizzes las ids
      */
     fun fetchQuiz() {
         firestore.collection("quiz").addSnapshotListener { snapshot, e ->
@@ -179,7 +185,7 @@ class QuizViewModel : ViewModel() {
 
 
     /**
-     * Recupera
+     * Recupera todas las quiz pasandole la lista de ids de todas las quiz en la base de datos
      */
     fun listenToQuezzys(documentsId: ArrayList<String>) {
         val documents = mutableListOf<QuizModel>()
@@ -206,7 +212,7 @@ class QuizViewModel : ViewModel() {
     }
 
     /**
-     * Recupera todas las notas del usuario actual desde Firestore y actualiza el estado?
+     * Recupera una quiz pasandole una id
      */
     fun getQuizById(documentId: String) {
         firestore.collection("quiz")
@@ -270,7 +276,7 @@ class QuizViewModel : ViewModel() {
 
 
     /**
-     * Actualiza el id de la quiz actual.
+     * Actualiza el id de la quiz actual, para leer las preguntas en la quiz seleccionada.
      *
      */
     fun changeQuizId(quizId: String) {

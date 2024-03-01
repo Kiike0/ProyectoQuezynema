@@ -28,7 +28,6 @@ import java.lang.Exception
  * @property nickName Nombre de usuario, utilizado solo en el proceso de registro.
  */
 class UserViewModel : ViewModel() {
-    // DCS - Definición de variables y funciones para manejar el inicio de sesión y registro de usuarios.
 
     private val auth: FirebaseAuth = Firebase.auth
     private val firestore = Firebase.firestore
@@ -80,6 +79,10 @@ class UserViewModel : ViewModel() {
 
     fun getCurrentNickName() = currentNickname.ifBlank { "" }
 
+    /**
+     * Accede a los datos del usuario para poder mostrarlos por pantalla.
+     *
+     */
     fun getNickName() {
         val uid = auth.currentUser?.uid
         if (uid != null) {
@@ -103,7 +106,7 @@ class UserViewModel : ViewModel() {
     /**
      * Crea un nuevo usuario con el email y la contraseña proporcionados.
      * Si el registro es exitoso, guarda la información del usuario y ejecuta la acción de éxito proporcionada.
-     * En caso de error, actualiza el estado para mostrar una alerta.
+     * En caso de error, actualiza el estado para mostrar el mensaje de alerta.
      *
      * @param onSuccess Acción a ejecutar si el registro es exitoso.
      */
