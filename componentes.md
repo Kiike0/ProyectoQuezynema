@@ -17,5 +17,4 @@
 4. **Firebase**: Este proyecto hace uso de Firebase para la autenticación de usuarios, almacenamiento de datos y posiblemente otras funcionalidades. Algunos de los componentes de Firebase que podrían utilizarse incluyen:
    * **Firebase Authentication**: Para gestionar la autenticación de usuarios.
    * **Cloud Firestore o Firebase Realtime Database**: Para almacenar y recuperar datos, como información de usuario, quizzes y preguntas.
-   * **Firebase Analytics**: Para realizar un seguimiento del comportamiento del usuario y mejorar la aplicación en base a esos datos.
 5. **Controladores o Presentadores**: Estos son componentes que manejan la lógica de la aplicación y la interacción entre las vistas y los modelos de datos. Se encargan de cosas como manejar eventos de clic en botones, procesar respuestas de quizzes, etc.
